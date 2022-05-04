@@ -1,0 +1,120 @@
+﻿<Page x:Class="Novaelectrosbit.Pages.MainSubPages.PerAccSubPages.TabPages.PerAccHistoryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:res="clr-namespace:Novaelectrosbit.Properties"
+      MinWidth="581"
+      FontFamily="{StaticResource FontMain}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="1.5"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="1.5"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Background="{StaticResource SweetWhiteBlue}">
+            <Label Content="История" Style="{StaticResource LHead}"/>
+        </StackPanel>
+        <TabControl x:Name="TCSubPages" Grid.Row="1" materialDesign:ColorZoneAssist.Mode="PrimaryMid" materialDesign:ColorZoneAssist.Background="White" SelectionChanged="TCSubPages_SelectionChanged">
+            <TabItem Header="Показания"/>
+            <TabItem Header="Оплаты"/>
+            <TabItem Header="Квитанции"/>
+        </TabControl>
+        <Grid Grid.Row="2" Background="Black"/>
+        <ComboBox x:Name="CBoxPeriod" Grid.Row="3" Style="{DynamicResource MaterialDesignOutlinedComboBox}" BorderBrush="Black" Margin="5,10,5,10" SelectedIndex="0" SelectionChanged="CBoxPeriod_SelectionChanged">
+            <ComboBoxItem Content="За последние 3 месяца"/>
+            <ComboBoxItem Content="За последние 6 месяцев"/>
+            <ComboBoxItem Content="За год"/>
+            <ComboBoxItem Content="За все время"/>
+        </ComboBox>
+        <Grid Grid.Row="4" Background="LightGray"/>
+        <Label x:Name="LNoData" Grid.Row="5" Content="Данных нет" Style="{StaticResource LDescription}" Visibility="Collapsed"/>
+        <DataGrid x:Name="DGMR" Grid.Row="5" Background="White" Foreground="Orange" Margin="5" HeadersVisibility="None" AutoGenerateColumns="False" CanUserAddRows="False" SelectionUnit="Cell"
+                  CanUserDeleteRows="False" IsReadOnly="True" Visibility="Collapsed">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <materialDesign:PackIcon Kind="CalendarRange" Foreground="{DynamicResource SecondaryHueMidBrush}" Width="auto"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Width="auto" Binding="{Binding IndicationsDateStr}"/>
+                <DataGridTextColumn Width="*" Binding="{Binding TariffName}"/>
+                <DataGridTextColumn Width="*" Binding="{Binding IndicationsStr}"/>
+            </DataGrid.Columns>
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="BorderBrush" Value="Orange"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+        </DataGrid>
+        <DataGrid x:Name="DGPayments" Grid.Row="5" Background="White" Foreground="Orange" Margin="5" HeadersVisibility="None" AutoGenerateColumns="False" CanUserAddRows="False" SelectionUnit="Cell"
+                  CanUserDeleteRows="False" IsReadOnly="True" Visibility="Collapsed">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <materialDesign:PackIcon Kind="CalendarRange" Foreground="{DynamicResource SecondaryHueMidBrush}" Width="auto"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Width="auto" Binding="{Binding PayDateStr}"/>
+                <DataGridTextColumn Width="*" Binding="{Binding Credited}"/>
+                <DataGridTextColumn Width="*" Binding="{Binding PayAmountStr}"/>
+            </DataGrid.Columns>
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="BorderBrush" Value="Orange"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+        </DataGrid>
+        <DataGrid x:Name="DGReceipts" Grid.Row="5" Background="White" Foreground="Orange" Margin="5" HeadersVisibility="None" AutoGenerateColumns="False" CanUserAddRows="False" SelectionUnit="FullRow"
+                  CanUserDeleteRows="False" IsReadOnly="True" Visibility="Collapsed" SelectedValuePath="PayDate">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <materialDesign:PackIcon Kind="CalendarRange" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Width="*" Binding="{Binding PayDateStr}"/>
+                <DataGridTextColumn Width="*" Binding="{Binding BalanceAfterPayStr}">
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Foreground" Value="{Binding BalanceBrush}"/>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="BtnPrintReceipt" Content="ПЕЧАТЬ КВИТАНЦИИ" Foreground="{DynamicResource SecondaryHueMidBrush}" BorderBrush="Transparent" BorderThickness="0" Background="White" 
+                                    materialDesign:ShadowAssist.ShadowDepth="Depth0" Margin="5" VerticalAlignment="Top" Click="BtnPrintReceipt_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="BorderBrush" Value="Orange"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+        </DataGrid>
+    </Grid>
+</Page>

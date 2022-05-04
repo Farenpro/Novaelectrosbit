@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NovaelectrosbitModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BuildType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Counter">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="InstallDate" Type="date" Nullable="false" />
+    <Property Name="CounterValue" Type="float" Nullable="false" />
+    <Property Name="CounterBrandID" Type="int" Nullable="false" />
+    <Property Name="SettingIndications" Type="int" Nullable="false" />
+    <Property Name="TransformCoefficient" Type="float" Nullable="false" />
+    <Property Name="MPIEndDate" Type="date" Nullable="false" />
+    <Property Name="InstallPlaceID" Type="int" Nullable="false" />
+    <Property Name="ExplResponsiblePersonID" Type="int" Nullable="false" />
+    <Property Name="NetworkOrganisationID" Type="int" Nullable="false" />
+    <Property Name="BuildTypeID" Type="int" Nullable="false" />
+    <Property Name="ASKUESystemName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CounterBrand">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InstallPlace">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Locality">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MeterReading">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="CounterNumber" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="IndicationsDate" Type="date" Nullable="false" />
+    <Property Name="Indications" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NetworkOrganisation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Payers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ResponsiblePersonID" Type="int" Nullable="false" />
+    <Property Name="RequisitesPersonalAccount" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymentType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Prefix">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="PrefixTypeID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PrefixType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegistrationAddress">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="LocalityID" Type="int" Nullable="false" />
+    <Property Name="PrefixID" Type="int" Nullable="false" />
+    <Property Name="House" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Flat" Type="int" />
+  </EntityType>
+  <EntityType Name="Requisites">
+    <Key>
+      <PropertyRef Name="PersonalAccount" />
+    </Key>
+    <Property Name="PersonalAccount" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="OwnerSurname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OwnerFirstname" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="OwnerMiddlename" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="RegistrationAddressID" Type="int" Nullable="false" />
+    <Property Name="TotalArea" Type="float" Nullable="false" />
+    <Property Name="LivingArea" Type="float" Nullable="false" />
+    <Property Name="NumOfResidents" Type="int" Nullable="false" />
+    <Property Name="NumOfRooms" Type="int" Nullable="false" />
+    <Property Name="TariffID" Type="int" Nullable="false" />
+    <Property Name="CounterNumber" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RequisitesPayments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="PersonalAccount" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="PaymentTypeID" Type="int" />
+    <Property Name="PayDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="PayAmount" Type="float" Nullable="false" />
+    <Property Name="BalanceAfterPay" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ResponsiblePerson">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Tariff">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Middlename" Type="nvarchar" MaxLength="60" />
+    <Property Name="Birthdate" Type="date" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="GenderID" Type="int" />
+  </EntityType>
+  <Association Name="FK_Consumer_RegistrationAddress">
+    <End Role="RegistrationAddress" Type="Self.RegistrationAddress" Multiplicity="1" />
+    <End Role="Requisites" Type="Self.Requisites" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistrationAddress">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Requisites">
+        <PropertyRef Name="RegistrationAddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConsumerPayments_ConsumerPayments">
+    <End Role="Requisites" Type="Self.Requisites" Multiplicity="1" />
+    <End Role="RequisitesPayments" Type="Self.RequisitesPayments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Requisites">
+        <PropertyRef Name="PersonalAccount" />
+      </Principal>
+      <Dependent Role="RequisitesPayments">
+        <PropertyRef Name="PersonalAccount" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Counter_BuildType">
+    <End Role="BuildType" Type="Self.BuildType" Multiplicity="1" />
+    <End Role="Counter" Type="Self.Counter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BuildType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Counter">
+        <PropertyRef Name="BuildTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Counter_CounterBrand">
+    <End Role="CounterBrand" Type="Self.CounterBrand" Multiplicity="1" />
+    <End Role="Counter" Type="Self.Counter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CounterBrand">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Counter">
+        <PropertyRef Name="CounterBrandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Counter_InstallPlace">
+    <End Role="InstallPlace" Type="Self.InstallPlace" Multiplicity="1" />
+    <End Role="Counter" Type="Self.Counter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstallPlace">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Counter">
+        <PropertyRef Name="InstallPlaceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Counter_NetworkOrganisation">
+    <End Role="NetworkOrganisation" Type="Self.NetworkOrganisation" Multiplicity="1" />
+    <End Role="Counter" Type="Self.Counter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NetworkOrganisation">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Counter">
+        <PropertyRef Name="NetworkOrganisationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Counter_ResponsiblePerson">
+    <End Role="ResponsiblePerson" Type="Self.ResponsiblePerson" Multiplicity="1" />
+    <End Role="Counter" Type="Self.Counter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResponsiblePerson">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Counter">
+        <PropertyRef Name="ExplResponsiblePersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MeterReading_Counter">
+    <End Role="Counter" Type="Self.Counter" Multiplicity="1" />
+    <End Role="MeterReading" Type="Self.MeterReading" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Counter">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="MeterReading">
+        <PropertyRef Name="CounterNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payers_Requisites">
+    <End Role="Requisites" Type="Self.Requisites" Multiplicity="1" />
+    <End Role="Payers" Type="Self.Payers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Requisites">
+        <PropertyRef Name="PersonalAccount" />
+      </Principal>
+      <Dependent Role="Payers">
+        <PropertyRef Name="RequisitesPersonalAccount" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payers_ResponsiblePerson">
+    <End Role="ResponsiblePerson" Type="Self.ResponsiblePerson" Multiplicity="1" />
+    <End Role="Payers" Type="Self.Payers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResponsiblePerson">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Payers">
+        <PropertyRef Name="ResponsiblePersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payers_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Payers" Type="Self.Payers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Payers">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prefix_PrefixType">
+    <End Role="PrefixType" Type="Self.PrefixType" Multiplicity="1" />
+    <End Role="Prefix" Type="Self.Prefix" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PrefixType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Prefix">
+        <PropertyRef Name="PrefixTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistrationAddress_Locality">
+    <End Role="Locality" Type="Self.Locality" Multiplicity="1" />
+    <End Role="RegistrationAddress" Type="Self.RegistrationAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locality">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RegistrationAddress">
+        <PropertyRef Name="LocalityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistrationAddress_Prefix">
+    <End Role="Prefix" Type="Self.Prefix" Multiplicity="1" />
+    <End Role="RegistrationAddress" Type="Self.RegistrationAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Prefix">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RegistrationAddress">
+        <PropertyRef Name="PrefixID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Requisites_Counter">
+    <End Role="Counter" Type="Self.Counter" Multiplicity="1" />
+    <End Role="Requisites" Type="Self.Requisites" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Counter">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="Requisites">
+        <PropertyRef Name="CounterNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Requisites_Tariff">
+    <End Role="Tariff" Type="Self.Tariff" Multiplicity="1" />
+    <End Role="Requisites" Type="Self.Requisites" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tariff">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Requisites">
+        <PropertyRef Name="TariffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequisitesPayments_PaymentType">
+    <End Role="PaymentType" Type="Self.PaymentType" Multiplicity="0..1" />
+    <End Role="RequisitesPayments" Type="Self.RequisitesPayments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RequisitesPayments">
+        <PropertyRef Name="PaymentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Gender">
+    <End Role="Gender" Type="Self.Gender" Multiplicity="0..1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="GenderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NovaelectrosbitModelStoreContainer">
+    <EntitySet Name="BuildType" EntityType="Self.BuildType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Counter" EntityType="Self.Counter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CounterBrand" EntityType="Self.CounterBrand" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InstallPlace" EntityType="Self.InstallPlace" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Locality" EntityType="Self.Locality" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MeterReading" EntityType="Self.MeterReading" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NetworkOrganisation" EntityType="Self.NetworkOrganisation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payers" EntityType="Self.Payers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentType" EntityType="Self.PaymentType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Prefix" EntityType="Self.Prefix" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PrefixType" EntityType="Self.PrefixType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RegistrationAddress" EntityType="Self.RegistrationAddress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Requisites" EntityType="Self.Requisites" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RequisitesPayments" EntityType="Self.RequisitesPayments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ResponsiblePerson" EntityType="Self.ResponsiblePerson" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tariff" EntityType="Self.Tariff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Consumer_RegistrationAddress" Association="Self.FK_Consumer_RegistrationAddress">
+      <End Role="RegistrationAddress" EntitySet="RegistrationAddress" />
+      <End Role="Requisites" EntitySet="Requisites" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConsumerPayments_ConsumerPayments" Association="Self.FK_ConsumerPayments_ConsumerPayments">
+      <End Role="Requisites" EntitySet="Requisites" />
+      <End Role="RequisitesPayments" EntitySet="RequisitesPayments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Counter_BuildType" Association="Self.FK_Counter_BuildType">
+      <End Role="BuildType" EntitySet="BuildType" />
+      <End Role="Counter" EntitySet="Counter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Counter_CounterBrand" Association="Self.FK_Counter_CounterBrand">
+      <End Role="CounterBrand" EntitySet="CounterBrand" />
+      <End Role="Counter" EntitySet="Counter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Counter_InstallPlace" Association="Self.FK_Counter_InstallPlace">
+      <End Role="InstallPlace" EntitySet="InstallPlace" />
+      <End Role="Counter" EntitySet="Counter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Counter_NetworkOrganisation" Association="Self.FK_Counter_NetworkOrganisation">
+      <End Role="NetworkOrganisation" EntitySet="NetworkOrganisation" />
+      <End Role="Counter" EntitySet="Counter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Counter_ResponsiblePerson" Association="Self.FK_Counter_ResponsiblePerson">
+      <End Role="ResponsiblePerson" EntitySet="ResponsiblePerson" />
+      <End Role="Counter" EntitySet="Counter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MeterReading_Counter" Association="Self.FK_MeterReading_Counter">
+      <End Role="Counter" EntitySet="Counter" />
+      <End Role="MeterReading" EntitySet="MeterReading" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payers_Requisites" Association="Self.FK_Payers_Requisites">
+      <End Role="Requisites" EntitySet="Requisites" />
+      <End Role="Payers" EntitySet="Payers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payers_ResponsiblePerson" Association="Self.FK_Payers_ResponsiblePerson">
+      <End Role="ResponsiblePerson" EntitySet="ResponsiblePerson" />
+      <End Role="Payers" EntitySet="Payers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payers_User" Association="Self.FK_Payers_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Payers" EntitySet="Payers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prefix_PrefixType" Association="Self.FK_Prefix_PrefixType">
+      <End Role="PrefixType" EntitySet="PrefixType" />
+      <End Role="Prefix" EntitySet="Prefix" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistrationAddress_Locality" Association="Self.FK_RegistrationAddress_Locality">
+      <End Role="Locality" EntitySet="Locality" />
+      <End Role="RegistrationAddress" EntitySet="RegistrationAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistrationAddress_Prefix" Association="Self.FK_RegistrationAddress_Prefix">
+      <End Role="Prefix" EntitySet="Prefix" />
+      <End Role="RegistrationAddress" EntitySet="RegistrationAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Requisites_Counter" Association="Self.FK_Requisites_Counter">
+      <End Role="Counter" EntitySet="Counter" />
+      <End Role="Requisites" EntitySet="Requisites" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Requisites_Tariff" Association="Self.FK_Requisites_Tariff">
+      <End Role="Tariff" EntitySet="Tariff" />
+      <End Role="Requisites" EntitySet="Requisites" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequisitesPayments_PaymentType" Association="Self.FK_RequisitesPayments_PaymentType">
+      <End Role="PaymentType" EntitySet="PaymentType" />
+      <End Role="RequisitesPayments" EntitySet="RequisitesPayments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Gender" Association="Self.FK_User_Gender">
+      <End Role="Gender" EntitySet="Gender" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Role" Association="Self.FK_User_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

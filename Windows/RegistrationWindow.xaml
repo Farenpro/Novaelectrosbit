@@ -1,0 +1,8 @@
+﻿<Window x:Class="Novaelectrosbit.Windows.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Binding ElementName=MainFrame, Path=Content.Title}" Width="{Binding Width, Mode=TwoWay}" MinWidth="{Binding MinWidth, Mode=OneTime}" 
+        Height="{Binding Height, Mode=TwoWay}" MinHeight="{Binding MinHeight, Mode=OneTime}" 
+        WindowStartupLocation="CenterOwner" Icon="/Resources/NovaelectrosbitLOGO.ico">
+    <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+</Window>

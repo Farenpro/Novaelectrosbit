@@ -1,0 +1,259 @@
+C:\Users\fapeh\source\repos\Novaelectrosbit\bin\Debug\Novaelectrosbit.exe.config
+C:\Users\fapeh\source\repos\Novaelectrosbit\bin\Debug\Novaelectrosbit.exe
+C:\Users\fapeh\source\repos\Novaelectrosbit\bin\Debug\Novaelectrosbit.pdb
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.AssemblyReference.cache
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\Windows\MainMenuWindow.g.cs
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\App.g.cs
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\Novaelectrosbit_MarkupCompile.cache
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\Novaelectrosbit_MarkupCompile.lref
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\Windows\MainMenuWindow.baml
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\Novaelectrosbit.g.resources
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\Novaelectrosbit.Properties.Resources.resources
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.GenerateResource.cache
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.CoreCompileInputs.cache
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\Novaelectrosbit.exe
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\Novaelectrosbit.pdb
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\Pages\AuthorizationPage.g.cs
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\Pages\AuthorizationPage.baml
+C:\Users\fapeh\source\repos\Novaelectrosbit\bin\Debug\MaterialDesignColors.dll
+C:\Users\fapeh\source\repos\Novaelectrosbit\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\fapeh\source\repos\Novaelectrosbit\bin\Debug\MaterialDesignColors.pdb
+C:\Users\fapeh\source\repos\Novaelectrosbit\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\fapeh\source\repos\Novaelectrosbit\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\App.baml
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.CopyComplete
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\Windows\RegistrationWindow.g.cs
+C:\Users\fapeh\source\repos\Novaelectrosbit\obj\Debug\Windows\RegistrationWindow.baml
+C:\Users\fapeh\source\repos\Novaelectrosbit\bin\Debug\BespokeFusion.dll
+C:\Users\fapeh\source\repos\Novaelectrosbit\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\fapeh\source\repos\Novaelectrosbit\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\fapeh\source\repos\Novaelectrosbit\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\fapeh\source\repos\Novaelectrosbit\bin\Debug\MaterialDesignMessageBox.dll
+C:\Users\fapeh\source\repos\Novaelectrosbit\bin\Debug\MaterialDesignMessageBox.xml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\Novaelectrosbit.exe.config
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\Novaelectrosbit.exe
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\Novaelectrosbit.pdb
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\BespokeFusion.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\MaterialDesignColors.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\MaterialDesignColors.pdb
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.AssemblyReference.cache
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\AuthorizationPage.baml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Windows\RegistrationWindow.baml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\App.baml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\AuthorizationPage.g.cs
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Windows\MainMenuWindow.g.cs
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Windows\RegistrationWindow.g.cs
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\App.g.cs
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit_MarkupCompile.cache
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Windows\MainMenuWindow.baml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.g.resources
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.Properties.Resources.resources
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.GenerateResource.cache
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.CoreCompileInputs.cache
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.CopyComplete
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.exe
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.pdb
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\RegistrationPage.baml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\RegistrationPage.g.cs
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\EntityFramework.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\EntityFramework.xml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit_Content.g.cs
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainPage.baml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainPage.g.cs
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfilePage.g.cs
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfilePage.baml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\GenInfoEditPage.baml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\GenInfoEditPage.g.cs
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Windows\EditInfoWindow.baml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Windows\EditInfoWindow.g.cs
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\TelephoneEditPage.baml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\TelephoneEditPage.g.cs
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\Novaelectrosbit.exe.config
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\Novaelectrosbit.exe
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\Novaelectrosbit.pdb
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\BespokeFusion.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\EntityFramework.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\MaterialDesignColors.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\EntityFramework.xml
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\MaterialDesignColors.pdb
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\10a\Downloads\Novaelectrosbit\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.AssemblyReference.cache
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\AuthorizationPage.baml
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\MainPage.baml
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfilePage.baml
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\GenInfoEditPage.baml
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\TelephoneEditPage.baml
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\RegistrationPage.baml
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Windows\EditInfoWindow.baml
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Windows\MainMenuWindow.baml
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Windows\RegistrationWindow.baml
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\App.baml
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\AuthorizationPage.g.cs
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\MainPage.g.cs
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfilePage.g.cs
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\GenInfoEditPage.g.cs
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\TelephoneEditPage.g.cs
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\RegistrationPage.g.cs
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Windows\EditInfoWindow.g.cs
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Windows\MainMenuWindow.g.cs
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Windows\RegistrationWindow.g.cs
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\App.g.cs
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Novaelectrosbit_Content.g.cs
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Novaelectrosbit_MarkupCompile.cache
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Novaelectrosbit.g.resources
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Novaelectrosbit.Properties.Resources.resources
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.GenerateResource.cache
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.CoreCompileInputs.cache
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.CopyComplete
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Novaelectrosbit.exe
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Novaelectrosbit.pdb
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\EmailEditPage.baml
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\EmailEditPage.g.cs
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\PasswordEditPage.baml
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\PasswordEditPage.g.cs
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\MainSubPages\NoPerAccPage.baml
+C:\Users\10a\Downloads\Novaelectrosbit\obj\Debug\Pages\MainSubPages\NoPerAccPage.g.cs
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\NoPerAccPage.baml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\EmailEditPage.baml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\PasswordEditPage.baml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\NoPerAccPage.g.cs
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\EmailEditPage.g.cs
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\PasswordEditPage.g.cs
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit_MarkupCompile.lref
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\UserControls\PersonalAccUC.baml
+C:\Users\fapeh\Desktop\Айрат работа\Novaelectrosbit\obj\Debug\UserControls\PersonalAccUC.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.AssemblyReference.cache
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.ResolveComReference.cache
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\NoPerAccPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\PerAccPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\PerAccSubPages\TabPages\PerAccRequisitesPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfilePage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\UserControls\PersonalAccUC.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Windows\EditInfoWindow.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Windows\MainMenuWindow.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Windows\RegistrationWindow.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\App.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\AuthorizationPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\AddPerAccPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\MeterReadingPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\NoPerAccPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\PaymentPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\PerAccPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\PerAccSubPages\TabPages\PerAccHistoryPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\PerAccSubPages\TabPages\PerAccRequisitesPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfilePage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\EmailEditPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\GenInfoEditPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\PasswordEditPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\TelephoneEditPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\RegistrationPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\UserControls\PersonalAccUC.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Windows\EditInfoWindow.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Windows\MainMenuWindow.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Windows\RegistrationWindow.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\App.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit_Content.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit_MarkupCompile.cache
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit_MarkupCompile.lref
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\Novaelectrosbit.exe.config
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\Novaelectrosbit.exe
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\Novaelectrosbit.pdb
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\BespokeFusion.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\EntityFramework.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\EntityFramework.SqlServer.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\MaterialDesignColors.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\QRCoder.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\Xceed.Wpf.AvalonDock.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\Xceed.Wpf.Toolkit.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\EntityFramework.xml
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\EntityFramework.SqlServer.xml
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\MaterialDesignColors.pdb
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\AuthorizationPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\AddPerAccPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\MeterReadingPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\PaymentPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\PerAccSubPages\TabPages\PerAccHistoryPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\EmailEditPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\GenInfoEditPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\PasswordEditPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\ProfileSubPages\TelephoneEditPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\RegistrationPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.g.resources
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.Properties.Resources.resources
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.GenerateResource.cache
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.CoreCompileInputs.cache
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.CopyComplete
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.exe
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.pdb

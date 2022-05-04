@@ -1,0 +1,54 @@
+﻿<Page x:Class="Novaelectrosbit.Pages.AuthorizationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:res="clr-namespace:Novaelectrosbit.Properties"
+      Height="360" Width="380" MinWidth="380" MinHeight="370" TextElement.FontSize="16"
+      Title="Вход в ЛКК НЭС" FontFamily="{StaticResource FontMain}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Label Content="Личный кабинет" FontSize="25" Margin="5" Foreground="{DynamicResource PrimaryHueMidBrush}" HorizontalAlignment="Left"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Вход" Margin="5,0,0,0"/>
+            <Label Grid.Column="1" Content="|" HorizontalAlignment="Right"/>
+            <Label Grid.Column="2">
+                <TextBlock x:Name="TbkRegistration" Text="Регистрация" Style="{StaticResource TBkHelpBtn}" MouseLeftButtonDown="TbkRegistration_MouseLeftButtonDown"/>
+            </Label>
+        </Grid>
+        <Label Grid.Row="2" Content="Телефон или E-mail *" Style="{StaticResource LDescription}"/>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" MaxWidth="500"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="TBoxLogin" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" Style="{StaticResource MaterialDesignOutlinedTextBox}" BorderBrush="Black" MaxLength="50" Margin="5,0" HorizontalAlignment="Left" MinWidth="300"/>
+            <materialDesign:PackIcon Grid.Column="1" Height="40" Width="30" ToolTip="Формат телефона 89XXXXXXXXX" Style="{StaticResource IconInfo}"/>
+        </Grid>
+        <Label Grid.Row="4" Content="Пароль *" Margin="5,20,0,0" Style="{StaticResource LDescription}"/>
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <PasswordBox x:Name="PBoxPassword" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" Style="{StaticResource MaterialDesignOutlinedPasswordBox}"
+                     BorderBrush="Black" MaxLength="50"/>
+            <TextBox x:Name="PBoxPasswordVisible" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="Обязательно для заполнения" Style="{StaticResource MaterialDesignOutlinedTextBox}" Visibility="Hidden"
+                     BorderBrush="Black" MaxLength="50"/>
+            <ToggleButton x:Name="TBDisplay" Grid.Row="0" Grid.Column="1" Content="{materialDesign:PackIcon Kind=EyeOff}" materialDesign:ToggleButtonAssist.OnContent="{materialDesign:PackIcon Kind=Eye}" Style="{StaticResource MaterialDesignActionAccentToggleButton}" BorderBrush="Black" Checked="TBDisplay_Checked" Unchecked="TBDisplay_Unchecked"/>
+        </Grid>
+        <Button x:Name="BtnEnter" Grid.Row="7" Margin="5,25" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="300" Content="ВОЙТИ" Style="{StaticResource MaterialDesignFlatMidBgButton}" Foreground="White" Click="BtnEnter_Click"/>
+    </Grid>
+</Page>

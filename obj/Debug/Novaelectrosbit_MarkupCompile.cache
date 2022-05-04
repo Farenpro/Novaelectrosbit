@@ -1,0 +1,20 @@
+﻿Novaelectrosbit
+
+
+winexe
+C#
+.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\
+Novaelectrosbit
+none
+false
+DEBUG;TRACE
+D:\MyWorks\Айрат работа\Novaelectrosbit\App.xaml
+191854420524
+21219829441
+54583461126
+32-2146998926
+Pages\AuthorizationPage.xaml;Pages\MainPage.xaml;Pages\MainSubPages\AddPerAccPage.xaml;Pages\MainSubPages\MeterReadingPage.xaml;Pages\MainSubPages\NoPerAccPage.xaml;Pages\MainSubPages\PaymentPage.xaml;Pages\MainSubPages\PerAccPage.xaml;Pages\MainSubPages\PerAccSubPages\TabPages\PerAccHistoryPage.xaml;Pages\MainSubPages\PerAccSubPages\TabPages\PerAccRequisitesPage.xaml;Pages\MainSubPages\ProfilePage.xaml;Pages\MainSubPages\ProfileSubPages\EmailEditPage.xaml;Pages\MainSubPages\ProfileSubPages\GenInfoEditPage.xaml;Pages\MainSubPages\ProfileSubPages\PasswordEditPage.xaml;Pages\MainSubPages\ProfileSubPages\TelephoneEditPage.xaml;Pages\RegistrationPage.xaml;UserControls\PersonalAccUC.xaml;Windows\EditInfoWindow.xaml;Windows\MainMenuWindow.xaml;Windows\RegistrationWindow.xaml;
+
+False
+
