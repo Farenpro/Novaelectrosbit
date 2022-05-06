@@ -111,7 +111,7 @@ namespace Novaelectrosbit.Pages
             if (App.Database.RequisitesPayments.Count() > 0)
                 FD = App.Database.RequisitesPayments.Select(p => p.ID).Max() + 1;
             if (App.CurPay.Requisite.RequisitesPayments.Count > 0)
-                balance = App.CurPay.Requisite.RequisitesPayments.Select(p => p.BalanceAfterPay).Last();
+                balance = App.CurPay.Requisite.RequisitesPayments.Select(p => p.BalanceAfterPay).LastOrDefault();
             RequisitesPayment requisitesPayment = new RequisitesPayment()
             {
                 ID = FD,

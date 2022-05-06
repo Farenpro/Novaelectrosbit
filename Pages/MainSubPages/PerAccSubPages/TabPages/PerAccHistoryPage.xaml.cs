@@ -117,7 +117,7 @@ namespace Novaelectrosbit.Pages.MainSubPages.PerAccSubPages.TabPages
             document.Bookmarks["NextCheckDate"].Range.Text = payment.Requisite.Counter.MPIEndDateStr;
             document.Bookmarks["Expenditure"].Range.Text = payment.Expenditure;
             document.Bookmarks["InfoStr"].Range.Text = payment.InfoStr;
-            document.Bookmarks["OnStartFinal"].Range.Text = Math.Abs(payment.BalanceAfterPay).ToString();
+            document.Bookmarks["OnStartFinal"].Range.Text = Math.Abs(payment.LastBalance).ToString();
             document.Bookmarks["ExpType"].Range.Text = payment.ExpType;
             document.Bookmarks["ExpPeriodNow"].Range.Text = payment.ExpPeriodNow;
             document.Bookmarks["TariffPrice"].Range.Text = payment.Requisite.Tariff.Price.ToString();
@@ -129,9 +129,9 @@ namespace Novaelectrosbit.Pages.MainSubPages.PerAccSubPages.TabPages
             document.Bookmarks["Recalc"].Range.Text = "-";
             document.Bookmarks["Peny"].Range.Text = "-";
             document.Bookmarks["Payment"].Range.Text = payment.Payment;
-            document.Bookmarks["Final"].Range.Text = payment.Final;
-            document.Bookmarks["LastPaymentDate"].Range.Text = payment.Requisite.RequisitesPayments.Where(p => p.PayDate < payment.PayDate).FirstOrDefault().PayDate.ToString("dd.MM.yyyy");
-            document.Bookmarks["LastPayment"].Range.Text = App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < payment.PayDate).FirstOrDefault().PayAmount.ToString();
+            document.Bookmarks["Final"].Range.Text = payment.FinalStr;
+            document.Bookmarks["LastPaymentDate"].Range.Text = payment.LastPayDate;
+            document.Bookmarks["LastPayment"].Range.Text = payment.LastPay.ToString();
             app.Visible = true;
         }
         private void GenerateQR()

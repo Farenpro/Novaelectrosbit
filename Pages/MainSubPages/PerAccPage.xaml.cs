@@ -29,7 +29,7 @@ namespace Novaelectrosbit.Pages.MainSubPages
             InitializeComponent();
             App.CurPay = p;
             this.DataContext = p;
-            if (DateTime.Now.Day > 26)
+            if (DateTime.Now.Day > 26 || App.CurPay.Requisite.Counter.MeterReadings.Select(p=>p.IndicationsDate).Last().Month == DateTime.Now.Month)
                 BtnTransferMR.IsEnabled = false;
         }
 

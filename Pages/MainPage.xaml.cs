@@ -47,7 +47,7 @@ namespace Novaelectrosbit.Pages
                     MainPageFrame.Navigate(new PaymentPage());
                     break;
                 case 3:
-
+                    MainPageFrame.Navigate(new MeterReadingPage());
                     break;
             }
         }

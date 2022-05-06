@@ -67,8 +67,8 @@ namespace Novaelectrosbit.Models
         {
             get
             {
-                if (BalanceAfterPay <= 0)
-                    return $"{Math.Truncate(Math.Abs(BalanceAfterPay))} р. {Math.Abs(BalanceAfterPay) - Math.Truncate(Math.Abs(BalanceAfterPay))} к.";
+                if (Final < 0)
+                    return $"{Math.Truncate(Math.Abs(Final))} р. {Math.Round(Math.Abs(Final) - Math.Truncate(Math.Abs(Final)),2)} к.";
                 else
                     return "0 р. 00 к.";
             }
@@ -77,9 +77,9 @@ namespace Novaelectrosbit.Models
         {
             get
             {
-                if (BalanceAfterPay < 0)
+                if (LastBalance < 0)
                     return $"На начало расчётного периода сумма задолженности составляет (руб.):";
-                else if (BalanceAfterPay == 0)
+                else if (LastBalance == 0)
                     return "На начало расчётного периода баланс составляет (руб.)";
                 else
                     return "На начало расчётного периода сумма переплаты составляет (руб.)";
@@ -89,20 +89,28 @@ namespace Novaelectrosbit.Models
         {
             get
             {
-                if (BalanceAfterPay < 0)
+                if (LastBalance < 0)
                     return Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).FirstOrDefault().PayAmount.ToString();
                 else
                     return "0,00";
             }
         }
-        public string Final
+        public double Final
         {
             get
             {
                 if (Payment != "0,00")
-                    return (BalanceAfterPay - Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).FirstOrDefault().PayAmount - Convert.ToDouble(PriceTariff)).ToString();
+                    return LastBalance - Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).FirstOrDefault().PayAmount - Convert.ToDouble(PriceTariff);
                 else
-                    return (BalanceAfterPay - Convert.ToDouble(PriceTariff)).ToString();
+                    return LastBalance - Convert.ToDouble(PriceTariff);
+            }
+        }
+
+        public string FinalStr
+        {
+            get
+            {
+                return Math.Abs(Final).ToString();
             }
         }
         public string LastMR
@@ -165,7 +173,7 @@ namespace Novaelectrosbit.Models
             {
                 if (LastMR != "-" && NowMR != "-")
                 {
-                    if (Convert.ToDateTime(LastMRDate) <= Convert.ToDateTime(LastMRDate).AddMonths(-1))
+                    if (Convert.ToDateTime(LastMRDate) <= Convert.ToDateTime(NowMRDate).AddMonths(-1))
                         return "П";
                     else
                         return "С,П";
@@ -195,6 +203,27 @@ namespace Novaelectrosbit.Models
             get
             {
                 return $"{Convert.ToDouble(Requisite.Tariff.Price) * Convert.ToDouble(ExpPeriodNow)}";
+            }
+        }
+        public double LastPay
+        {
+            get
+            {
+                return App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).LastOrDefault().PayAmount;
+            }
+        }
+        public string LastPayDate
+        {
+            get
+            {
+                return App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).LastOrDefault().PayDate.ToString("dd.MM.yyyy");
+            }
+        }
+        public double LastBalance
+        {
+            get
+            {
+                return App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).LastOrDefault().BalanceAfterPay;
             }
         }
     }

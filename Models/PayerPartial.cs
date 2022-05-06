@@ -52,7 +52,7 @@ namespace Novaelectrosbit.Models
             get
             {
                 if (Requisite.RequisitesPayments.Count() > 0)
-                    return Requisite.RequisitesPayments.OrderBy(p=>p.PayDate).Last().BalanceAfterPay;
+                    return Requisite.RequisitesPayments.OrderBy(p=>p.PayDate).LastOrDefault().BalanceAfterPay;
                 else
                     return 0;
             }
@@ -79,6 +79,41 @@ namespace Novaelectrosbit.Models
                     return Brushes.White;
                 else
                     return Brushes.Red;
+            }
+        }
+        public string CounterNum
+        {
+            get
+            {
+                return Requisite.CounterNumber;
+            }
+        }
+        public string TariffName
+        {
+            get
+            {
+                return Requisite.Tariff.Name;
+            }
+        }
+
+        public string LastMRDate
+        {
+            get
+            {
+                if (Requisite.Counter.MeterReadings.Count() > 0)
+                    return Requisite.Counter.MeterReadings.Select(p=>p.IndicationsDate).LastOrDefault().ToString("dd.MM.yyyy");
+                else
+                    return "-";
+            }
+        }
+        public string LastMR
+        {
+            get
+            {
+                if (Requisite.Counter.MeterReadings.Count() > 0)
+                    return Requisite.Counter.MeterReadings.Select(p=>p.Indications).LastOrDefault().ToString();
+                else
+                    return "-";
             }
         }
     }
