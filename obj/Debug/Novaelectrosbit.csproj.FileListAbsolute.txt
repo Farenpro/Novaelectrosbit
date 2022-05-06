@@ -257,3 +257,10 @@ D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.csp
 D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.csproj.CopyComplete
 D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.exe
 D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Novaelectrosbit.pdb
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\PaySimulatePage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\PaySimulatePage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Windows\PayWindow.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Windows\PayWindow.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\WpfAnimatedGif.dll
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\WpfAnimatedGif.pdb
+D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\WpfAnimatedGif.xml

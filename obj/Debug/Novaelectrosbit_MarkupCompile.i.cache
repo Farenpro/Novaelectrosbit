@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\MyWorks\Айрат работа\Novaelectrosbit\App.xaml
-191854420524
+21-1314553369
 21219829441
-55-258898241
-32-2146998926
-Pages\AuthorizationPage.xaml;Pages\MainPage.xaml;Pages\MainSubPages\AddPerAccPage.xaml;Pages\MainSubPages\MeterReadingPage.xaml;Pages\MainSubPages\NoPerAccPage.xaml;Pages\MainSubPages\PaymentPage.xaml;Pages\MainSubPages\PerAccPage.xaml;Pages\MainSubPages\PerAccSubPages\TabPages\PerAccHistoryPage.xaml;Pages\MainSubPages\PerAccSubPages\TabPages\PerAccRequisitesPage.xaml;Pages\MainSubPages\ProfilePage.xaml;Pages\MainSubPages\ProfileSubPages\EmailEditPage.xaml;Pages\MainSubPages\ProfileSubPages\GenInfoEditPage.xaml;Pages\MainSubPages\ProfileSubPages\PasswordEditPage.xaml;Pages\MainSubPages\ProfileSubPages\TelephoneEditPage.xaml;Pages\RegistrationPage.xaml;UserControls\PersonalAccUC.xaml;Windows\EditInfoWindow.xaml;Windows\MainMenuWindow.xaml;Windows\RegistrationWindow.xaml;
+57-1273472439
+331203758100
+Pages\AuthorizationPage.xaml;Pages\MainPage.xaml;Pages\MainSubPages\AddPerAccPage.xaml;Pages\MainSubPages\MeterReadingPage.xaml;Pages\MainSubPages\NoPerAccPage.xaml;Pages\MainSubPages\PaymentPage.xaml;Pages\PaySimulatePage.xaml;Pages\MainSubPages\PerAccPage.xaml;Pages\MainSubPages\PerAccSubPages\TabPages\PerAccHistoryPage.xaml;Pages\MainSubPages\PerAccSubPages\TabPages\PerAccRequisitesPage.xaml;Pages\MainSubPages\ProfilePage.xaml;Pages\MainSubPages\ProfileSubPages\EmailEditPage.xaml;Pages\MainSubPages\ProfileSubPages\GenInfoEditPage.xaml;Pages\MainSubPages\ProfileSubPages\PasswordEditPage.xaml;Pages\MainSubPages\ProfileSubPages\TelephoneEditPage.xaml;Pages\RegistrationPage.xaml;UserControls\PersonalAccUC.xaml;Windows\EditInfoWindow.xaml;Windows\MainMenuWindow.xaml;Windows\PayWindow.xaml;Windows\RegistrationWindow.xaml;
 
-True
+False
 

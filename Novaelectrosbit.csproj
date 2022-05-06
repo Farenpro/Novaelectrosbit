@@ -96,6 +96,9 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9e7cd3b544a090dc, processorArchitecture=MSIL">
+      <HintPath>packages\WpfAnimatedGif.2.0.2\lib\net40\WpfAnimatedGif.dll</HintPath>
+    </Reference>
     <Reference Include="Xceed.Wpf.AvalonDock, Version=4.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
       <HintPath>packages\Extended.Wpf.Toolkit.4.3.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
     </Reference>
@@ -222,6 +225,9 @@
     <Compile Include="Pages\MainSubPages\PaymentPage.xaml.cs">
       <DependentUpon>PaymentPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PaySimulatePage.xaml.cs">
+      <DependentUpon>PaySimulatePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MainSubPages\PerAccPage.xaml.cs">
       <DependentUpon>PerAccPage.xaml</DependentUpon>
     </Compile>
@@ -258,6 +264,9 @@
     <Compile Include="Windows\MainMenuWindow.xaml.cs">
       <DependentUpon>MainMenuWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\PayWindow.xaml.cs">
+      <DependentUpon>PayWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
@@ -292,6 +301,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Resources\ЧекШаблон.docx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -323,6 +333,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MainSubPages\PaymentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PaySimulatePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -371,6 +385,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\MainMenuWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\PayWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -440,6 +458,17 @@
       <DependentUpon>BaseModel.edmx</DependentUpon>
       <LastGenOutput>BaseModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\PayLoading.gif" />
+    <Resource Include="Resources\PayComplete.gif" />
+    <Resource Include="Resources\BankLogos\MIRCheckLOGO.png" />
+    <Resource Include="Resources\BankLogos\MCCheckLOGO.png" />
+    <Resource Include="Resources\BankLogos\PCICheckLOGO.png" />
+    <Resource Include="Resources\BankLogos\VISACheckLOGO.png" />
+    <Resource Include="Resources\BankLogos\VISALOGO.png" />
+    <Resource Include="Resources\BankLogos\MAESTROLOGO.png" />
+    <Resource Include="Resources\BankLogos\MCLOGO.png" />
+    <Resource Include="Resources\BankLogos\MIRLOGO.png" />
+    <Resource Include="Resources\BankLogos\GPBLOGO.png" />
     <Resource Include="Resources\NovaelectrosbitShortLOGOBlack.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -84,6 +84,15 @@
             <Style TargetType="Grid" x:Key="GridRightInfo">
                 <Setter Property="Margin" Value="0,0,20,0"/>
             </Style>
+            <Style TargetType="Label" x:Key="LPayInfo">
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="Margin" Value="10,2,0,0"/>
+                <Setter Property="FontSize" Value="8"/>
+            </Style>
+            <Style TargetType="Label" x:Key="LPayInfo2">
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="FontSize" Value="8"/>
+            </Style>
             <ResourceDictionary.MergedDictionaries>
                 <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="Orange" SecondaryColor="Blue" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
