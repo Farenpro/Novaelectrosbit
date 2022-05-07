@@ -207,6 +207,9 @@
   <data name="Description" xml:space="preserve">
     <value>Описание:</value>
   </data>
+  <data name="Electro" xml:space="preserve">
+    <value>Электроэнергия</value>
+  </data>
   <data name="Email2" xml:space="preserve">
     <value>Email</value>
   </data>

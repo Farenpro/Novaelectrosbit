@@ -331,6 +331,15 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Электроэнергия.
+        /// </summary>
+        public static string Electro {
+            get {
+                return ResourceManager.GetString("Electro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Email.
         /// </summary>
         public static string Email2 {

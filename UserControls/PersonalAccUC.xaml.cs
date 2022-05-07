@@ -1,6 +1,4 @@
 ﻿using Novaelectrosbit.Models;
-using Novaelectrosbit.Pages;
-using Novaelectrosbit.Windows;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,7 +16,7 @@ namespace Novaelectrosbit.UserControls
         {
             InitializeComponent();
             ThisPayer = payer;
-            this.DataContext = payer;
+            DataContext = payer;
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
