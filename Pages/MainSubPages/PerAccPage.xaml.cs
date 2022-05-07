@@ -2,20 +2,9 @@
 using Novaelectrosbit.Pages.MainSubPages.PerAccSubPages.TabPages;
 using Novaelectrosbit.Windows;
 using System;
-using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Novaelectrosbit.Pages.MainSubPages
 {
@@ -28,7 +17,7 @@ namespace Novaelectrosbit.Pages.MainSubPages
         {
             InitializeComponent();
             App.CurPay = p;
-            this.DataContext = p;
+            DataContext = p;
             if (DateTime.Now.Day > 26 || App.CurPay.Requisite.Counter.MeterReadings.Select(p=>p.IndicationsDate).Last().Month == DateTime.Now.Month)
                 BtnTransferMR.IsEnabled = false;
         }
@@ -37,7 +26,7 @@ namespace Novaelectrosbit.Pages.MainSubPages
         {
             App.Database = new NovaelectrosbitEntities();
             App.CurPay = App.Database.Payers.Where(p => App.CurPay.ID == p.ID).SingleOrDefault();
-            this.DataContext = App.CurPay;
+            DataContext = App.CurPay;
         }
         private void TCSubPages_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

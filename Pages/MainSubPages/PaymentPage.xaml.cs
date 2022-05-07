@@ -1,19 +1,9 @@
 ﻿using Novaelectrosbit.Classes;
 using Novaelectrosbit.Windows;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Novaelectrosbit.Pages.MainSubPages
 {
@@ -27,7 +17,7 @@ namespace Novaelectrosbit.Pages.MainSubPages
         {
             InitializeComponent();
             PaySumm = 0;
-            this.DataContext = App.CurPay;
+            DataContext = App.CurPay;
             TBoxEmail.DataContext = App.CurUser;
         }
 
@@ -41,7 +31,7 @@ namespace Novaelectrosbit.Pages.MainSubPages
 
         private void BtnMainPageBack_Click(object sender, RoutedEventArgs e)
         {
-            (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage());
+            App.CurUserDefaultPage();
         }
 
         private void TBoxPaySumm_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -50,6 +40,16 @@ namespace Novaelectrosbit.Pages.MainSubPages
                 e.Handled = false;
             else
                 e.Handled = true;
+        }
+
+        private void CBoxAgree_Checked(object sender, RoutedEventArgs e)
+        {
+            BtnPay.IsEnabled = true;
+        }
+
+        private void CBoxAgree_Unchecked(object sender, RoutedEventArgs e)
+        {
+            BtnPay.IsEnabled = false;
         }
 
         private void BtnPay_Click(object sender, RoutedEventArgs e)
@@ -61,26 +61,15 @@ namespace Novaelectrosbit.Pages.MainSubPages
                     {
                         PayWindow payWindow = new PayWindow(Convert.ToDouble(TBoxPaySumm.Text), TBoxEmail.Text);
                         payWindow.ShowDialog();
-                        (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage());
+                        App.CurUserDefaultPage();
                     }
                     else
-                        App.Messages.ShowError("Проверьте правильность введенной суммы. " +
-                            "Она не может быть меньше 1, не должна начинаться с 0, превышать 9'999'999 млн. руб., а также не может содержать 3 цифры после запятой");
+                        App.Messages.ShowError(Properties.Resources.SummError);
                 else
                     App.Messages.ShowError(Properties.Resources.EmailError);
             }
             else
                 App.Messages.ShowError(Properties.Resources.NeedToFillRequired);
-        }
-
-        private void CBoxAgree_Checked(object sender, RoutedEventArgs e)
-        {
-            BtnPay.IsEnabled = true;
-        }
-
-        private void CBoxAgree_Unchecked(object sender, RoutedEventArgs e)
-        {
-            BtnPay.IsEnabled = false;
         }
     }
 }

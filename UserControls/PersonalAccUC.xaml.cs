@@ -28,13 +28,13 @@ namespace Novaelectrosbit.UserControls
                 Payer p = App.Database.Payers.Where(p => p.UserID == App.CurUser.ID && p.RequisitesPersonalAccount == TBkPerAcc.Text).SingleOrDefault();
                 App.Database.Payers.Remove(p);
                 App.Database.SaveChanges();
-                (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage());
+                App.CurUserDefaultPage();
             }
         }
 
         private void GridPerAcc_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage());
+            App.CurUserDefaultPage();
         }
     }
 }

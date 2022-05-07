@@ -17,7 +17,7 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
             InitializeComponent();
             window = Application.Current.Windows.OfType<EditInfoWindow>().SingleOrDefault();
             window.DataContext = this;
-            this.DataContext = App.CurUser;
+            DataContext = App.CurUser;
         }
 
         private void TBkCancel_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
@@ -36,13 +36,14 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
                         App.CurUser.Email = TBoxEmail.Text;
                         App.Database.SaveChanges();
                         window.Close();
+                        App.Messages.ShowInfo(Properties.Resources.EmailCongrats);
                         (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage(0));
                     }
                     else
                         App.Messages.ShowError(Properties.Resources.EmailError);
                 }
                 else
-                    App.Messages.ShowError("Пользователь с таким E-mail'ом уже существует");
+                    App.Messages.ShowError(Properties.Resources.UserEmailExists);
             }
             else
                 App.Messages.ShowError(Properties.Resources.NeedToFillRequired);

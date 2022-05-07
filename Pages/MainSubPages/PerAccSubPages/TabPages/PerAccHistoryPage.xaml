@@ -15,29 +15,29 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <StackPanel Background="{StaticResource SweetWhiteBlue}">
-            <Label Content="История" Style="{StaticResource LHead}"/>
+            <Label Content="{x:Static res:Resources.History}" Style="{StaticResource LHead}"/>
         </StackPanel>
-        <TabControl x:Name="TCSubPages" Grid.Row="1" materialDesign:ColorZoneAssist.Mode="PrimaryMid" materialDesign:ColorZoneAssist.Background="White" SelectionChanged="TCSubPages_SelectionChanged">
-            <TabItem Header="Показания"/>
-            <TabItem Header="Оплаты"/>
-            <TabItem Header="Квитанции"/>
+        <TabControl x:Name="TCSubPages" Grid.Row="1" SelectionChanged="TCSubPages_SelectionChanged" materialDesign:ColorZoneAssist.Mode="PrimaryMid" materialDesign:ColorZoneAssist.Background="White">
+            <TabItem Header="{x:Static res:Resources.Indications}"/>
+            <TabItem Header="{x:Static res:Resources.Payments}"/>
+            <TabItem Header="{x:Static res:Resources.Receipts}"/>
         </TabControl>
         <Grid Grid.Row="2" Background="Black"/>
-        <ComboBox x:Name="CBoxPeriod" Grid.Row="3" Style="{DynamicResource MaterialDesignOutlinedComboBox}" BorderBrush="Black" Margin="5,10,5,10" SelectedIndex="0" SelectionChanged="CBoxPeriod_SelectionChanged">
-            <ComboBoxItem Content="За последние 3 месяца"/>
-            <ComboBoxItem Content="За последние 6 месяцев"/>
-            <ComboBoxItem Content="За год"/>
-            <ComboBoxItem Content="За все время"/>
+        <ComboBox x:Name="CBoxPeriod" Grid.Row="3" Margin="5,10,5,10" SelectedIndex="0" SelectionChanged="CBoxPeriod_SelectionChanged" BorderBrush="Black" Style="{DynamicResource MaterialDesignOutlinedComboBox}">
+            <ComboBoxItem Content="{x:Static res:Resources.Last3Months}"/>
+            <ComboBoxItem Content="{x:Static res:Resources.Last6Months}"/>
+            <ComboBoxItem Content="{x:Static res:Resources.LastYear}"/>
+            <ComboBoxItem Content="{x:Static res:Resources.AllTime}"/>
         </ComboBox>
         <Grid Grid.Row="4" Background="LightGray"/>
-        <Label x:Name="LNoData" Grid.Row="5" Content="Данных нет" Style="{StaticResource LDescription}" Visibility="Collapsed"/>
-        <DataGrid x:Name="DGMR" Grid.Row="5" Background="White" Foreground="Orange" Margin="5" HeadersVisibility="None" AutoGenerateColumns="False" CanUserAddRows="False" SelectionUnit="Cell"
+        <Label x:Name="LNoData" Grid.Row="5" Content="{x:Static res:Resources.NoData}" Visibility="Collapsed" Style="{StaticResource LDescription}"/>
+        <DataGrid x:Name="DGMR" Grid.Row="5" Margin="5" Background="White" Foreground="Orange" HeadersVisibility="None" AutoGenerateColumns="False" CanUserAddRows="False" SelectionUnit="Cell"
                   CanUserDeleteRows="False" IsReadOnly="True" Visibility="Collapsed">
             <DataGrid.Columns>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <materialDesign:PackIcon Kind="CalendarRange" Foreground="{DynamicResource SecondaryHueMidBrush}" Width="auto"/>
+                            <materialDesign:PackIcon Width="auto" Kind="CalendarRange" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -55,13 +55,13 @@
                 </Style>
             </DataGrid.CellStyle>
         </DataGrid>
-        <DataGrid x:Name="DGPayments" Grid.Row="5" Background="White" Foreground="Orange" Margin="5" HeadersVisibility="None" AutoGenerateColumns="False" CanUserAddRows="False" SelectionUnit="Cell"
+        <DataGrid x:Name="DGPayments" Grid.Row="5" Margin="5" Background="White" Foreground="Orange"  HeadersVisibility="None" AutoGenerateColumns="False" CanUserAddRows="False" SelectionUnit="Cell"
                   CanUserDeleteRows="False" IsReadOnly="True" Visibility="Collapsed">
             <DataGrid.Columns>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <materialDesign:PackIcon Kind="CalendarRange" Foreground="{DynamicResource SecondaryHueMidBrush}" Width="auto"/>
+                            <materialDesign:PackIcon Width="auto" Kind="CalendarRange" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -79,7 +79,7 @@
                 </Style>
             </DataGrid.CellStyle>
         </DataGrid>
-        <DataGrid x:Name="DGReceipts" Grid.Row="5" Background="White" Foreground="Orange" Margin="5" HeadersVisibility="None" AutoGenerateColumns="False" CanUserAddRows="False" SelectionUnit="FullRow"
+        <DataGrid x:Name="DGReceipts" Grid.Row="5" Margin="5" Background="White" Foreground="Orange" HeadersVisibility="None" AutoGenerateColumns="False" CanUserAddRows="False" SelectionUnit="FullRow"
                   CanUserDeleteRows="False" IsReadOnly="True" Visibility="Collapsed" SelectedValuePath="PayDate">
             <DataGrid.Columns>
                 <DataGridTemplateColumn>
@@ -100,8 +100,8 @@
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button x:Name="BtnPrintReceipt" Content="ПЕЧАТЬ КВИТАНЦИИ" Foreground="{DynamicResource SecondaryHueMidBrush}" BorderBrush="Transparent" BorderThickness="0" Background="White" 
-                                    materialDesign:ShadowAssist.ShadowDepth="Depth0" Margin="5" VerticalAlignment="Top" Click="BtnPrintReceipt_Click"/>
+                            <Button x:Name="BtnPrintReceipt" Margin="5" VerticalAlignment="Top" Content="{x:Static res:Resources.PrintReceipt}" Click="BtnPrintReceipt_Click" Foreground="{DynamicResource SecondaryHueMidBrush}" BorderBrush="Transparent" BorderThickness="0" Background="White" 
+                                    materialDesign:ShadowAssist.ShadowDepth="Depth0"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

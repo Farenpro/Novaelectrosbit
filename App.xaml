@@ -93,6 +93,19 @@
                 <Setter Property="HorizontalAlignment" Value="Left"/>
                 <Setter Property="FontSize" Value="8"/>
             </Style>
+            <Style TargetType="Image" x:Key="ImgPayLogo">
+                <Setter Property="Width" Value="30"/>
+                <Setter Property="Margin" Value="15"/>
+            </Style>
+            <Style TargetType="StackPanel" x:Key="SPBtnsPay">
+                <Setter Property="Margin" Value="0,20,0,0"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Orientation" Value="Horizontal"/>
+            </Style>
+            <Style TargetType="Image" x:Key="ImgPayLogo2">
+                <Setter Property="Width" Value="60"/>
+                <Setter Property="Margin" Value="15"/>
+            </Style>
             <ResourceDictionary.MergedDictionaries>
                 <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="Orange" SecondaryColor="Blue" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />

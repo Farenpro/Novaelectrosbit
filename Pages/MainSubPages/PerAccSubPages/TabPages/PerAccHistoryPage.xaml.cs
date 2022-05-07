@@ -1,21 +1,10 @@
-﻿using Novaelectrosbit.Models;
-using QRCoder;
+﻿using Novaelectrosbit.Classes;
+using Novaelectrosbit.Models;
 using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Word = Microsoft.Office.Interop.Word;
 
 namespace Novaelectrosbit.Pages.MainSubPages.PerAccSubPages.TabPages
@@ -45,11 +34,11 @@ namespace Novaelectrosbit.Pages.MainSubPages.PerAccSubPages.TabPages
                 switch (TCSubPages.SelectedIndex)
                 {
                     case 0:
-                        DGMR.ItemsSource = App.CurPay.Requisite.Counter.MeterReadings.OrderByDescending(p=>p.IndicationsDate).Where(p => p.IndicationsDate >= SelectedDate).ToList();
+                        DGMR.ItemsSource = App.CurPay.Requisite.Counter.MeterReadings.OrderByDescending(p => p.IndicationsDate).Where(p => p.IndicationsDate >= SelectedDate).ToList();
                         HideShow(DGMR);
                         break;
                     case 1:
-                        DGPayments.ItemsSource = App.CurPay.Requisite.RequisitesPayments.OrderByDescending(p=>p.PayDate).Where(p => p.PayDate >= SelectedDate && p.PaymentTypeID == 1).ToList();
+                        DGPayments.ItemsSource = App.CurPay.Requisite.RequisitesPayments.OrderByDescending(p => p.PayDate).Where(p => p.PayDate >= SelectedDate && p.PaymentTypeID == 1).ToList();
                         HideShow(DGPayments);
                         break;
                     case 2:
@@ -96,7 +85,15 @@ namespace Novaelectrosbit.Pages.MainSubPages.PerAccSubPages.TabPages
             Word.Application app = new Word.Application();
             Word.Document document = app.Documents.Add(path);
             payment = App.Database.RequisitesPayments.Where(p => p.PayDate.ToString() == DGReceipts.SelectedValue.ToString()).SingleOrDefault();
-            GenerateQR();
+            Random r = new Random();
+            SubFunctions.GenerateQR($"Name=ООО \"НоваЭлектроСбыт\",\n" +
+                $"PersonalAcc={App.CurPay.RequisitesPersonalAccount}\n" +
+                $"BankName=Ф-л Банка ГПБ (АО) в г. Томске\n" +
+                $"RCBIC=046902758\n" +
+                $"CorrAcc=30101810800000000758\n" +
+                $"Sum={payment.Price}\n" +
+                $"PaymPeriod={payment.PayDateStr2}\n" +
+                $"TechCode={r.Next(100, 1000000)}");
             document.Bookmarks["Period2"].Range.Text = payment.PayDateStr2;
             document.Bookmarks["PerAcc"].Range.Text = payment.PersonalAccount;
             document.Bookmarks["CounterNum"].Range.Text = payment.Requisite.CounterNumber;
@@ -133,22 +130,6 @@ namespace Novaelectrosbit.Pages.MainSubPages.PerAccSubPages.TabPages
             document.Bookmarks["LastPaymentDate"].Range.Text = payment.LastPayDate;
             document.Bookmarks["LastPayment"].Range.Text = payment.LastPay.ToString();
             app.Visible = true;
-        }
-        private void GenerateQR()
-        {
-            Random r = new Random();
-            QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qrData = qrGenerator.CreateQrCode($"Name=ООО \"НоваЭлектроСбыт\",\n" +
-                $"PersonalAcc={App.CurPay.RequisitesPersonalAccount}\n" +
-                $"BankName=Ф-л Банка ГПБ (АО) в г. Томске\n" +
-                $"RCBIC=046902758\n" +
-                $"CorrAcc=30101810800000000758\n" +
-                $"Sum={payment.Price}\n" +
-                $"PaymPeriod={payment.PayDateStr2}\n" +
-                $"TechCode={r.Next(100,1000000)}", QRCodeGenerator.ECCLevel.Q);
-            QRCode qr = new QRCode(qrData);
-            Bitmap qrImage = qr.GetGraphic(1);
-            qrImage.Save("qrtemp.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
         }
     }
 }

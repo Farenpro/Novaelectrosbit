@@ -1,7 +1,6 @@
-﻿using System.Linq;
+﻿using Novaelectrosbit.Windows;
 using System.Windows;
 using System.Windows.Controls;
-using Novaelectrosbit.Windows;
 
 namespace Novaelectrosbit.Pages.MainSubPages
 {
@@ -13,14 +12,19 @@ namespace Novaelectrosbit.Pages.MainSubPages
         public ProfilePage()
         {
             InitializeComponent();
-            this.DataContext = App.CurUser;
+            DataContext = App.CurUser;
             LTelephone.Text = App.CurUser.Telephone.Substring(1);
             PBoxPassword.Password = App.CurUser.Password;
+        }
+        private void ShowEditWindow(int type)
+        {
+            EditInfoWindow editInfoWindow = new EditInfoWindow(type);
+            editInfoWindow.ShowDialog();
         }
 
         private void BtnMainPageBack_Click(object sender, RoutedEventArgs e)
         {
-            (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage());
+            App.CurUserDefaultPage();
         }
 
         private void BtnProfileEdit_Click(object sender, RoutedEventArgs e)
@@ -43,10 +47,6 @@ namespace Novaelectrosbit.Pages.MainSubPages
             ShowEditWindow(4);
         }
 
-        private void ShowEditWindow(int type)
-        {
-            EditInfoWindow editInfoWindow = new EditInfoWindow(type);
-            editInfoWindow.ShowDialog();
-        }
+
     }
 }

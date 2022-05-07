@@ -126,6 +126,7 @@
     </Compile>
     <Compile Include="Classes\Checking.cs" />
     <Compile Include="Classes\MessagesClass.cs" />
+    <Compile Include="Classes\SubFunctions.cs" />
     <Compile Include="Models\BaseModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -207,6 +208,9 @@
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UserPartial.cs" />
+    <Compile Include="Pages\AdminPage.xaml.cs">
+      <DependentUpon>AdminPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AuthorizationPage.xaml.cs">
       <DependentUpon>AuthorizationPage.xaml</DependentUpon>
     </Compile>
@@ -224,6 +228,9 @@
     </Compile>
     <Compile Include="Pages\MainSubPages\PaymentPage.xaml.cs">
       <DependentUpon>PaymentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MeterInstallerPage.xaml.cs">
+      <DependentUpon>MeterInstallerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PaySimulatePage.xaml.cs">
       <DependentUpon>PaySimulatePage.xaml</DependentUpon>
@@ -312,6 +319,10 @@
     <None Include="Resources\НЭСШаблон.docx" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Pages\AdminPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AuthorizationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -333,6 +344,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MainSubPages\PaymentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MeterInstallerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

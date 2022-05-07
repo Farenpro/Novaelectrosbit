@@ -12,6 +12,7 @@
                     return $"{Name} {Middlename}";
             }
         }
+
         public string FI
         {
             get
@@ -22,6 +23,7 @@
                     return Name;
             }
         }
+
         public string StrGender
         {
             get
@@ -33,6 +35,7 @@
                 else return null;
             }
         }
+
         public int IntGenderID
         {
             get
@@ -43,6 +46,7 @@
                     return -1;
             }
         }
+
         public string DTBirthdate
         {
             get

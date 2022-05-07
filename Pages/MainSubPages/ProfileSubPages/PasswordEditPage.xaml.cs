@@ -18,58 +18,39 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
             window = Application.Current.Windows.OfType<EditInfoWindow>().SingleOrDefault();
             window.DataContext = this;
         }
-
-        private void FieldsShowHide(TextBox tbox, PasswordBox pbox, bool check)
+        private void TBkCancel_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            if (check)
-            {
-                tbox.Text = pbox.Password;
-                pbox.Clear();
-                tbox.Visibility = Visibility.Visible;
-                pbox.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                pbox.Password = tbox.Text;
-                tbox.Text = string.Empty;
-                tbox.Visibility = Visibility.Collapsed;
-                pbox.Visibility = Visibility.Visible;
-            }
+            window.Close();
         }
 
         private void TBDisplay_Checked(object sender, RoutedEventArgs e)
         {
-            FieldsShowHide(PBoxPasswordVisible, PBoxPassword, true);
+            SubFunctions.TBShowHide(PBoxPasswordVisible, PBoxPassword, true);
         }
 
         private void TBDisplay_Unchecked(object sender, RoutedEventArgs e)
         {
-            FieldsShowHide(PBoxPasswordVisible, PBoxPassword, false);
+            SubFunctions.TBShowHide(PBoxPasswordVisible, PBoxPassword, false);
         }
 
         private void TBDisplay2_Checked(object sender, RoutedEventArgs e)
         {
-            FieldsShowHide(PBoxNewPasswordVisible, PBoxNewPassword, true);
+            SubFunctions.TBShowHide(PBoxNewPasswordVisible, PBoxNewPassword, true);
         }
 
         private void TBDisplay2_Unchecked(object sender, RoutedEventArgs e)
         {
-            FieldsShowHide(PBoxNewPasswordVisible, PBoxNewPassword, false);
+            SubFunctions.TBShowHide(PBoxNewPasswordVisible, PBoxNewPassword, false);
         }
 
         private void TBDisplay3_Checked(object sender, RoutedEventArgs e)
         {
-            FieldsShowHide(PBoxNewPasswordAgainVisible, PBoxNewPasswordAgain, true);
+            SubFunctions.TBShowHide(PBoxNewPasswordAgainVisible, PBoxNewPasswordAgain, true);
         }
 
         private void TBDisplay3_Unchecked(object sender, RoutedEventArgs e)
         {
-            FieldsShowHide(PBoxNewPasswordAgainVisible, PBoxNewPasswordAgain, false);
-        }
-
-        private void TBkCancel_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            window.Close();
+            SubFunctions.TBShowHide(PBoxNewPasswordAgainVisible, PBoxNewPasswordAgain, false);
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
@@ -91,7 +72,7 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
                             else
                                 App.CurUser.Password = PBoxNewPasswordVisible.Text;
                             App.Database.SaveChanges();
-                            App.Messages.ShowInfo("Пароль успешно изменен");
+                            App.Messages.ShowInfo(Properties.Resources.PasswordCongrats);
                             window.Close();
                             (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage(0));
                         }

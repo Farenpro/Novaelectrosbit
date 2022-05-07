@@ -1,9 +1,9 @@
-﻿using Novaelectrosbit.Windows;
+﻿using Novaelectrosbit.Models;
+using Novaelectrosbit.Windows;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Linq;
-using Novaelectrosbit.Models;
 
 namespace Novaelectrosbit.Pages
 {
@@ -41,10 +41,10 @@ namespace Novaelectrosbit.Pages
                 if (App.Database.Users.Where(p => (p.Email == TBoxLogin.Text || p.Telephone == TBoxLogin.Text) && (p.Password == PBoxPassword.Password || p.Password == PBoxPasswordVisible.Text)).SingleOrDefault() is User user)
                 {
                     App.CurUser = user;
-                    (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage());
+                    App.CurUserDefaultPage();
                 }
                 else
-                    App.Messages.ShowError("Неверно введен логин или пароль. Проверьте правильность ввода и повторите попытку.");
+                    App.Messages.ShowError(Properties.Resources.LogOrPassError);
             }
             else
                 App.Messages.ShowError(Properties.Resources.NeedToFillRequired);

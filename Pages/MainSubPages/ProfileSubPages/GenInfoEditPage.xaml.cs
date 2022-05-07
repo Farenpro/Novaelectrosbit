@@ -18,7 +18,7 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
             InitializeComponent();
             window = Application.Current.Windows.OfType<EditInfoWindow>().SingleOrDefault();
             window.DataContext = this;
-            this.DataContext = App.CurUser;
+            DataContext = App.CurUser;
             DPBirthdate.DisplayDateStart = DateTime.Now.AddYears(-100);
             DPBirthdate.DisplayDateEnd = DateTime.Now.AddYears(-18);
         }
@@ -27,7 +27,15 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
         {
             window.Close();
         }
+        private void BtnCBoxClear_Click(object sender, RoutedEventArgs e)
+        {
+            CBoxGender.SelectedIndex = -1;
+        }
 
+        private void BtnDPClear_Click(object sender, RoutedEventArgs e)
+        {
+            DPBirthdate.SelectedDate = null;
+        }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
@@ -70,20 +78,11 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
                 App.CurUser.Birthdate = DPBirthdate.SelectedDate;
                 App.Database.SaveChanges();
                 window.Close();
+                App.Messages.ShowInfo(Properties.Resources.GenInfoCongrats);
                 (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage(0));
             }
             else
                 App.Messages.ShowError(Properties.Resources.NeedToFillRequired);
-        }
-
-        private void BtnCBoxClear_Click(object sender, RoutedEventArgs e)
-        {
-            CBoxGender.SelectedIndex = -1;
-        }
-
-        private void BtnDPClear_Click(object sender, RoutedEventArgs e)
-        {
-            DPBirthdate.SelectedDate = null;
         }
     }
 }

@@ -264,3 +264,7 @@ D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Windows\PayWindow.g
 D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\WpfAnimatedGif.dll
 D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\WpfAnimatedGif.pdb
 D:\MyWorks\Айрат работа\Novaelectrosbit\bin\Debug\WpfAnimatedGif.xml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MeterInstallerPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MeterInstallerPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\AdminPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\AdminPage.baml

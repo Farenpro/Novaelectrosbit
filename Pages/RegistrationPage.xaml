@@ -2,10 +2,10 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:res="clr-namespace:Novaelectrosbit.Properties"
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+      xmlns:res="clr-namespace:Novaelectrosbit.Properties"
       xmlns:s="clr-namespace:System;assembly=mscorlib"
-      Title="Регистрация" Height="610" Width="760" MinWidth="760" MinHeight="610" TextElement.FontSize="16" FontFamily="{StaticResource FontMain}">
+      Title="{x:Static res:Resources.Registration}" Height="610" Width="760" MinWidth="760" MinHeight="610" TextElement.FontSize="16" FontFamily="{StaticResource FontMain}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -26,13 +26,13 @@
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Регистрация" FontSize="20" Style="{StaticResource LHead}"/>
+        <Label Content="{x:Static res:Resources.Registration}" FontSize="20" Style="{StaticResource LHead}"/>
         <Label Grid.Row="2" Content="{x:Static res:Resources.TelephoneS}" Style="{StaticResource LDescription}"/>
-        <xctk:MaskedTextBox x:Name="TBoxTelephone" Grid.Row="3" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" Style="{StaticResource MaterialDesignOutlinedTextBox}" 
-                            BorderBrush="Black" Mask="+8(000)000-00-00" BeepOnError="True" ValueDataType="{x:Type s:String}" IncludeLiteralsInValue="False" Value="{Binding Telephone, UpdateSourceTrigger=PropertyChanged}"/>
+        <xctk:MaskedTextBox x:Name="TBoxTelephone" Grid.Row="3" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" Value="{Binding Telephone, UpdateSourceTrigger=PropertyChanged}" Mask="+8(000)000-00-00" BeepOnError="True" 
+                            ValueDataType="{x:Type s:String}" IncludeLiteralsInValue="False" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
         <Label Grid.Row="4" Margin="5,20,0,0" Content="{x:Static res:Resources.EmailS}" Style="{StaticResource LDescription}"/>
-        <TextBox x:Name="TBoxEmail" Grid.Row="5" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                 BorderBrush="Black" Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox x:Name="TBoxEmail" Grid.Row="5" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" 
+                 Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
         <Label Grid.Row="6" Margin="5,20,0,0" Content="{x:Static res:Resources.ComeUpPassS}" Style="{StaticResource LDescription}"/>
         <Grid Grid.Row="7">
             <Grid.ColumnDefinitions>
@@ -40,12 +40,12 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <PasswordBox x:Name="PBoxPassword" Grid.RowSpan="2" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" Style="{StaticResource MaterialDesignOutlinedPasswordBox}"
-                     BorderBrush="Black"/>
-            <TextBox x:Name="PBoxPasswordVisible" Grid.RowSpan="2" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" Style="{StaticResource MaterialDesignOutlinedTextBox}" Visibility="Hidden"
-                     BorderBrush="Black"/>
-            <ToggleButton x:Name="TBDisplay" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"  Height="35" Width="35" Content="{materialDesign:PackIcon Kind=EyeOff}" materialDesign:ToggleButtonAssist.OnContent="{materialDesign:PackIcon Kind=Eye}" Style="{StaticResource MaterialDesignActionAccentToggleButton}" 
-                          BorderBrush="Black" Checked="TBDisplay_Checked" Unchecked="TBDisplay_Unchecked"/>
+            <PasswordBox x:Name="PBoxPassword" Grid.RowSpan="2" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" BorderBrush="Black" 
+                         Style="{StaticResource MaterialDesignOutlinedPasswordBox}"/>
+            <TextBox x:Name="PBoxPasswordVisible" Grid.RowSpan="2" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" Visibility="Hidden" BorderBrush="Black" 
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <ToggleButton x:Name="TBDisplay" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"  Height="35" Width="35" Content="{materialDesign:PackIcon Kind=EyeOff}" materialDesign:ToggleButtonAssist.OnContent="{materialDesign:PackIcon Kind=Eye}" BorderBrush="Black" 
+                          Checked="TBDisplay_Checked" Unchecked="TBDisplay_Unchecked" Style="{StaticResource MaterialDesignActionAccentToggleButton}"/>
             <materialDesign:PackIcon Grid.Column="2" Grid.RowSpan="2" HorizontalAlignment="Center" Height="40" Width="60" ToolTip="{x:Static res:Resources.IconInfoToolTip}"
                                      Style="{StaticResource IconInfo}"/>
         </Grid>
@@ -55,32 +55,32 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <PasswordBox x:Name="PBoxPasswordAgain" Grid.RowSpan="2" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" Style="{StaticResource MaterialDesignOutlinedPasswordBox}"
-                     BorderBrush="Black"/>
-            <TextBox x:Name="PBoxPasswordAgainVisible" Grid.RowSpan="2" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="Обязательно для заполнения" Style="{StaticResource MaterialDesignOutlinedTextBox}" Visibility="Hidden"
-                     BorderBrush="Black"/>
-            <ToggleButton x:Name="TBDisplay2" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Height="35"  Width="35" Content="{materialDesign:PackIcon Kind=EyeOff}" materialDesign:ToggleButtonAssist.OnContent="{materialDesign:PackIcon Kind=Eye}" Style="{StaticResource MaterialDesignActionAccentToggleButton}" 
-                     BorderBrush="Black" Checked="TBDisplay2_Checked" Unchecked="TBDisplay2_Unchecked"/>
+            <PasswordBox x:Name="PBoxPasswordAgain" Grid.RowSpan="2" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" BorderBrush="Black" 
+                         Style="{StaticResource MaterialDesignOutlinedPasswordBox}"/>
+            <TextBox x:Name="PBoxPasswordAgainVisible" Grid.RowSpan="2" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="Обязательно для заполнения" BorderBrush="Black" Visibility="Hidden" 
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <ToggleButton x:Name="TBDisplay2" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Height="35"  Width="35" Content="{materialDesign:PackIcon Kind=EyeOff}" materialDesign:ToggleButtonAssist.OnContent="{materialDesign:PackIcon Kind=Eye}" BorderBrush="Black"
+                          Checked="TBDisplay2_Checked" Unchecked="TBDisplay2_Unchecked" Style="{StaticResource MaterialDesignActionAccentToggleButton}"/>
         </Grid>
         <Label Grid.Row="2" Grid.Column="1" Content="{x:Static res:Resources.UserSurname}" Style="{StaticResource LDescription}"/>
-        <TextBox x:Name="TBoxSurname" Grid.Column="1" Grid.Row="3" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" Style="{StaticResource MaterialDesignOutlinedTextBox}" BorderBrush="Black" Text="{Binding Surname, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBox x:Name="TBoxSurname" Grid.Column="1" Grid.Row="3" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" Text="{Binding Surname, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
         <Label Grid.Row="4" Grid.Column="1" Content="{x:Static res:Resources.UserFirstnameS}" Style="{StaticResource LDescription}"/>
-        <TextBox x:Name="TBoxFirstname" Grid.Column="1" Grid.Row="5" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" Style="{StaticResource MaterialDesignOutlinedTextBox}" 
-                 BorderBrush="Black" Text="{Binding Firstname, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox x:Name="TBoxFirstname" Grid.Column="1" Grid.Row="5" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" Text="{Binding Firstname, UpdateSourceTrigger=PropertyChanged}" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}"
+                 BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
         <Label Grid.Row="6" Grid.Column="1" Content="{x:Static res:Resources.UserMiddlename}" Style="{StaticResource LDescription}"/>
-        <TextBox x:Name="TBoxMiddlename" Grid.Column="1" Grid.Row="7" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                 BorderBrush="Black" Text="{Binding Middlename, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox x:Name="TBoxMiddlename" Grid.Column="1" Grid.Row="7" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" Text="{Binding Middlename, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Black"
+                 Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
         <Label Grid.Row="8" Grid.Column="1" Content="{x:Static res:Resources.Gender}" Style="{StaticResource LDescription}"/>
-        <ComboBox x:Name="CBoxGender" Grid.Row="9" Grid.Column="1" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" Style="{StaticResource MaterialDesignOutlinedComboBox}" 
-                 BorderBrush="Black" SelectedIndex="{Binding Gender, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" DisplayMemberPath="Name">
+        <ComboBox x:Name="CBoxGender" Grid.Row="9" Grid.Column="1" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" SelectedIndex="{Binding Gender, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" DisplayMemberPath="Name"
+                 BorderBrush="Black"  Style="{StaticResource MaterialDesignOutlinedComboBox}">
         </ComboBox>
-        <Button x:Name="BtnCBoxClear" Grid.Row="9" Grid.Column="2" Style="{StaticResource BtnClear}" Click="BtnCBoxClear_Click" Content="{materialDesign:PackIcon Kind=Eraser}"/>
+        <Button x:Name="BtnCBoxClear" Grid.Row="9" Grid.Column="2" Content="{materialDesign:PackIcon Kind=Eraser}" Click="BtnCBoxClear_Click" Style="{StaticResource BtnClear}"/>
         <Label Grid.Row="10" Grid.Column="1" Content="{x:Static res:Resources.Birthdate}" Style="{StaticResource LDescription}"/>
-        <DatePicker x:Name="DPBirthdate" Grid.Row="11" Grid.Column="1" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" Style="{StaticResource MaterialDesignOutlinedDatePicker}" 
-                    BorderBrush="Black" materialDesign:ThemeAssist.Theme="Light" ToolTip="{x:Static res:Resources.BirthdateToolTip}" FirstDayOfWeek="Monday" Focusable="False" SelectedDate="{Binding Birthdate, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}"/>
-        <Button x:Name="BtnDPClear" Grid.Row="11" Grid.Column="2" Style="{StaticResource BtnClear}" Click="BtnDPClear_Click" Content="{materialDesign:PackIcon Kind=Eraser}"/>
-        <Label Grid.Row="10" Margin="5,17,0,0" Content="Нажимая кнопку &quot;Продолжить&quot; вы принимаете Пользовательское соглашение и даете&#x0a;согласие на обработку персональных данных" FontSize="9" Foreground="{StaticResource MaterialDesignDarkBackground}"
+        <DatePicker x:Name="DPBirthdate" Grid.Row="11" Grid.Column="1" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" SelectedDate="{Binding Birthdate, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" FirstDayOfWeek="Monday" Focusable="False"
+                     ToolTip="{x:Static res:Resources.BirthdateToolTip}" BorderBrush="Black" materialDesign:ThemeAssist.Theme="Light" Style="{StaticResource MaterialDesignOutlinedDatePicker}"/>
+        <Button x:Name="BtnDPClear" Grid.Row="11" Grid.Column="2" Click="BtnDPClear_Click" Content="{materialDesign:PackIcon Kind=Eraser}" Style="{StaticResource BtnClear}"/>
+        <Label Grid.Row="10" Margin="5,17,0,0" Content="{x:Static res:Resources.PersonalDataAgree}" FontSize="9" Foreground="{StaticResource MaterialDesignDarkBackground}"
                Style="{StaticResource LDescription}"/>
-        <Button x:Name="BtnContinue" Grid.Row="11" Margin="5,0" VerticalAlignment="Center" MinWidth="300" Height="{Binding ElementName=DPBirthdate, Path=Height}" Content="ПРОДОЛЖИТЬ" Style="{StaticResource MaterialDesignFlatMidBgButton}" Foreground="White" Click="BtnContinue_Click"/>
+        <Button x:Name="BtnContinue" Grid.Row="11" Margin="5,0" VerticalAlignment="Center" MinWidth="300" Height="{Binding ElementName=DPBirthdate, Path=Height}" Content="{x:Static res:Resources.Continue}" Foreground="White" Style="{StaticResource MaterialDesignFlatMidBgButton}"/>
     </Grid>
 </Page>

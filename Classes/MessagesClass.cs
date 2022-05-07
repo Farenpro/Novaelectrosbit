@@ -10,14 +10,9 @@ namespace Novaelectrosbit.Classes
     /// </summary>
     public class MessagesClass
     {
-        /// <summary>
-        /// Сообщение с информацией
-        /// </summary>
-        /// <param name="info"></param>
-        /// <returns></returns>
-        public MessageBoxResult ShowInfo(string info)
+        public CustomMaterialMessageBox InitializeMessageBox()
         {
-            CustomMaterialMessageBox MessageBox = new CustomMaterialMessageBox()
+            CustomMaterialMessageBox messageBox = new CustomMaterialMessageBox()
             {
                 BtnOk = { Content = "Ок", Background = Brushes.DodgerBlue },
                 BtnCancel = { Visibility = Visibility.Hidden },
@@ -26,14 +21,23 @@ namespace Novaelectrosbit.Classes
                 BtnCopyMessage = { Visibility = Visibility.Hidden },
                 BorderBrush = Brushes.Black,
                 BorderThickness = new Thickness(1),
-                SizeToContent = SizeToContent.WidthAndHeight,
-                TxtTitle = { Text = "Информация" },
-                TxtMessage = { Text = info }
+                SizeToContent = SizeToContent.WidthAndHeight
             };
+            return messageBox;
+        }
+        /// <summary>
+        /// Сообщение с информацией
+        /// </summary>
+        /// <param name="info"></param>
+        /// <returns></returns>
+        public MessageBoxResult ShowInfo(string info)
+        {
+            CustomMaterialMessageBox messageBox = InitializeMessageBox();
+            messageBox.TxtTitle.Text = "Информация";
+            messageBox.TxtMessage.Text = info;
             SystemSounds.Exclamation.Play();
-            MessageBox.Show();
-            MessageBox.Dispose();
-            return MessageBox.Result;
+            messageBox.Show();
+            return messageBox.Result;
         }
         /// <summary>
         /// Сообщение с ошибкой
@@ -42,23 +46,12 @@ namespace Novaelectrosbit.Classes
         /// <returns></returns>
         public MessageBoxResult ShowError(string error)
         {
-            CustomMaterialMessageBox MessageBox = new CustomMaterialMessageBox()
-            {
-                BtnOk = { Content = "Ок", Background = Brushes.DodgerBlue },
-                BtnCancel = { Visibility = Visibility.Hidden },
-                MainContentControl = { Background = Brushes.White },
-                TitleBackgroundPanel = { Background = Brushes.Orange },
-                BtnCopyMessage = { Visibility = Visibility.Hidden },
-                BorderBrush = Brushes.Black,
-                BorderThickness = new Thickness(1),
-                SizeToContent = SizeToContent.WidthAndHeight,
-                TxtTitle = { Text = "Ошибка" },
-                TxtMessage = { Text = error }
-            };
+            CustomMaterialMessageBox messageBox = InitializeMessageBox();
+            messageBox.TxtTitle.Text = "Ошибка";
+            messageBox.TxtMessage.Text = error;
             SystemSounds.Hand.Play();
-            MessageBox.Show();
-            MessageBox.Dispose();
-            return MessageBox.Result;
+            messageBox.Show();
+            return messageBox.Result;
         }
         /// <summary>
         /// Сообщение с предупреждением
@@ -67,23 +60,12 @@ namespace Novaelectrosbit.Classes
         /// <returns></returns>
         public MessageBoxResult ShowWarning(string warning)
         {
-            CustomMaterialMessageBox MessageBox = new CustomMaterialMessageBox()
-            {
-                BtnOk = { Content = "Ок", Background = Brushes.DodgerBlue },
-                BtnCancel = { Visibility = Visibility.Hidden },
-                MainContentControl = { Background = Brushes.White },
-                TitleBackgroundPanel = { Background = Brushes.Orange },
-                BtnCopyMessage = { Visibility = Visibility.Hidden },
-                BorderBrush = Brushes.Black,
-                BorderThickness = new Thickness(1),
-                SizeToContent = SizeToContent.WidthAndHeight,
-                TxtTitle = { Text = "Внимание" },
-                TxtMessage = { Text = warning }
-            };
+            CustomMaterialMessageBox messageBox = InitializeMessageBox();
+            messageBox.TxtTitle.Text = "Внимание";
+            messageBox.TxtMessage.Text = warning;
             SystemSounds.Exclamation.Play();
-            MessageBox.Show();
-            MessageBox.Dispose();
-            return MessageBox.Result;
+            messageBox.Show();
+            return messageBox.Result;
         }
         /// <summary>
         /// Сообщение с вопросом
@@ -92,43 +74,16 @@ namespace Novaelectrosbit.Classes
         /// <returns></returns>
         public MessageBoxResult ShowQuestion(string question)
         {
-            CustomMaterialMessageBox MessageBox = new CustomMaterialMessageBox()
-            {
-                BtnOk = { Content = "Да", Background = Brushes.DodgerBlue },
-                BtnCancel = { Content = "Нет", Background = Brushes.Red},
-                MainContentControl = { Background = Brushes.White },
-                TitleBackgroundPanel = { Background = Brushes.Orange },
-                BtnCopyMessage = { Visibility = Visibility.Hidden },
-                BorderBrush = Brushes.Black,
-                BorderThickness = new Thickness(1),
-                SizeToContent = SizeToContent.WidthAndHeight,
-                TxtTitle = { Text = "Внимание" },
-                TxtMessage = { Text = question }
-            };
-            SystemSounds.Question.Play();
-            MessageBox.Show();
-            MessageBox.Dispose();
-            return MessageBox.Result;
-        }
-        public MessageBoxResult ShowNoFunc()
-        {
-            CustomMaterialMessageBox MessageBox = new CustomMaterialMessageBox()
-            {
-                BtnOk = { Content = "Да", Background = Brushes.DodgerBlue },
-                BtnCancel = { Visibility = Visibility.Hidden },
-                MainContentControl = { Background = Brushes.White },
-                TitleBackgroundPanel = { Background = Brushes.Orange },
-                BtnCopyMessage = { Visibility = Visibility.Hidden },
-                BorderBrush = Brushes.Black,
-                BorderThickness = new Thickness(1),
-                SizeToContent = SizeToContent.WidthAndHeight,
-                TxtTitle = { Text = "Внимание" },
-                TxtMessage = { Text = "Данный функционал находится в разработке" }
-            };
+            CustomMaterialMessageBox messageBox = InitializeMessageBox();
+            messageBox.BtnOk.Content = "Да";
+            messageBox.BtnCancel.Visibility = Visibility.Visible;
+            messageBox.BtnCancel.Content = "Нет";
+            messageBox.BtnCancel.Background = Brushes.Red;
+            messageBox.TxtTitle.Text = "Внимание";
+            messageBox.TxtMessage.Text = question;
             SystemSounds.Exclamation.Play();
-            MessageBox.Show();
-            MessageBox.Dispose();
-            return MessageBox.Result;
+            messageBox.Show();
+            return messageBox.Result;
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿using System.Windows;
-using Novaelectrosbit.Pages;
+﻿using Novaelectrosbit.Pages;
+using System.Windows;
 
 namespace Novaelectrosbit.Windows
 {

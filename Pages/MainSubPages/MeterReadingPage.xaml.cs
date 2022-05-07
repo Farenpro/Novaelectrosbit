@@ -1,19 +1,8 @@
 ﻿using Novaelectrosbit.Models;
-using Novaelectrosbit.Windows;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Novaelectrosbit.Pages.MainSubPages
 {
@@ -25,11 +14,11 @@ namespace Novaelectrosbit.Pages.MainSubPages
         public MeterReadingPage()
         {
             InitializeComponent();
-            this.DataContext = App.CurPay;
+            DataContext = App.CurPay;
         }
         private void BtnMainPageBack_Click(object sender, RoutedEventArgs e)
         {
-            (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage());
+            App.CurUserDefaultPage();
         }
         private void BtnTransferMR_Click(object sender, RoutedEventArgs e)
         {
@@ -37,7 +26,7 @@ namespace Novaelectrosbit.Pages.MainSubPages
             if (App.CurPay.Requisite.Counter.MeterReadings.Count > 0)
             {
                 lastMR = App.CurPay.Requisite.Counter.MeterReadings.Select(p => p.Indications).LastOrDefault();
-                ID = App.CurPay.Requisite.Counter.MeterReadings.Select(p => p.ID).Max()+1;
+                ID = App.CurPay.Requisite.Counter.MeterReadings.Select(p => p.ID).Max() + 1;
             }
             if (TBoxMR.Text != "" && int.TryParse(TBoxMR.Text, out int MR))
             {
@@ -52,14 +41,14 @@ namespace Novaelectrosbit.Pages.MainSubPages
                     };
                     App.Database.MeterReadings.Add(meterReading);
                     App.Database.SaveChanges();
-                    App.Messages.ShowInfo("Показания успешно добавлены");
+                    App.Messages.ShowInfo(Properties.Resources.MRSuccess);
                     BtnMainPageBack_Click(null, null);
                 }
                 else
-                    App.Messages.ShowError("Нынешние показания не могут быть меньше, чем предыдущие");
+                    App.Messages.ShowError(Properties.Resources.MRError);
             }
             else
-                App.Messages.ShowError("Проверьте правильность введенных данных в обязательном поле!");
+                App.Messages.ShowError(Properties.Resources.RequiredError);
         }
     }
 }

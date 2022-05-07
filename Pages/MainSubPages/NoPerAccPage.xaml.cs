@@ -12,7 +12,7 @@ namespace Novaelectrosbit.Pages.MainSubPages
         public NoPerAccPage()
         {
             InitializeComponent();
-            this.DataContext = App.CurUser;
+            DataContext = App.CurUser;
         }
 
         private void BtnAddPerAcc_Click(object sender, RoutedEventArgs e)

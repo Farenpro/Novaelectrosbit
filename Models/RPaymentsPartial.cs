@@ -1,42 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media;
 
 namespace Novaelectrosbit.Models
 {
     public partial class RequisitesPayment
     {
-        public string PayDateStr
-        {
-            get
-            {
-                return PayDate.ToString("dd.MM.yyyy");
-            }
-        }
-        public string Credited
-        {
-            get
-            {
-                return PaymentType.Name;
-            }
-        }
-        public string PayAmountStr
-        {
-            get
-            {
-                return $"{PayAmount} руб.";
-            }
-        }
-        public string BalanceAfterPayStr
-        {
-            get
-            {
-                return $"{BalanceAfterPay} руб";
-            }
-        }
+        public string PayDateStr { get { return PayDate.ToString("dd.MM.yyyy"); } }
+        public string Credited { get { return PaymentType.Name; } }
+        public string PayAmountStr { get { return $"{PayAmount} руб."; } }
+        public string BalanceAfterPayStr { get { return $"{BalanceAfterPay} руб"; } }
+        public string PayDateStr2 { get { return PayDate.ToString("MMMM yyyy г."); } }
+        public string PayDateStr3 { get { return PayDate.ToString("MMMM yyyy"); } }
+        public string FinalStr { get { return Math.Abs(Final).ToString(); } }
+        public string PriceTariff { get { return $"{Convert.ToDouble(Requisite.Tariff.Price) * Convert.ToDouble(ExpPeriodNow)}"; } }
+        public double LastPay { get { return App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).LastOrDefault().PayAmount; } }
+        public string LastPayDate { get { return App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).LastOrDefault().PayDate.ToString("dd.MM.yyyy"); } }
+        public double LastBalance { get { return App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).LastOrDefault().BalanceAfterPay; } }
+
         public Brush BalanceBrush
         {
             get
@@ -49,30 +30,18 @@ namespace Novaelectrosbit.Models
                     return Brushes.Red;
             }
         }
-        public string PayDateStr2
-        {
-            get
-            {
-                return PayDate.ToString("MMMM yyyy г.");
-            }
-        }
-        public string PayDateStr3
-        {
-            get
-            {
-                return PayDate.ToString("MMMM yyyy");
-            }
-        }
+
         public string Price
         {
             get
             {
                 if (Final < 0)
-                    return $"{Math.Truncate(Math.Abs(Final))} р. {Math.Round(Math.Abs(Final) - Math.Truncate(Math.Abs(Final)),2)} к.";
+                    return $"{Math.Truncate(Math.Abs(Final))} р. {Math.Round(Math.Abs(Final) - Math.Truncate(Math.Abs(Final)), 2)} к.";
                 else
                     return "0 р. 00 к.";
             }
         }
+
         public string InfoStr
         {
             get
@@ -85,6 +54,7 @@ namespace Novaelectrosbit.Models
                     return "На начало расчётного периода сумма переплаты составляет (руб.)";
             }
         }
+
         public string Payment
         {
             get
@@ -95,6 +65,7 @@ namespace Novaelectrosbit.Models
                     return "0,00";
             }
         }
+
         public double Final
         {
             get
@@ -106,11 +77,14 @@ namespace Novaelectrosbit.Models
             }
         }
 
-        public string FinalStr
+        public string LastMRDate
         {
             get
             {
-                return Math.Abs(Final).ToString();
+                if (Requisite.Counter.MeterReadings.Count() > 0)
+                    return Requisite.Counter.MeterReadings.Where(p => p.IndicationsDate <= PayDate).FirstOrDefault().IndicationsDate.ToString("dd.MM.yyyy");
+                else
+                    return "-";
             }
         }
         public string LastMR
@@ -123,27 +97,7 @@ namespace Novaelectrosbit.Models
                     return "-";
             }
         }
-        public string LastMRDate
-        {
-            get
-            {
-                if (Requisite.Counter.MeterReadings.Count() > 0)
-                    return Requisite.Counter.MeterReadings.Where(p => p.IndicationsDate <= PayDate).FirstOrDefault().IndicationsDate.ToString("dd.MM.yyyy");
-                else
-                    return "-";
-            }
-        }
-        public string NowMR
-        {
-            get
-            {
-                if (Requisite.Counter.MeterReadings.Where(p => p.IndicationsDate.Month == PayDate.Month && p.IndicationsDate.Year == PayDate.Year).Count() > 0)
-                    return Requisite.Counter.MeterReadings.Where(p => p.IndicationsDate.Month == PayDate.Month && 
-                    p.IndicationsDate.Year == PayDate.Year).SingleOrDefault().Indications.ToString();
-                else
-                    return "-";
-            }
-        }
+
         public string NowMRDate
         {
             get
@@ -155,6 +109,19 @@ namespace Novaelectrosbit.Models
                     return "-";
             }
         }
+
+        public string NowMR
+        {
+            get
+            {
+                if (Requisite.Counter.MeterReadings.Where(p => p.IndicationsDate.Month == PayDate.Month && p.IndicationsDate.Year == PayDate.Year).Count() > 0)
+                    return Requisite.Counter.MeterReadings.Where(p => p.IndicationsDate.Month == PayDate.Month &&
+                    p.IndicationsDate.Year == PayDate.Year).SingleOrDefault().Indications.ToString();
+                else
+                    return "-";
+            }
+        }
+
         public string Expenditure
         {
             get
@@ -167,6 +134,7 @@ namespace Novaelectrosbit.Models
                     return "?";
             }
         }
+
         public string ExpType
         {
             get
@@ -184,6 +152,7 @@ namespace Novaelectrosbit.Models
                     return "Н";
             }
         }
+
         public string ExpPeriodNow
         {
             get
@@ -196,34 +165,6 @@ namespace Novaelectrosbit.Models
                     return $"{Requisite.Counter.MeterReadings.Average(p => Convert.ToDouble(Expenditure) + Convert.ToInt32(NowMR))}";
                 else
                     return $"{Requisite.NumOfResidents * 120 * Requisite.Tariff.Price}";
-            }
-        }
-        public string PriceTariff
-        {
-            get
-            {
-                return $"{Convert.ToDouble(Requisite.Tariff.Price) * Convert.ToDouble(ExpPeriodNow)}";
-            }
-        }
-        public double LastPay
-        {
-            get
-            {
-                return App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).LastOrDefault().PayAmount;
-            }
-        }
-        public string LastPayDate
-        {
-            get
-            {
-                return App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).LastOrDefault().PayDate.ToString("dd.MM.yyyy");
-            }
-        }
-        public double LastBalance
-        {
-            get
-            {
-                return App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).LastOrDefault().BalanceAfterPay;
             }
         }
     }

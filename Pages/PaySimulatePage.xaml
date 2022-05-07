@@ -1,12 +1,13 @@
 ﻿<Page x:Class="Novaelectrosbit.Pages.PaySimulatePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:s="clr-namespace:System;assembly=mscorlib"
-      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       xmlns:gif="http://wpfanimatedgif.codeplex.com"
+      xmlns:res="clr-namespace:Novaelectrosbit.Properties"
+      xmlns:s="clr-namespace:System;assembly=mscorlib"
       MinWidth="600" MinHeight="590" Height="600" Width="600"
-      FontFamily="{StaticResource FontMain}" Title="Оплата платежа">
+      FontFamily="{StaticResource FontMain}" Title="{x:Static res:Resources.PayTitle}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -21,7 +22,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
             <Image Source="/Resources/BankLogos/GPBLOGO.png"/>
-            <Label Content="ГАЗПРОМБАНК" FontSize="22" Foreground="{DynamicResource SecondaryHueDarkBrush}" FontFamily="Impact" VerticalAlignment="Center"/>
+            <Label Content="{x:Static res:Resources.GPB}" VerticalAlignment="Center" FontSize="22" Foreground="{DynamicResource SecondaryHueDarkBrush}" FontFamily="Impact"/>
         </StackPanel>
         <Grid Grid.Row="1" Background="LightGray"/>
         <Grid x:Name="GridPayInfo" Grid.Row="2" HorizontalAlignment="Center" Margin="0,10,0,10">
@@ -35,12 +36,12 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Ellipse Grid.RowSpan="2" Fill="White" Width="40" Height="40" Stroke="LightGray"/>
-            <Label Grid.Column="1" Content="NES" FontSize="10" VerticalAlignment="Center"/>
-            <Label x:Name="LRequistes" Grid.Column="2" Content="{Binding RequisitesPersonalAccount}" ContentStringFormat="Оплата по ЛС:{0}" FontSize="10" VerticalAlignment="Center"/>
+            <Label Grid.Column="1" Content="{x:Static res:Resources.NES}" FontSize="10" VerticalAlignment="Center"/>
+            <Label x:Name="LRequistes" Grid.Column="2" VerticalAlignment="Center" Content="{Binding RequisitesPersonalAccount}" ContentStringFormat="Оплата по ЛС:{0}" FontSize="10" />
             <Label x:Name="LSummPay" Grid.Row="1" Grid.Column="2" Content="{Binding SummPay}" ContentStringFormat="{}{0} ₽" Foreground="{DynamicResource SecondaryHueDarkBrush}" FontFamily="Impact" FontSize="16"/>
         </Grid>
         <Grid Grid.Row="3" Background="LightGray"/>
-        <materialDesign:Card x:Name="mDCardPayCardBack" Grid.Row="4" Background="White" HorizontalAlignment="Center" Margin="250,50,10,0" MinWidth="300">
+        <materialDesign:Card x:Name="mDCardPayCardBack" Grid.Row="4" HorizontalAlignment="Center" Margin="250,50,10,0" MinWidth="300" Background="White" >
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
@@ -50,37 +51,37 @@
                 <Grid Background="Transparent"/>
                 <Grid Grid.Row="1" Background="Gray"/>
                 <StackPanel Grid.Row="2" HorizontalAlignment="Right" Margin="0,0,0,20" >
-                    <xctk:MaskedTextBox x:Name="TBoxCVC" materialDesign:HintAssist.Hint="CVC2/CVV2" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="5,5,5,5"
-                            BorderBrush="Black" Mask="000" BeepOnError="True" IncludeLiteralsInValue="False" ValueDataType="{x:Type s:String}" materialDesign:HintAssist.Background="White" Value="{Binding CardCVV2, UpdateSourceTrigger=PropertyChanged}"/>
-                    <Label Content="Три цифры с оборотной&#x0a;стороны карты" Style="{StaticResource LDescription}" FontSize="8"/>
+                    <xctk:MaskedTextBox x:Name="TBoxCVC" Margin="5,5,5,5" materialDesign:HintAssist.Hint="CVC2/CVV2" Value="{Binding CardCVV2, UpdateSourceTrigger=PropertyChanged}" Mask="000" BeepOnError="True" IncludeLiteralsInValue="False"
+                               ValueDataType="{x:Type s:String}" BorderBrush="Black" materialDesign:HintAssist.Background="White"  Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+                    <Label Content="{x:Static res:Resources.PayCardDesc}" FontSize="8" Style="{StaticResource LDescription}"/>
                 </StackPanel>
             </Grid>
         </materialDesign:Card>
-        <materialDesign:Card x:Name="mDCardPayCardFront" Grid.Row="4" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+        <materialDesign:Card x:Name="mDCardPayCardFront" Grid.Row="4" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Image Source="/Resources/BankLogos/MIRLOGO.png" Width="30" Margin="15"/>
-                    <Image Source="/Resources/BankLogos/MCLOGO.png" Width="30" Margin="15"/>
-                    <Image Source="/Resources/BankLogos/MAESTROLOGO.png" Width="30" Margin="15"/>
-                    <Image Source="/Resources/BankLogos/VISALOGO.png" Width="30" Margin="15"/>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Image Source="/Resources/BankLogos/MIRLOGO.png" Style="{StaticResource ImgPayLogo}"/>
+                    <Image Source="/Resources/BankLogos/MCLOGO.png" Style="{StaticResource ImgPayLogo}"/>
+                    <Image Source="/Resources/BankLogos/MAESTROLOGO.png" Style="{StaticResource ImgPayLogo}"/>
+                    <Image Source="/Resources/BankLogos/VISALOGO.png" Style="{StaticResource ImgPayLogo}"/>
                 </StackPanel>
-                <xctk:MaskedTextBox x:Name="TBoxCardNum" Grid.Row="1" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.Hint="Номер карты" Style="{StaticResource MaterialDesignOutlinedTextBox}" 
-                            BorderBrush="Black" Mask="0000 0000 0000 0000" BeepOnError="True" IncludeLiteralsInValue="False" ValueDataType="{x:Type s:String}" materialDesign:HintAssist.Background="White" Value="{Binding CardNum, UpdateSourceTrigger=PropertyChanged}"/>
-                <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Margin="5,15,0,5">
-                    <xctk:MaskedTextBox x:Name="TBoxCardMonth" materialDesign:HintAssist.Hint="Месяц" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="5"
-                            BorderBrush="Black" Mask="00" BeepOnError="True" IncludeLiteralsInValue="False" ValueDataType="{x:Type s:String}" materialDesign:HintAssist.Background="White" Value="{Binding CardMonth, UpdateSourceTrigger=PropertyChanged}"/>
+                <xctk:MaskedTextBox x:Name="TBoxCardNum" Grid.Row="1" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.Hint="{x:Static res:Resources.CardNum}" Value="{Binding CardNum, UpdateSourceTrigger=PropertyChanged}" Mask="0000 0000 0000 0000" BeepOnError="True" IncludeLiteralsInValue="False" 
+                                    ValueDataType="{x:Type s:String}" BorderBrush="Black" materialDesign:HintAssist.Background="White" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+                <StackPanel Grid.Row="2" Margin="5,15,0,5" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <xctk:MaskedTextBox x:Name="TBoxCardMonth" Margin="5" materialDesign:HintAssist.Hint="{x:Static res:Resources.Month}" Value="{Binding CardMonth, UpdateSourceTrigger=PropertyChanged}" Mask="00" BeepOnError="True" IncludeLiteralsInValue="False"
+                              ValueDataType="{x:Type s:String}" BorderBrush="Black" materialDesign:HintAssist.Background="White" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
                     <Label Content="/" VerticalAlignment="Center"/>
-                    <xctk:MaskedTextBox x:Name="TBoxCardYear" materialDesign:HintAssist.Hint="Год" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="5"
-                            BorderBrush="Black" Mask="00" BeepOnError="True" IncludeLiteralsInValue="False" ValueDataType="{x:Type s:String}" materialDesign:HintAssist.Background="White" Value="{Binding CardYear, UpdateSourceTrigger=PropertyChanged}"/>
+                    <xctk:MaskedTextBox x:Name="TBoxCardYear" Margin="5" materialDesign:HintAssist.Hint="{x:Static res:Resources.Year}" Value="{Binding CardYear, UpdateSourceTrigger=PropertyChanged}" Mask="00" BeepOnError="True" IncludeLiteralsInValue="False"
+                              ValueDataType="{x:Type s:String}" BorderBrush="Black" materialDesign:HintAssist.Background="White" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
                 </StackPanel>
             </Grid>
         </materialDesign:Card>
-        <materialDesign:Card x:Name="mDCardFinal" Grid.Row="4" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Visibility="Collapsed">
+        <materialDesign:Card x:Name="mDCardFinal" Grid.Row="4" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" Visibility="Collapsed">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
@@ -97,42 +98,42 @@
                     <ColumnDefinition Width="auto"/>
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
-                <Label Content="Платеж завершен успешно" Style="{StaticResource LPayInfo}" FontSize="14" Foreground="Green" Grid.ColumnSpan="2"/>
-                <Label Grid.Row="1" Content="Продавец:" Style="{StaticResource LPayInfo}"/>
-                <Label Grid.Row="1" Grid.Column="2" Content="NES" Style="{StaticResource LPayInfo2}"/>
-                <Label Grid.Row="2" Content="Описание:" Style="{StaticResource LPayInfo}"/>
+                <Label Grid.ColumnSpan="2" Content="{x:Static res:Resources.PayCompleteSuccess}" FontSize="14" Foreground="Green" Style="{StaticResource LPayInfo}"/>
+                <Label Grid.Row="1" Content="{x:Static res:Resources.Seller}" Style="{StaticResource LPayInfo}"/>
+                <Label Grid.Row="1" Grid.Column="2" Content="{x:Static res:Resources.NES}" Style="{StaticResource LPayInfo2}"/>
+                <Label Grid.Row="2" Content="{x:Static res:Resources.Description}" Style="{StaticResource LPayInfo}"/>
                 <Label x:Name="LDesc" Grid.Row="2" Grid.Column="2" Style="{StaticResource LPayInfo2}"/>
-                <Label Grid.Row="3" Content="Номер карты:" Style="{StaticResource LPayInfo}"/>
+                <Label Grid.Row="3" Content="{x:Static res:Resources.CardNum}" Style="{StaticResource LPayInfo}"/>
                 <Label x:Name="LCardNumSecured" Grid.Row="3" Grid.Column="2" Style="{StaticResource LPayInfo2}"/>
-                <Label Grid.Row="4" Content="Идентификатор транзакции:" Style="{StaticResource LPayInfo}"/>
+                <Label Grid.Row="4" Content="{x:Static res:Resources.TransID}" Style="{StaticResource LPayInfo}"/>
                 <Label x:Name="LTransID" Grid.Row="4" Grid.Column="2" Style="{StaticResource LPayInfo2}"/>
-                <Label Grid.Row="5" Content="Дата/время:" Style="{StaticResource LPayInfo}"/>
+                <Label Grid.Row="5" Content="{x:Static res:Resources.DateTime}" Style="{StaticResource LPayInfo}"/>
                 <Label x:Name="LDateTimeNow" Grid.Row="5" Grid.Column="2" Style="{StaticResource LPayInfo2}"/>
-                <Label Grid.Row="6" Content="Авторизованный код:" Style="{StaticResource LPayInfo}"/>
+                <Label Grid.Row="6" Content="{x:Static res:Resources.AuthCode}" Style="{StaticResource LPayInfo}"/>
                 <Label x:Name="LAuthCode" Grid.Row="6" Grid.Column="2" Style="{StaticResource LPayInfo2}"/>
-                <Label Grid.Row="7" Content="RRN:" Style="{StaticResource LPayInfo}"/>
+                <Label Grid.Row="7" Content="{x:Static res:Resources.RRN}" Style="{StaticResource LPayInfo}"/>
                 <Label x:Name="LRRN" Grid.Row="7" Grid.Column="2" Style="{StaticResource LPayInfo2}"/>
-                <Label Grid.Row="8" Content="Сумма:" Style="{StaticResource LHead}" FontSize="12"/>
+                <Label Grid.Row="8" Content="{x:Static res:Resources.Summ}" Style="{StaticResource LHead}" FontSize="12"/>
                 <Label x:Name="LSummPrice" Grid.Row="8" Grid.Column="2" Style="{StaticResource LPayInfo2}"/>
             </Grid>
         </materialDesign:Card>
-        <Image x:Name="ImgGifLoad" Grid.Row="4" Visibility="Collapsed" gif:ImageBehavior.RepeatBehavior="3x" gif:ImageBehavior.AnimationCompleted="ImgGifPlayer_AnimationCompleted" MaxHeight="217"/>
-        <Image x:Name="ImgGifSuccess" Grid.Row="4" Visibility="Collapsed" gif:ImageBehavior.RepeatBehavior="1x" gif:ImageBehavior.AnimationCompleted="ImgGifSuccess_AnimationCompleted" MaxHeight="217"/>
-        <StackPanel x:Name="SPBtnsPay" Grid.Row="5" HorizontalAlignment="Center" Margin="0,20,0,0" Orientation="Horizontal">
-            <Button x:Name="BtnCancel" Content="ОТМЕНА" Background="Gray" BorderBrush="Transparent"  Foreground="White" Click="BtnCancel_Click"/>
-            <Button x:Name="BtnPay" Content="ОПЛАТИТЬ" Background="{DynamicResource SecondaryHueDarkBrush}" BorderBrush="Transparent"  Foreground="White" Margin="20,0,0,0" Click="BtnPay_Click"/>
+        <Image x:Name="ImgGifLoad" Grid.Row="4" MaxHeight="217" Visibility="Collapsed" gif:ImageBehavior.RepeatBehavior="3x" gif:ImageBehavior.AnimationCompleted="ImgGifPlayer_AnimationCompleted" />
+        <Image x:Name="ImgGifSuccess" Grid.Row="4" MaxHeight="217" Visibility="Collapsed" gif:ImageBehavior.RepeatBehavior="1x" gif:ImageBehavior.AnimationCompleted="ImgGifSuccess_AnimationCompleted"/>
+        <StackPanel x:Name="SPBtnsPay" Grid.Row="5" Style="{StaticResource SPBtnsPay}">
+            <Button x:Name="BtnCancel" Content="{x:Static res:Resources.CancelCaps}" Background="Gray" BorderBrush="Transparent" Foreground="White" Click="BtnCancel_Click"/>
+            <Button x:Name="BtnPay" Margin="20,0,0,0" Content="{x:Static res:Resources.PayCaps}" Background="{DynamicResource SecondaryHueDarkBrush}" BorderBrush="Transparent" Foreground="White" Click="BtnPay_Click"/>
         </StackPanel>
-        <StackPanel x:Name="SPBtnsFinal" Grid.Row="5" HorizontalAlignment="Center" Margin="0,20,0,0" Orientation="Horizontal" Visibility="Collapsed">
-            <Button x:Name="BtnPrint" Content="РАСПЕЧАТАТЬ" Background="Gray" BorderBrush="Transparent"  Foreground="White" Click="BtnPrint_Click"/>
-            <Button x:Name="BtnBack" Content="ВЕРНУТЬСЯ В МАГАЗИН" Background="{DynamicResource SecondaryHueDarkBrush}" BorderBrush="Transparent" Foreground="White" Margin="20,0,0,0" Click="BtnBack_Click"/>
+        <StackPanel x:Name="SPBtnsFinal" Grid.Row="5" Visibility="Collapsed" Style="{StaticResource SPBtnsPay}">
+            <Button x:Name="BtnPrint" Content="{x:Static res:Resources.Print}" Background="Gray" BorderBrush="Transparent"  Foreground="White" Click="BtnPrint_Click"/>
+            <Button x:Name="BtnBack" Margin="20,0,0,0" Content="{x:Static res:Resources.PayBack}" Background="{DynamicResource SecondaryHueDarkBrush}" BorderBrush="Transparent" Foreground="White" Click="BtnBack_Click"/>
         </StackPanel>
-        <Label Grid.Row="6" HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="10" Content="Безопасность передаваемой информации обеспечивается&#x0a; с помощью современного протокола обеспечения безопасности в сети интернет TLS.&#x0a;Данные защищены по международному стандарту PCI DSS." Style="{StaticResource LDescription}"/>
+        <Label Grid.Row="6" Margin="0,20,0,0" HorizontalAlignment="Center" FontSize="10" Content="{x:Static res:Resources.PayProtectInfo}" Style="{StaticResource LDescription}"/>
         <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Image Source="/Resources/BankLogos/MIRCheckLOGO.png" Width="60" Margin="15"/>
-            <Image Source="/Resources/BankLogos/PCICheckLOGO.png" Width="60" Margin="15"/>
-            <Image Source="/Resources/BankLogos/MCCheckLOGO.png" Width="60" Margin="15"/>
-            <Image Source="/Resources/BankLogos/VISACheckLOGO.png" Width="60" Margin="15"/>
+            <Image Source="/Resources/BankLogos/MIRCheckLOGO.png" Style="{StaticResource ImgPayLogo2}"/>
+            <Image Source="/Resources/BankLogos/PCICheckLOGO.png" Style="{StaticResource ImgPayLogo2}"/>
+            <Image Source="/Resources/BankLogos/MCCheckLOGO.png" Style="{StaticResource ImgPayLogo2}"/>
+            <Image Source="/Resources/BankLogos/VISACheckLOGO.png" Style="{StaticResource ImgPayLogo2}"/>
         </StackPanel>
-        <Label Grid.Row="8" HorizontalAlignment="Center" FontSize="10" Content="Банк ГБП (АО). Генеральная лицензия Банка России №354" Style="{StaticResource LDescription}"/>
+        <Label Grid.Row="8" HorizontalAlignment="Center" FontSize="10" Content="{x:Static res:Resources.BankInfo}" Style="{StaticResource LDescription}"/>
     </Grid>
 </Page>

@@ -2,28 +2,29 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      Title="ЛКК НЭС" Height="800" Width="800" MinHeight="800" MinWidth="800" FontFamily="{StaticResource FontMain}">
+      xmlns:res="clr-namespace:Novaelectrosbit.Properties"
+      Title="{x:Static res:Resources.LCC}" Height="800" Width="800" MinHeight="800" MinWidth="800" FontFamily="{StaticResource FontMain}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto" x:Name="Row1"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Content="Ваши счета:" Grid.Column="0" FontSize="25" Background="{StaticResource PColorLGray}" HorizontalAlignment="Left" MinWidth="206" Height="auto"/>
+        <Label Grid.Row="0" Grid.Column="0" MinWidth="207" HorizontalAlignment="Left" Content="{x:Static res:Resources.YourAccs}" FontSize="25" Background="{StaticResource PColorLGray}"/>
         <Grid Grid.Row="1" Background="{StaticResource PColorLGray}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button x:Name="BtnAddPerAcc" Margin="5,0" materialDesign:ButtonAssist.CornerRadius="5" Content="+ Добавить лицевой счет" BorderBrush="{DynamicResource SecondaryHueMidBrush}" 
-                    BorderThickness="1" Style="{StaticResource MaterialDesignFlatSecondaryButton}" Foreground="{DynamicResource SecondaryHueMidBrush}" Cursor="Hand" Click="BtnAddPerAcc_Click"/>
+            <Button x:Name="BtnAddPerAcc" Margin="5,0" Content="{x:Static res:Resources.AddPerAcc}" Cursor="Hand" Click="BtnAddPerAcc_Click" BorderBrush="{DynamicResource SecondaryHueMidBrush}" 
+                    BorderThickness="1" Style="{StaticResource MaterialDesignFlatSecondaryButton}" materialDesign:ButtonAssist.CornerRadius="5" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
             <Border Grid.Row="1" Margin="0,15,0,0" BorderBrush="Gray" BorderThickness="0,1"/>
             <ListBox x:Name="LBoxPerAccs" Grid.Row="2">
-                <ListBoxItem Content="У вас не подключены лицевые&#x0a;счета" Foreground="Black" Background="{StaticResource SweetWhiteBlue}"/>
+                <ListBoxItem Content="{x:Static res:Resources.NoPerAccs}" Foreground="Black" Background="{StaticResource SweetWhiteBlue}"/>
             </ListBox>
         </Grid>
         <Grid Grid.Column="1" Background="{DynamicResource PrimaryHueMidBrush}">
@@ -32,15 +33,15 @@
                 <ColumnDefinition />
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <Image Grid.Column="0" Source="/Resources/NovaelectrosbitLOGO.png" Width="160" HorizontalAlignment="Left"/>
-            <materialDesign:PackIcon Grid.Column="1" Kind="AccountCircle" Height="40" Width="30" HorizontalAlignment="Right"/>
-            <ComboBox x:Name="CBoxProfile" Grid.Column="2" Margin="0,0,20,0" Text="{Binding ElementName=CBoxItemFIO, Path=Content}" HorizontalAlignment="Left" IsReadOnly="True" Height="40" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"
-                       FontSize="15" IsEditable="True" SelectionChanged="CBoxProfile_SelectionChanged" Cursor="Hand" >
+            <Image Grid.Column="0" Width="160" HorizontalAlignment="Left" Source="/Resources/NovaelectrosbitLOGO.png"/>
+            <materialDesign:PackIcon Grid.Column="1" Height="40" Width="30" HorizontalAlignment="Right" Kind="AccountCircle"/>
+            <ComboBox x:Name="CBoxProfile" Grid.Column="2" Margin="0,0,20,0" HorizontalAlignment="Left" Height="40" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Cursor="Hand" 
+                      Text="{Binding ElementName=CBoxItemFIO, Path=Content}" IsReadOnly="True" FontSize="15" IsEditable="True" SelectionChanged="CBoxProfile_SelectionChanged">
                 <ComboBoxItem x:Name="CBoxItemFIO" Content="{Binding FI}" Visibility="Collapsed"/>
-                <ComboBoxItem Content="Профиль"/>
-                <ComboBoxItem Content="Выход"/>
+                <ComboBoxItem Content="{x:Static res:Resources.Profile}"/>
+                <ComboBoxItem Content="{x:Static res:Resources.Exit}"/>
             </ComboBox>
         </Grid>
-        <Frame x:Name="MainPageFrame" Grid.Row="1" Grid.Column="1" NavigationUIVisibility="Hidden" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Frame x:Name="MainPageFrame" Grid.Row="1" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Page>

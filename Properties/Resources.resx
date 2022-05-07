@@ -117,20 +117,107 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddPerAcc" xml:space="preserve">
+    <value>+ Добавить лицевой счет</value>
+  </data>
+  <data name="AddPerAccCaps" xml:space="preserve">
+    <value>ДОБАВИТЬ ЛИЦЕВОЙ СЧЕТ</value>
+  </data>
+  <data name="Administrator" xml:space="preserve">
+    <value>Администратор</value>
+  </data>
+  <data name="AllTime" xml:space="preserve">
+    <value>За все время</value>
+  </data>
+  <data name="AuthCode" xml:space="preserve">
+    <value>Авторизованный код:</value>
+  </data>
+  <data name="BankInfo" xml:space="preserve">
+    <value>Банк ГБП (АО). Генеральная лицензия Банка России №354</value>
+  </data>
   <data name="Birthdate" xml:space="preserve">
     <value>Дата рождения</value>
   </data>
   <data name="BirthdateToolTip" xml:space="preserve">
     <value>Вам должно быть не менее 18 лет</value>
   </data>
+  <data name="BuildType" xml:space="preserve">
+    <value>Тип дома:</value>
+  </data>
   <data name="Cancel" xml:space="preserve">
     <value>Отмена</value>
+  </data>
+  <data name="CancelCaps" xml:space="preserve">
+    <value>ОТМЕНА</value>
+  </data>
+  <data name="CardExpired" xml:space="preserve">
+    <value>Срок карты истек</value>
+  </data>
+  <data name="CardMonthError" xml:space="preserve">
+    <value>Месяц в диапазоне 01-12</value>
+  </data>
+  <data name="CardNum" xml:space="preserve">
+    <value>Номер карты:</value>
+  </data>
+  <data name="CardYearError" xml:space="preserve">
+    <value>Проверьте правильность введенного года, не более 5 лет с текущего года</value>
   </data>
   <data name="ComeUpPassS" xml:space="preserve">
     <value>Придумайте пароль *</value>
   </data>
+  <data name="Connect" xml:space="preserve">
+    <value>ПОДКЛЮЧИТЬ</value>
+  </data>
+  <data name="ConnectPerAcc" xml:space="preserve">
+    <value>&lt; Подключить лицевой счет</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>ПРОДОЛЖИТЬ</value>
+  </data>
+  <data name="CounterBrand" xml:space="preserve">
+    <value>Марка счетчика</value>
+  </data>
+  <data name="CounterInstallPlace" xml:space="preserve">
+    <value>Место установки счетчика:</value>
+  </data>
+  <data name="CounterNum" xml:space="preserve">
+    <value>Номер счетчика</value>
+  </data>
+  <data name="CounterResponsiblePerson" xml:space="preserve">
+    <value>Лицо, отв. за эксплуатацию счетчика:</value>
+  </data>
+  <data name="CounterValue" xml:space="preserve">
+    <value>Значность счетчика:</value>
+  </data>
+  <data name="CountOfLiving" xml:space="preserve">
+    <value>Кол-во проживающих:</value>
+  </data>
+  <data name="CountOfRooms" xml:space="preserve">
+    <value>Кол-во комнат:</value>
+  </data>
   <data name="CreditedStr" xml:space="preserve">
     <value>Зачислен</value>
+  </data>
+  <data name="CurPassword" xml:space="preserve">
+    <value>Текущий пароль *</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Дата/время:</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Описание:</value>
+  </data>
+  <data name="Email2" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailBill" xml:space="preserve">
+    <value>E-mail для направления чека *</value>
+  </data>
+  <data name="EmailCongrats" xml:space="preserve">
+    <value>E-mail успешно изменен</value>
+  </data>
+  <data name="EmailEdit" xml:space="preserve">
+    <value>Редактирование E-mail</value>
   </data>
   <data name="EmailError" xml:space="preserve">
     <value>Некорректный E-mail</value>
@@ -138,20 +225,259 @@
   <data name="EmailS" xml:space="preserve">
     <value>Email *</value>
   </data>
+  <data name="Enter" xml:space="preserve">
+    <value>ВОЙТИ</value>
+  </data>
+  <data name="EnterLCC" xml:space="preserve">
+    <value>Вход в ЛКК НЭС</value>
+  </data>
+  <data name="Entrance" xml:space="preserve">
+    <value>Вход</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Женский</value>
+  </data>
+  <data name="FinalSumm" xml:space="preserve">
+    <value>Итого к оплате *</value>
+  </data>
+  <data name="FIO" xml:space="preserve">
+    <value>Ф.И.О:</value>
+  </data>
   <data name="FIOError" xml:space="preserve">
     <value>ФИО должно начинаться с заглавной буквы и содержать не менее 2х символов</value>
   </data>
   <data name="Gender" xml:space="preserve">
     <value>Пол</value>
   </data>
+  <data name="GeneralInfo" xml:space="preserve">
+    <value>Общая информация</value>
+  </data>
+  <data name="GeneralLivingArea" xml:space="preserve">
+    <value>Общая/жилая площадь:</value>
+  </data>
+  <data name="GenInfoCongrats" xml:space="preserve">
+    <value>Информация успешно изменена</value>
+  </data>
+  <data name="GPB" xml:space="preserve">
+    <value>ГАЗПРОМБАНК</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>История</value>
+  </data>
   <data name="IconInfoToolTip" xml:space="preserve">
     <value>Пароль должен содержать не менее 8 знаков, включая цифры, и большие, и маленькие буквы латинского алфавита</value>
+  </data>
+  <data name="Indications" xml:space="preserve">
+    <value>Показания</value>
+  </data>
+  <data name="InputMRint" xml:space="preserve">
+    <value>Введите показания целым числом</value>
+  </data>
+  <data name="InputTelephone" xml:space="preserve">
+    <value>Введите номер телефона</value>
+  </data>
+  <data name="InstallDate" xml:space="preserve">
+    <value>Дата установки</value>
+  </data>
+  <data name="Last3Months" xml:space="preserve">
+    <value>За последние 3 месяца</value>
+  </data>
+  <data name="Last6Months" xml:space="preserve">
+    <value>За последние 6 месяцев</value>
+  </data>
+  <data name="LastYear" xml:space="preserve">
+    <value>За год</value>
+  </data>
+  <data name="LCC" xml:space="preserve">
+    <value>ЛКК НЭС</value>
+  </data>
+  <data name="LCCProfile" xml:space="preserve">
+    <value>&lt; Профиль пользователя личного кабинета</value>
+  </data>
+  <data name="LogOrPassError" xml:space="preserve">
+    <value>Неверно введен логин или пароль. Проверьте правильность ввода и повторите попытку.</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Мужской</value>
+  </data>
+  <data name="MeterInstaller" xml:space="preserve">
+    <value>Установщик счетчиков</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Месяц</value>
+  </data>
+  <data name="MPIEndDate" xml:space="preserve">
+    <value>Дата окончания МПИ:</value>
+  </data>
+  <data name="MRError" xml:space="preserve">
+    <value>Нынешние показания не могут быть меньше, чем предыдущие</value>
+  </data>
+  <data name="MRNow" xml:space="preserve">
+    <value>Текущие показания, кВт*ч *</value>
+  </data>
+  <data name="MRPerAcc" xml:space="preserve">
+    <value>&lt; Передача показаний по ЛС</value>
+  </data>
+  <data name="MRSuccess" xml:space="preserve">
+    <value>Показания успешно добавлены</value>
+  </data>
+  <data name="NameASKUESystem" xml:space="preserve">
+    <value>Наименование системы АСКУЭ:</value>
+  </data>
+  <data name="NeedToFillCardRequired" xml:space="preserve">
+    <value>Вам необходимо заполнить все необходимые данные о карте</value>
   </data>
   <data name="NeedToFillRequired" xml:space="preserve">
     <value>Вам необходимо заполнить все обязательные поля</value>
   </data>
+  <data name="NES" xml:space="preserve">
+    <value>NES</value>
+  </data>
+  <data name="NetworkOrganisation" xml:space="preserve">
+    <value>Сетевая организация:</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>Данных нет</value>
+  </data>
+  <data name="NoPerAccs" xml:space="preserve">
+    <value>У вас не подключены лицевые
+счета</value>
+  </data>
+  <data name="OOONES" xml:space="preserve">
+    <value>ООО "НЭС"</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Пароль *</value>
+  </data>
+  <data name="Password2" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="PasswordAdvice" xml:space="preserve">
+    <value>Придумайте длинный пароль из букв и цифр, который вам будет
+легко запомнить, а другим - сложно угадать</value>
+  </data>
+  <data name="PasswordCongrats" xml:space="preserve">
+    <value>Пароль успешно изменен</value>
+  </data>
+  <data name="PasswordEdit" xml:space="preserve">
+    <value>Изменение пароля</value>
+  </data>
   <data name="PasswordsError" xml:space="preserve">
     <value>Пароли не совпадают</value>
+  </data>
+  <data name="Pay" xml:space="preserve">
+    <value>Оплатить</value>
+  </data>
+  <data name="PayAdvice" xml:space="preserve">
+    <value>Для вашего удобства вы можете сделать авансовый платеж
+на один или несколько месяцев вперед. Рекомендуемая
+сумма оплаты за 1 месяц - 1000 рублей.</value>
+  </data>
+  <data name="PayAgree" xml:space="preserve">
+    <value>Я согласен с правилами оплаты</value>
+  </data>
+  <data name="PayBack" xml:space="preserve">
+    <value>ВЕРНУТЬСЯ В МАГАЗИН</value>
+  </data>
+  <data name="PayBankCard" xml:space="preserve">
+    <value>Оплатить банковской картой</value>
+  </data>
+  <data name="PayCancel" xml:space="preserve">
+    <value>Не удалось зарегестрировать платеж. Платеж был отменен/Истекло время ожидания ответа от пользователя</value>
+  </data>
+  <data name="PayCaps" xml:space="preserve">
+    <value>ОПЛАТИТЬ</value>
+  </data>
+  <data name="PayCardDesc" xml:space="preserve">
+    <value>Три цифры с оборотной
+стороны карты</value>
+  </data>
+  <data name="PayCompleteSuccess" xml:space="preserve">
+    <value>Платеж завершен успешно</value>
+  </data>
+  <data name="Payment" xml:space="preserve">
+    <value>&lt; Оплата</value>
+  </data>
+  <data name="Payments" xml:space="preserve">
+    <value>Оплаты</value>
+  </data>
+  <data name="PayProtectInfo" xml:space="preserve">
+    <value>Безопасность передаваемой информации обеспечивается
+с помощью современного протокола обеспечения безопасности в сети интернет TLS.
+Данные защищены по международному стандарту PCI DSS.</value>
+  </data>
+  <data name="PayQuestion" xml:space="preserve">
+    <value>Увеличить сумму оплаты на рекомендованную сумму?</value>
+  </data>
+  <data name="PaySuccess" xml:space="preserve">
+    <value>Оплата успешно зачислена</value>
+  </data>
+  <data name="PayTitle" xml:space="preserve">
+    <value>Оплата платежа</value>
+  </data>
+  <data name="PerAcc" xml:space="preserve">
+    <value>Личный кабинет</value>
+  </data>
+  <data name="PerAccAlreadyConnected" xml:space="preserve">
+    <value>Данный лицевой счет уже подключен!</value>
+  </data>
+  <data name="PerAccNotFound" xml:space="preserve">
+    <value>Лицевой счет не найден</value>
+  </data>
+  <data name="PerAccNumber" xml:space="preserve">
+    <value>Номер лицевого счета *</value>
+  </data>
+  <data name="PerAccRelationStatus" xml:space="preserve">
+    <value>Статус отношения к ЛС</value>
+  </data>
+  <data name="PerAccRequisites" xml:space="preserve">
+    <value>Реквизиты ЛС</value>
+  </data>
+  <data name="PerAccToolTip" xml:space="preserve">
+    <value>Номер лицевого счета вы можете посмотреть в счете на оплату</value>
+  </data>
+  <data name="PersonalDataAgree" xml:space="preserve">
+    <value>Нажимая кнопку "Продолжить" вы принимаете Пользовательское соглашение и даете
+согласие на обработку персональных данных</value>
+  </data>
+  <data name="PersonalInfoEdit" xml:space="preserve">
+    <value>Редактирование личных данных</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Стоимость:</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>РАСПЕЧАТАТЬ</value>
+  </data>
+  <data name="PrintReceipt" xml:space="preserve">
+    <value>ПЕЧАТЬ КВИТАНЦИИ</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
+  <data name="Receipts" xml:space="preserve">
+    <value>Квитанции</value>
+  </data>
+  <data name="RecSumm" xml:space="preserve">
+    <value>+1000 руб</value>
+  </data>
+  <data name="Registration" xml:space="preserve">
+    <value>Регистрация</value>
+  </data>
+  <data name="RegistrationAddress" xml:space="preserve">
+    <value>Адрес регистрации:</value>
+  </data>
+  <data name="RegistrationCongrats" xml:space="preserve">
+    <value>Поздравляем, теперь Вы можете пользоваться личным кабинетом!</value>
+  </data>
+  <data name="RepeatNewPassword" xml:space="preserve">
+    <value>Повтор нового пароля *</value>
+  </data>
+  <data name="RequiredError" xml:space="preserve">
+    <value>Проверьте правильность введенных данных в обязательном поле!</value>
   </data>
   <data name="RequiredFillIn" xml:space="preserve">
     <value>Обязательно для заполнения</value>
@@ -159,11 +485,78 @@
   <data name="RetryPassS" xml:space="preserve">
     <value>Повторите пароль *</value>
   </data>
+  <data name="RRN" xml:space="preserve">
+    <value>RRN:</value>
+  </data>
+  <data name="Rub" xml:space="preserve">
+    <value>руб.</value>
+  </data>
   <data name="Save" xml:space="preserve">
     <value>СОХРАНИТЬ</value>
   </data>
+  <data name="SavePassword" xml:space="preserve">
+    <value>СОХРАНИТЬ ПАРОЛЬ</value>
+  </data>
+  <data name="Seller" xml:space="preserve">
+    <value>Продавец:</value>
+  </data>
+  <data name="SettingIndicators" xml:space="preserve">
+    <value>Установочные показания</value>
+  </data>
+  <data name="StartWork" xml:space="preserve">
+    <value>Начните работу с сервисом добавлением лицевого счета</value>
+  </data>
+  <data name="Summ" xml:space="preserve">
+    <value>Сумма:</value>
+  </data>
+  <data name="SummError" xml:space="preserve">
+    <value>Проверьте правильность введенной суммы. Она не может быть меньше 1, не должна начинаться с 0, превышать 9'999'999 млн. руб., а также не может содержать 3 цифры после запятой</value>
+  </data>
+  <data name="Tariff" xml:space="preserve">
+    <value>Тариф</value>
+  </data>
+  <data name="TariffType" xml:space="preserve">
+    <value>Тип тарифа:</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>Мобильный телефон</value>
+  </data>
+  <data name="TelephoneAndEmail" xml:space="preserve">
+    <value>Телефон и e-mail</value>
+  </data>
+  <data name="TelephoneCongrats" xml:space="preserve">
+    <value>Номер телефона успешно изменен</value>
+  </data>
+  <data name="TelephoneEdit" xml:space="preserve">
+    <value>Редактирование телефона</value>
+  </data>
+  <data name="TelephoneFormat" xml:space="preserve">
+    <value>Формат телефона 89XXXXXXXXX</value>
+  </data>
+  <data name="TelephoneOrEmail" xml:space="preserve">
+    <value>Телефон или E-mail *</value>
+  </data>
   <data name="TelephoneS" xml:space="preserve">
     <value>Мобильный телефон *</value>
+  </data>
+  <data name="TransferMR" xml:space="preserve">
+    <value>Передать показания</value>
+  </data>
+  <data name="TransferMRCaps" xml:space="preserve">
+    <value>ПЕРЕДАТЬ ПОКАЗАНИЯ</value>
+  </data>
+  <data name="TransformCoefficient" xml:space="preserve">
+    <value>Коэффициент трансформации:</value>
+  </data>
+  <data name="TransID" xml:space="preserve">
+    <value>Идентификатор транзакции:</value>
+  </data>
+  <data name="UserEmailExists" xml:space="preserve">
+    <value>Пользователь с таким E-mail'ом уже существует</value>
+  </data>
+  <data name="UserExists" xml:space="preserve">
+    <value>Пользователь с таким телефоном/e-mail уже существует, если аккаунт принадлежит вам,
+то войдите в ЛК, используя эти данные в качестве логина и ранее используемый вами пароль</value>
   </data>
   <data name="UserFirstnameS" xml:space="preserve">
     <value>Имя пользователя *</value>
@@ -173,5 +566,17 @@
   </data>
   <data name="UserSurname" xml:space="preserve">
     <value>Фамилия пользователя</value>
+  </data>
+  <data name="UserTelephoneExists" xml:space="preserve">
+    <value>Пользователь с таким номером телефона уже существует</value>
+  </data>
+  <data name="VertLine" xml:space="preserve">
+    <value>|</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Год</value>
+  </data>
+  <data name="YourAccs" xml:space="preserve">
+    <value>Ваши счета:</value>
   </data>
 </root>

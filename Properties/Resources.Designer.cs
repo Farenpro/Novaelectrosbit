@@ -61,6 +61,60 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to + Добавить лицевой счет.
+        /// </summary>
+        public static string AddPerAcc {
+            get {
+                return ResourceManager.GetString("AddPerAcc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ДОБАВИТЬ ЛИЦЕВОЙ СЧЕТ.
+        /// </summary>
+        public static string AddPerAccCaps {
+            get {
+                return ResourceManager.GetString("AddPerAccCaps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Администратор.
+        /// </summary>
+        public static string Administrator {
+            get {
+                return ResourceManager.GetString("Administrator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to За все время.
+        /// </summary>
+        public static string AllTime {
+            get {
+                return ResourceManager.GetString("AllTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Авторизованный код:.
+        /// </summary>
+        public static string AuthCode {
+            get {
+                return ResourceManager.GetString("AuthCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Банк ГБП (АО). Генеральная лицензия Банка России №354.
+        /// </summary>
+        public static string BankInfo {
+            get {
+                return ResourceManager.GetString("BankInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Дата рождения.
         /// </summary>
         public static string Birthdate {
@@ -79,11 +133,65 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Тип дома:.
+        /// </summary>
+        public static string BuildType {
+            get {
+                return ResourceManager.GetString("BuildType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Отмена.
         /// </summary>
         public static string Cancel {
             get {
                 return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ОТМЕНА.
+        /// </summary>
+        public static string CancelCaps {
+            get {
+                return ResourceManager.GetString("CancelCaps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Срок карты истек.
+        /// </summary>
+        public static string CardExpired {
+            get {
+                return ResourceManager.GetString("CardExpired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Месяц в диапазоне 01-12.
+        /// </summary>
+        public static string CardMonthError {
+            get {
+                return ResourceManager.GetString("CardMonthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Номер карты:.
+        /// </summary>
+        public static string CardNum {
+            get {
+                return ResourceManager.GetString("CardNum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Проверьте правильность введенного года, не более 5 лет с текущего года.
+        /// </summary>
+        public static string CardYearError {
+            get {
+                return ResourceManager.GetString("CardYearError", resourceCulture);
             }
         }
         
@@ -97,11 +205,164 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ПОДКЛЮЧИТЬ.
+        /// </summary>
+        public static string Connect {
+            get {
+                return ResourceManager.GetString("Connect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt; Подключить лицевой счет.
+        /// </summary>
+        public static string ConnectPerAcc {
+            get {
+                return ResourceManager.GetString("ConnectPerAcc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ПРОДОЛЖИТЬ.
+        /// </summary>
+        public static string Continue {
+            get {
+                return ResourceManager.GetString("Continue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Марка счетчика.
+        /// </summary>
+        public static string CounterBrand {
+            get {
+                return ResourceManager.GetString("CounterBrand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Место установки счетчика:.
+        /// </summary>
+        public static string CounterInstallPlace {
+            get {
+                return ResourceManager.GetString("CounterInstallPlace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Номер счетчика.
+        /// </summary>
+        public static string CounterNum {
+            get {
+                return ResourceManager.GetString("CounterNum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Лицо, отв. за эксплуатацию счетчика:.
+        /// </summary>
+        public static string CounterResponsiblePerson {
+            get {
+                return ResourceManager.GetString("CounterResponsiblePerson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Значность счетчика:.
+        /// </summary>
+        public static string CounterValue {
+            get {
+                return ResourceManager.GetString("CounterValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Кол-во проживающих:.
+        /// </summary>
+        public static string CountOfLiving {
+            get {
+                return ResourceManager.GetString("CountOfLiving", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Кол-во комнат:.
+        /// </summary>
+        public static string CountOfRooms {
+            get {
+                return ResourceManager.GetString("CountOfRooms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Зачислен.
         /// </summary>
         public static string CreditedStr {
             get {
                 return ResourceManager.GetString("CreditedStr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Текущий пароль *.
+        /// </summary>
+        public static string CurPassword {
+            get {
+                return ResourceManager.GetString("CurPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дата/время:.
+        /// </summary>
+        public static string DateTime {
+            get {
+                return ResourceManager.GetString("DateTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Описание:.
+        /// </summary>
+        public static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        public static string Email2 {
+            get {
+                return ResourceManager.GetString("Email2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-mail для направления чека *.
+        /// </summary>
+        public static string EmailBill {
+            get {
+                return ResourceManager.GetString("EmailBill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-mail успешно изменен.
+        /// </summary>
+        public static string EmailCongrats {
+            get {
+                return ResourceManager.GetString("EmailCongrats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Редактирование E-mail.
+        /// </summary>
+        public static string EmailEdit {
+            get {
+                return ResourceManager.GetString("EmailEdit", resourceCulture);
             }
         }
         
@@ -124,6 +385,69 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ВОЙТИ.
+        /// </summary>
+        public static string Enter {
+            get {
+                return ResourceManager.GetString("Enter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вход в ЛКК НЭС.
+        /// </summary>
+        public static string EnterLCC {
+            get {
+                return ResourceManager.GetString("EnterLCC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вход.
+        /// </summary>
+        public static string Entrance {
+            get {
+                return ResourceManager.GetString("Entrance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выход.
+        /// </summary>
+        public static string Exit {
+            get {
+                return ResourceManager.GetString("Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Женский.
+        /// </summary>
+        public static string Female {
+            get {
+                return ResourceManager.GetString("Female", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Итого к оплате *.
+        /// </summary>
+        public static string FinalSumm {
+            get {
+                return ResourceManager.GetString("FinalSumm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ф.И.О:.
+        /// </summary>
+        public static string FIO {
+            get {
+                return ResourceManager.GetString("FIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ФИО должно начинаться с заглавной буквы и содержать не менее 2х символов.
         /// </summary>
         public static string FIOError {
@@ -142,11 +466,236 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Общая информация.
+        /// </summary>
+        public static string GeneralInfo {
+            get {
+                return ResourceManager.GetString("GeneralInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Общая/жилая площадь:.
+        /// </summary>
+        public static string GeneralLivingArea {
+            get {
+                return ResourceManager.GetString("GeneralLivingArea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Информация успешно изменена.
+        /// </summary>
+        public static string GenInfoCongrats {
+            get {
+                return ResourceManager.GetString("GenInfoCongrats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ГАЗПРОМБАНК.
+        /// </summary>
+        public static string GPB {
+            get {
+                return ResourceManager.GetString("GPB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to История.
+        /// </summary>
+        public static string History {
+            get {
+                return ResourceManager.GetString("History", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Пароль должен содержать не менее 8 знаков, включая цифры, и большие, и маленькие буквы латинского алфавита.
         /// </summary>
         public static string IconInfoToolTip {
             get {
                 return ResourceManager.GetString("IconInfoToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Показания.
+        /// </summary>
+        public static string Indications {
+            get {
+                return ResourceManager.GetString("Indications", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите показания целым числом.
+        /// </summary>
+        public static string InputMRint {
+            get {
+                return ResourceManager.GetString("InputMRint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите номер телефона.
+        /// </summary>
+        public static string InputTelephone {
+            get {
+                return ResourceManager.GetString("InputTelephone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дата установки.
+        /// </summary>
+        public static string InstallDate {
+            get {
+                return ResourceManager.GetString("InstallDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to За последние 3 месяца.
+        /// </summary>
+        public static string Last3Months {
+            get {
+                return ResourceManager.GetString("Last3Months", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to За последние 6 месяцев.
+        /// </summary>
+        public static string Last6Months {
+            get {
+                return ResourceManager.GetString("Last6Months", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to За год.
+        /// </summary>
+        public static string LastYear {
+            get {
+                return ResourceManager.GetString("LastYear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ЛКК НЭС.
+        /// </summary>
+        public static string LCC {
+            get {
+                return ResourceManager.GetString("LCC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt; Профиль пользователя личного кабинета.
+        /// </summary>
+        public static string LCCProfile {
+            get {
+                return ResourceManager.GetString("LCCProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Неверно введен логин или пароль. Проверьте правильность ввода и повторите попытку..
+        /// </summary>
+        public static string LogOrPassError {
+            get {
+                return ResourceManager.GetString("LogOrPassError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Мужской.
+        /// </summary>
+        public static string Male {
+            get {
+                return ResourceManager.GetString("Male", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Установщик счетчиков.
+        /// </summary>
+        public static string MeterInstaller {
+            get {
+                return ResourceManager.GetString("MeterInstaller", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Месяц.
+        /// </summary>
+        public static string Month {
+            get {
+                return ResourceManager.GetString("Month", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дата окончания МПИ:.
+        /// </summary>
+        public static string MPIEndDate {
+            get {
+                return ResourceManager.GetString("MPIEndDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Нынешние показания не могут быть меньше, чем предыдущие.
+        /// </summary>
+        public static string MRError {
+            get {
+                return ResourceManager.GetString("MRError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Текущие показания, кВт*ч *.
+        /// </summary>
+        public static string MRNow {
+            get {
+                return ResourceManager.GetString("MRNow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt; Передача показаний по ЛС.
+        /// </summary>
+        public static string MRPerAcc {
+            get {
+                return ResourceManager.GetString("MRPerAcc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Показания успешно добавлены.
+        /// </summary>
+        public static string MRSuccess {
+            get {
+                return ResourceManager.GetString("MRSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Наименование системы АСКУЭ:.
+        /// </summary>
+        public static string NameASKUESystem {
+            get {
+                return ResourceManager.GetString("NameASKUESystem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вам необходимо заполнить все необходимые данные о карте.
+        /// </summary>
+        public static string NeedToFillCardRequired {
+            get {
+                return ResourceManager.GetString("NeedToFillCardRequired", resourceCulture);
             }
         }
         
@@ -160,11 +709,424 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to NES.
+        /// </summary>
+        public static string NES {
+            get {
+                return ResourceManager.GetString("NES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сетевая организация:.
+        /// </summary>
+        public static string NetworkOrganisation {
+            get {
+                return ResourceManager.GetString("NetworkOrganisation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Данных нет.
+        /// </summary>
+        public static string NoData {
+            get {
+                return ResourceManager.GetString("NoData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to У вас не подключены лицевые
+        ///счета.
+        /// </summary>
+        public static string NoPerAccs {
+            get {
+                return ResourceManager.GetString("NoPerAccs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ООО &quot;НЭС&quot;.
+        /// </summary>
+        public static string OOONES {
+            get {
+                return ResourceManager.GetString("OOONES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пароль *.
+        /// </summary>
+        public static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пароль.
+        /// </summary>
+        public static string Password2 {
+            get {
+                return ResourceManager.GetString("Password2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Придумайте длинный пароль из букв и цифр, который вам будет
+        ///легко запомнить, а другим - сложно угадать.
+        /// </summary>
+        public static string PasswordAdvice {
+            get {
+                return ResourceManager.GetString("PasswordAdvice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пароль успешно изменен.
+        /// </summary>
+        public static string PasswordCongrats {
+            get {
+                return ResourceManager.GetString("PasswordCongrats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Изменение пароля.
+        /// </summary>
+        public static string PasswordEdit {
+            get {
+                return ResourceManager.GetString("PasswordEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Пароли не совпадают.
         /// </summary>
         public static string PasswordsError {
             get {
                 return ResourceManager.GetString("PasswordsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Оплатить.
+        /// </summary>
+        public static string Pay {
+            get {
+                return ResourceManager.GetString("Pay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Для вашего удобства вы можете сделать авансовый платеж
+        ///на один или несколько месяцев вперед. Рекомендуемая
+        ///сумма оплаты за 1 месяц - 1000 рублей..
+        /// </summary>
+        public static string PayAdvice {
+            get {
+                return ResourceManager.GetString("PayAdvice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Я согласен с правилами оплаты.
+        /// </summary>
+        public static string PayAgree {
+            get {
+                return ResourceManager.GetString("PayAgree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ВЕРНУТЬСЯ В МАГАЗИН.
+        /// </summary>
+        public static string PayBack {
+            get {
+                return ResourceManager.GetString("PayBack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Оплатить банковской картой.
+        /// </summary>
+        public static string PayBankCard {
+            get {
+                return ResourceManager.GetString("PayBankCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Не удалось зарегестрировать платеж. Платеж был отменен/Истекло время ожидания ответа от пользователя.
+        /// </summary>
+        public static string PayCancel {
+            get {
+                return ResourceManager.GetString("PayCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ОПЛАТИТЬ.
+        /// </summary>
+        public static string PayCaps {
+            get {
+                return ResourceManager.GetString("PayCaps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Три цифры с оборотной
+        ///стороны карты.
+        /// </summary>
+        public static string PayCardDesc {
+            get {
+                return ResourceManager.GetString("PayCardDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Платеж завершен успешно.
+        /// </summary>
+        public static string PayCompleteSuccess {
+            get {
+                return ResourceManager.GetString("PayCompleteSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt; Оплата.
+        /// </summary>
+        public static string Payment {
+            get {
+                return ResourceManager.GetString("Payment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Оплаты.
+        /// </summary>
+        public static string Payments {
+            get {
+                return ResourceManager.GetString("Payments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Безопасность передаваемой информации обеспечивается
+        ///с помощью современного протокола обеспечения безопасности в сети интернет TLS.
+        ///Данные защищены по международному стандарту PCI DSS..
+        /// </summary>
+        public static string PayProtectInfo {
+            get {
+                return ResourceManager.GetString("PayProtectInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Увеличить сумму оплаты на рекомендованную сумму?.
+        /// </summary>
+        public static string PayQuestion {
+            get {
+                return ResourceManager.GetString("PayQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Оплата успешно зачислена.
+        /// </summary>
+        public static string PaySuccess {
+            get {
+                return ResourceManager.GetString("PaySuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Оплата платежа.
+        /// </summary>
+        public static string PayTitle {
+            get {
+                return ResourceManager.GetString("PayTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Личный кабинет.
+        /// </summary>
+        public static string PerAcc {
+            get {
+                return ResourceManager.GetString("PerAcc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Данный лицевой счет уже подключен!.
+        /// </summary>
+        public static string PerAccAlreadyConnected {
+            get {
+                return ResourceManager.GetString("PerAccAlreadyConnected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Лицевой счет не найден.
+        /// </summary>
+        public static string PerAccNotFound {
+            get {
+                return ResourceManager.GetString("PerAccNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Номер лицевого счета *.
+        /// </summary>
+        public static string PerAccNumber {
+            get {
+                return ResourceManager.GetString("PerAccNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Статус отношения к ЛС.
+        /// </summary>
+        public static string PerAccRelationStatus {
+            get {
+                return ResourceManager.GetString("PerAccRelationStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Реквизиты ЛС.
+        /// </summary>
+        public static string PerAccRequisites {
+            get {
+                return ResourceManager.GetString("PerAccRequisites", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Номер лицевого счета вы можете посмотреть в счете на оплату.
+        /// </summary>
+        public static string PerAccToolTip {
+            get {
+                return ResourceManager.GetString("PerAccToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Нажимая кнопку &quot;Продолжить&quot; вы принимаете Пользовательское соглашение и даете
+        ///согласие на обработку персональных данных.
+        /// </summary>
+        public static string PersonalDataAgree {
+            get {
+                return ResourceManager.GetString("PersonalDataAgree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Редактирование личных данных.
+        /// </summary>
+        public static string PersonalInfoEdit {
+            get {
+                return ResourceManager.GetString("PersonalInfoEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Стоимость:.
+        /// </summary>
+        public static string Price {
+            get {
+                return ResourceManager.GetString("Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to РАСПЕЧАТАТЬ.
+        /// </summary>
+        public static string Print {
+            get {
+                return ResourceManager.GetString("Print", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ПЕЧАТЬ КВИТАНЦИИ.
+        /// </summary>
+        public static string PrintReceipt {
+            get {
+                return ResourceManager.GetString("PrintReceipt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Профиль.
+        /// </summary>
+        public static string Profile {
+            get {
+                return ResourceManager.GetString("Profile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Квитанции.
+        /// </summary>
+        public static string Receipts {
+            get {
+                return ResourceManager.GetString("Receipts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to +1000 руб.
+        /// </summary>
+        public static string RecSumm {
+            get {
+                return ResourceManager.GetString("RecSumm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Регистрация.
+        /// </summary>
+        public static string Registration {
+            get {
+                return ResourceManager.GetString("Registration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Адрес регистрации:.
+        /// </summary>
+        public static string RegistrationAddress {
+            get {
+                return ResourceManager.GetString("RegistrationAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Поздравляем, теперь Вы можете пользоваться личным кабинетом!.
+        /// </summary>
+        public static string RegistrationCongrats {
+            get {
+                return ResourceManager.GetString("RegistrationCongrats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Повтор нового пароля *.
+        /// </summary>
+        public static string RepeatNewPassword {
+            get {
+                return ResourceManager.GetString("RepeatNewPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Проверьте правильность введенных данных в обязательном поле!.
+        /// </summary>
+        public static string RequiredError {
+            get {
+                return ResourceManager.GetString("RequiredError", resourceCulture);
             }
         }
         
@@ -187,6 +1149,24 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to RRN:.
+        /// </summary>
+        public static string RRN {
+            get {
+                return ResourceManager.GetString("RRN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to руб..
+        /// </summary>
+        public static string Rub {
+            get {
+                return ResourceManager.GetString("Rub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to СОХРАНИТЬ.
         /// </summary>
         public static string Save {
@@ -196,11 +1176,192 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to СОХРАНИТЬ ПАРОЛЬ.
+        /// </summary>
+        public static string SavePassword {
+            get {
+                return ResourceManager.GetString("SavePassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Продавец:.
+        /// </summary>
+        public static string Seller {
+            get {
+                return ResourceManager.GetString("Seller", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Установочные показания.
+        /// </summary>
+        public static string SettingIndicators {
+            get {
+                return ResourceManager.GetString("SettingIndicators", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Начните работу с сервисом добавлением лицевого счета.
+        /// </summary>
+        public static string StartWork {
+            get {
+                return ResourceManager.GetString("StartWork", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сумма:.
+        /// </summary>
+        public static string Summ {
+            get {
+                return ResourceManager.GetString("Summ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Проверьте правильность введенной суммы. Она не может быть меньше 1, не должна начинаться с 0, превышать 9&apos;999&apos;999 млн. руб., а также не может содержать 3 цифры после запятой.
+        /// </summary>
+        public static string SummError {
+            get {
+                return ResourceManager.GetString("SummError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Тариф.
+        /// </summary>
+        public static string Tariff {
+            get {
+                return ResourceManager.GetString("Tariff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Тип тарифа:.
+        /// </summary>
+        public static string TariffType {
+            get {
+                return ResourceManager.GetString("TariffType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Мобильный телефон.
+        /// </summary>
+        public static string Telephone {
+            get {
+                return ResourceManager.GetString("Telephone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Телефон и e-mail.
+        /// </summary>
+        public static string TelephoneAndEmail {
+            get {
+                return ResourceManager.GetString("TelephoneAndEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Номер телефона успешно изменен.
+        /// </summary>
+        public static string TelephoneCongrats {
+            get {
+                return ResourceManager.GetString("TelephoneCongrats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Редактирование телефона.
+        /// </summary>
+        public static string TelephoneEdit {
+            get {
+                return ResourceManager.GetString("TelephoneEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Формат телефона 89XXXXXXXXX.
+        /// </summary>
+        public static string TelephoneFormat {
+            get {
+                return ResourceManager.GetString("TelephoneFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Телефон или E-mail *.
+        /// </summary>
+        public static string TelephoneOrEmail {
+            get {
+                return ResourceManager.GetString("TelephoneOrEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Мобильный телефон *.
         /// </summary>
         public static string TelephoneS {
             get {
                 return ResourceManager.GetString("TelephoneS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Передать показания.
+        /// </summary>
+        public static string TransferMR {
+            get {
+                return ResourceManager.GetString("TransferMR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ПЕРЕДАТЬ ПОКАЗАНИЯ.
+        /// </summary>
+        public static string TransferMRCaps {
+            get {
+                return ResourceManager.GetString("TransferMRCaps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Коэффициент трансформации:.
+        /// </summary>
+        public static string TransformCoefficient {
+            get {
+                return ResourceManager.GetString("TransformCoefficient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Идентификатор транзакции:.
+        /// </summary>
+        public static string TransID {
+            get {
+                return ResourceManager.GetString("TransID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пользователь с таким E-mail&apos;ом уже существует.
+        /// </summary>
+        public static string UserEmailExists {
+            get {
+                return ResourceManager.GetString("UserEmailExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пользователь с таким телефоном/e-mail уже существует, если аккаунт принадлежит вам,
+        ///то войдите в ЛК, используя эти данные в качестве логина и ранее используемый вами пароль.
+        /// </summary>
+        public static string UserExists {
+            get {
+                return ResourceManager.GetString("UserExists", resourceCulture);
             }
         }
         
@@ -228,6 +1389,42 @@ namespace Novaelectrosbit.Properties {
         public static string UserSurname {
             get {
                 return ResourceManager.GetString("UserSurname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пользователь с таким номером телефона уже существует.
+        /// </summary>
+        public static string UserTelephoneExists {
+            get {
+                return ResourceManager.GetString("UserTelephoneExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to |.
+        /// </summary>
+        public static string VertLine {
+            get {
+                return ResourceManager.GetString("VertLine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Год.
+        /// </summary>
+        public static string Year {
+            get {
+                return ResourceManager.GetString("Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ваши счета:.
+        /// </summary>
+        public static string YourAccs {
+            get {
+                return ResourceManager.GetString("YourAccs", resourceCulture);
             }
         }
     }

@@ -14,6 +14,7 @@ namespace Novaelectrosbit.Classes
         public static string NamePattern = @"^[A-ZА-ЯЁ]+[A-Za-z0-9]{1,}";
         public static string NumPattern = @"^[1-9]{1}[0-9]{0,6}(\,[0-9]{1,2})?$";
         public static string NumSymbPattern = @"^[-,0-9]+$";
+
         public static bool EmailCheck(string email)
         {
             if (Regex.IsMatch(email, EmailPattern))
@@ -21,6 +22,7 @@ namespace Novaelectrosbit.Classes
             else
                 return false;
         }
+
         public static bool UserExistCheck(string email, string telephone)
         {
             if (App.Database.Users.Where(p => p.Email == email || p.Telephone == telephone.Insert(0, "8")).Count() <= 0)
@@ -28,6 +30,7 @@ namespace Novaelectrosbit.Classes
             else
                 return false;
         }
+
         public static bool PasswordCheck(string password)
         {
             if (password != "" && password.Length >= 8 && Regex.IsMatch(password, PasswordPatternUpLetters) && Regex.IsMatch(password, PasswordPatternLowLetters) &&
@@ -36,6 +39,7 @@ namespace Novaelectrosbit.Classes
             else
                 return false;
         }
+
         public static bool FIOCheck(string name)
         {
             if (Regex.IsMatch(name, NamePattern))
@@ -43,6 +47,7 @@ namespace Novaelectrosbit.Classes
             else
                 return false;
         }
+
         public static bool NumCheck(string input)
         {
             if (Regex.IsMatch(input, NumPattern))
@@ -50,6 +55,7 @@ namespace Novaelectrosbit.Classes
             else
                 return false;
         }
+
         public static bool NumCheckOneSymb(string symb)
         {
             if (Regex.IsMatch(symb, NumSymbPattern))
@@ -57,6 +63,7 @@ namespace Novaelectrosbit.Classes
             else
                 return false;
         }
+
         public static bool MonthCheck(string month)
         {
             DateTime dt;
@@ -65,6 +72,7 @@ namespace Novaelectrosbit.Classes
             else
                 return false;
         }
+
         public static bool YearCheck(string year)
         {
             if (Convert.ToInt32(year) + 2000 <= DateTime.Now.AddYears(5).Year && Convert.ToInt32(year) + 2000 >= DateTime.Now.Year)
@@ -72,6 +80,7 @@ namespace Novaelectrosbit.Classes
             else
                 return false;
         }
+
         public static bool MAndYCheck(string month, string year)
         {
             DateTime dt;

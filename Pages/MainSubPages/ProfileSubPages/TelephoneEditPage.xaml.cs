@@ -34,10 +34,11 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
                     App.CurUser.Telephone = TBoxTelephone.Value.ToString().Insert(0, "8");
                     App.Database.SaveChanges();
                     window.Close();
+                    App.Messages.ShowInfo(Properties.Resources.TelephoneCongrats);
                     (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage(0));
                 }
                 else
-                    App.Messages.ShowError("Пользователь с таким телефоном уже существует");
+                    App.Messages.ShowError(Properties.Resources.UserTelephoneExists);
             }
             else
                 App.Messages.ShowError(Properties.Resources.NeedToFillRequired);

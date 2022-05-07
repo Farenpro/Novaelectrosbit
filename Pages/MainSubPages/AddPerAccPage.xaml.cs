@@ -1,5 +1,4 @@
 ﻿using Novaelectrosbit.Models;
-using Novaelectrosbit.Windows;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,22 +19,20 @@ namespace Novaelectrosbit.Pages.MainSubPages
 
         private void BtnMainPageBack_Click(object sender, RoutedEventArgs e)
         {
-            (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage());
+            App.CurUserDefaultPage();
         }
 
         private void BtnConnect_Click(object sender, RoutedEventArgs e)
         {
-            int id;
             if (TBoxPerAccNumber.Value != null)
             {
                 if (App.Database.Requisites.Where(p => p.PersonalAccount == TBoxPerAccNumber.Value.ToString()).Count() > 0)
                 {
                     if (App.Database.Payers.Where(p => p.UserID == App.CurUser.ID && p.RequisitesPersonalAccount == TBoxPerAccNumber.Value.ToString()).Count() <= 0)
                     {
+                        int id = 1;
                         if (App.Database.Payers.Count() > 0)
                             id = App.Database.Payers.Select(p => p.ID).Max() + 1;
-                        else
-                            id = 1;
                         Payer payer = new Payer()
                         {
                             ID = id,
@@ -45,13 +42,13 @@ namespace Novaelectrosbit.Pages.MainSubPages
                         };
                         App.Database.Payers.Add(payer);
                         App.Database.SaveChanges();
-                        (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage());
+                        App.CurUserDefaultPage();
                     }
                     else
-                        App.Messages.ShowError("Данный лицевой счет уже подключен!");
+                        App.Messages.ShowError(Properties.Resources.PerAccAlreadyConnected);
                 }
                 else
-                    App.Messages.ShowWarning("Лицевой счет не найден");
+                    App.Messages.ShowWarning(Properties.Resources.PerAccNotFound);
             }
             else
                 App.Messages.ShowError(Properties.Resources.NeedToFillRequired);
