@@ -1,4 +1,4 @@
-﻿using Novaelectrosbit.Windows;
+﻿using Novaelectrosbit.Classes;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -16,37 +16,15 @@ namespace Novaelectrosbit.Pages.MainSubPages
             LTelephone.Text = App.CurUser.Telephone.Substring(1);
             PBoxPassword.Password = App.CurUser.Password;
         }
-        private void ShowEditWindow(int type)
-        {
-            EditInfoWindow editInfoWindow = new EditInfoWindow(type);
-            editInfoWindow.ShowDialog();
-        }
 
-        private void BtnMainPageBack_Click(object sender, RoutedEventArgs e)
-        {
-            App.CurUserDefaultPage();
-        }
+        private void BtnMainPageBack_Click(object sender, RoutedEventArgs e) { App.CurUserDefaultPage(); }
 
-        private void BtnProfileEdit_Click(object sender, RoutedEventArgs e)
-        {
-            ShowEditWindow(1);
-        }
+        private void BtnProfileEdit_Click(object sender, RoutedEventArgs e) { SubFunctions.ShowEditWindow(1); }
 
-        private void BtnPhoneEdit_Click(object sender, RoutedEventArgs e)
-        {
-            ShowEditWindow(2);
-        }
+        private void BtnPhoneEdit_Click(object sender, RoutedEventArgs e) { SubFunctions.ShowEditWindow(2); }
 
-        private void BtnEmailEdit_Click(object sender, RoutedEventArgs e)
-        {
-            ShowEditWindow(3);
-        }
+        private void BtnEmailEdit_Click(object sender, RoutedEventArgs e) { SubFunctions.ShowEditWindow(3); }
 
-        private void BtnPasswordEdit_Click(object sender, RoutedEventArgs e)
-        {
-            ShowEditWindow(4);
-        }
-
-
+        private void BtnPasswordEdit_Click(object sender, RoutedEventArgs e) { SubFunctions.ShowEditWindow(4); }
     }
 }

@@ -12,18 +12,16 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
     public partial class TelephoneEditPage : Page
     {
         readonly EditInfoWindow window;
+
         public TelephoneEditPage()
         {
             InitializeComponent();
-            window = Application.Current.Windows.OfType<EditInfoWindow>().SingleOrDefault();
+            window = App.Current.Windows.OfType<EditInfoWindow>().SingleOrDefault();
             window.DataContext = this;
             TBoxTelephone.Value = App.CurUser.Telephone.Substring(1);
         }
 
-        private void TBkCancel_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            window.Close();
-        }
+        private void TBkCancel_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e) { window.Close(); }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
@@ -35,7 +33,7 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
                     App.Database.SaveChanges();
                     window.Close();
                     App.Messages.ShowInfo(Properties.Resources.TelephoneCongrats);
-                    (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage(0));
+                    App.LoadProfilePage(App.CurUser.RoleID);
                 }
                 else
                     App.Messages.ShowError(Properties.Resources.UserTelephoneExists);

@@ -16,10 +16,9 @@ namespace Novaelectrosbit.Pages.MainSubPages
             InitializeComponent();
             DataContext = App.CurPay;
         }
-        private void BtnMainPageBack_Click(object sender, RoutedEventArgs e)
-        {
-            App.CurUserDefaultPage();
-        }
+
+        private void BtnMainPageBack_Click(object sender, RoutedEventArgs e) { App.LoadCurPayPage(App.CurPay); }
+
         private void BtnTransferMR_Click(object sender, RoutedEventArgs e)
         {
             int lastMR = 0, ID = 1;

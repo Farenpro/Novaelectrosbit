@@ -268,3 +268,17 @@ D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MeterInstalle
 D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MeterInstallerPage.g.cs
 D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\AdminPage.g.cs
 D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\AdminPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\CreatingPerAcc.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\CreatingPerAcc.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MRPages\AddCounterPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MRPages\AddRegAddressPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MRPages\AddTariffPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MRPages\AddCounterPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MRPages\AddRegAddressPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MRPages\AddTariffPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MRPages\RegAddressSubPages\LocalityAddPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MRPages\RegAddressSubPages\StreetAddPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MRPages\RegAddressSubPages\LocalityAddPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MRPages\RegAddressSubPages\StreetAddPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MRPages\CounterSubPages\AddBrandPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MRPages\CounterSubPages\AddBrandPage.baml

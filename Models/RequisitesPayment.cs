@@ -16,7 +16,7 @@ namespace Novaelectrosbit.Models
     {
         public int ID { get; set; }
         public string PersonalAccount { get; set; }
-        public Nullable<int> PaymentTypeID { get; set; }
+        public int PaymentTypeID { get; set; }
         public System.DateTime PayDate { get; set; }
         public double PayAmount { get; set; }
         public double BalanceAfterPay { get; set; }

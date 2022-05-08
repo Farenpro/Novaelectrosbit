@@ -16,6 +16,8 @@ namespace Novaelectrosbit
         public static User CurUser { get; set; } = new User();
         public static Payer CurPay { get; set; } = new Payer();
 
+        public static void LoadCurPayPage(Payer p) { (Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage(p)); }
+
         public static void CurUserDefaultPage()
         {
             switch (CurUser.RoleID)
@@ -27,7 +29,21 @@ namespace Novaelectrosbit
                     (Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MeterInstallerPage());
                     break;
                 case 3:
-
+                    (Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new AdminPage());
+                    break;
+            }
+        }
+        public static void LoadProfilePage(int id) 
+        { 
+            switch (id)
+            {
+                case 1:
+                    (App.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage(0));
+                    break;
+                case 2:
+                    (App.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MeterInstallerPage(true));
+                    break;
+                case 3:
                     break;
             }
         }

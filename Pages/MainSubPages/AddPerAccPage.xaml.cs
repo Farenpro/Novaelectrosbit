@@ -17,10 +17,7 @@ namespace Novaelectrosbit.Pages.MainSubPages
             CBoxResponsiblePerson.SelectedIndex = 0;
         }
 
-        private void BtnMainPageBack_Click(object sender, RoutedEventArgs e)
-        {
-            App.CurUserDefaultPage();
-        }
+        private void BtnMainPageBack_Click(object sender, RoutedEventArgs e) { App.CurUserDefaultPage(); }
 
         private void BtnConnect_Click(object sender, RoutedEventArgs e)
         {

@@ -20,9 +20,9 @@
             get
             {
                 if (RegistrationAddress.Flat.HasValue)
-                    return $"{RegistrationAddress.Locality.Name}, {RegistrationAddress.Prefix.PrefixType.Name} {RegistrationAddress.Prefix.Name}, {RegistrationAddress.House}, {RegistrationAddress.Flat}";
+                    return $"{RegistrationAddress.Locality.LocalityStr}, {RegistrationAddress.Prefix.PrefixStr}, {RegistrationAddress.House}, {RegistrationAddress.Flat}";
                 else
-                    return $"{RegistrationAddress.Locality.Name}, {RegistrationAddress.Prefix.PrefixType.Name} {RegistrationAddress.Prefix.Name}, {RegistrationAddress.House}";
+                    return $"{RegistrationAddress.Locality.LocalityStr}, {RegistrationAddress.Prefix.PrefixStr}, {RegistrationAddress.House}";
             }
         }
     }

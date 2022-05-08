@@ -13,29 +13,23 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
     public partial class GenInfoEditPage : Page
     {
         public EditInfoWindow window;
+
         public GenInfoEditPage()
         {
             InitializeComponent();
-            window = Application.Current.Windows.OfType<EditInfoWindow>().SingleOrDefault();
+            CBoxGender.ItemsSource = App.Database.Genders.ToList();
+            window = App.Current.Windows.OfType<EditInfoWindow>().SingleOrDefault();
             window.DataContext = this;
             DataContext = App.CurUser;
             DPBirthdate.DisplayDateStart = DateTime.Now.AddYears(-100);
             DPBirthdate.DisplayDateEnd = DateTime.Now.AddYears(-18);
         }
 
-        private void TBkCancel_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            window.Close();
-        }
-        private void BtnCBoxClear_Click(object sender, RoutedEventArgs e)
-        {
-            CBoxGender.SelectedIndex = -1;
-        }
+        private void TBkCancel_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e) { window.Close(); }
 
-        private void BtnDPClear_Click(object sender, RoutedEventArgs e)
-        {
-            DPBirthdate.SelectedDate = null;
-        }
+        private void BtnCBoxClear_Click(object sender, RoutedEventArgs e) { CBoxGender.SelectedIndex = -1; }
+
+        private void BtnDPClear_Click(object sender, RoutedEventArgs e) { DPBirthdate.SelectedDate = null; }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
@@ -79,7 +73,7 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
                 App.Database.SaveChanges();
                 window.Close();
                 App.Messages.ShowInfo(Properties.Resources.GenInfoCongrats);
-                (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage(0));
+                App.LoadProfilePage(App.CurUser.RoleID);
             }
             else
                 App.Messages.ShowError(Properties.Resources.NeedToFillRequired);

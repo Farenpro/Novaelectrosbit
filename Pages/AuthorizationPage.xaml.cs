@@ -1,4 +1,5 @@
-﻿using Novaelectrosbit.Models;
+﻿using Novaelectrosbit.Classes;
+using Novaelectrosbit.Models;
 using Novaelectrosbit.Windows;
 using System.Linq;
 using System.Windows;
@@ -15,24 +16,12 @@ namespace Novaelectrosbit.Pages
         public AuthorizationPage()
         {
             InitializeComponent();
-            (Application.Current.MainWindow as MainMenuWindow).DataContext = this;
+            (App.Current.MainWindow as MainMenuWindow).DataContext = this;
         }
 
-        private void TBDisplay_Checked(object sender, RoutedEventArgs e)
-        {
-            PBoxPasswordVisible.Text = PBoxPassword.Password;
-            PBoxPassword.Clear();
-            PBoxPasswordVisible.Visibility = Visibility.Visible;
-            PBoxPassword.Visibility = Visibility.Collapsed;
-        }
+        private void TBDisplay_Checked(object sender, RoutedEventArgs e) { SubFunctions.TBShowHide(PBoxPasswordVisible, PBoxPassword, true); }
 
-        private void TBDisplay_Unchecked(object sender, RoutedEventArgs e)
-        {
-            PBoxPassword.Password = PBoxPasswordVisible.Text;
-            PBoxPasswordVisible.Text = string.Empty;
-            PBoxPasswordVisible.Visibility = Visibility.Collapsed;
-            PBoxPassword.Visibility = Visibility.Visible;
-        }
+        private void TBDisplay_Unchecked(object sender, RoutedEventArgs e) { SubFunctions.TBShowHide(PBoxPasswordVisible, PBoxPassword, false); }
 
         private void BtnEnter_Click(object sender, RoutedEventArgs e)
         {

@@ -21,8 +21,10 @@ namespace Novaelectrosbit.Models
         }
     
         public int ID { get; set; }
+        public Nullable<int> LocalityTypeID { get; set; }
         public string Name { get; set; }
     
+        public virtual LocalityType LocalityType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RegistrationAddress> RegistrationAddresses { get; set; }
     }

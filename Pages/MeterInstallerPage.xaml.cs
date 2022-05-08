@@ -1,6 +1,5 @@
 ﻿using Novaelectrosbit.Pages.MainSubPages;
 using Novaelectrosbit.Windows;
-using System.Windows;
 using System.Windows.Controls;
 
 namespace Novaelectrosbit.Pages
@@ -13,8 +12,17 @@ namespace Novaelectrosbit.Pages
         public MeterInstallerPage()
         {
             InitializeComponent();
-            (Application.Current.MainWindow as MainMenuWindow).DataContext = this;
+            (App.Current.MainWindow as MainMenuWindow).DataContext = this;
             CBoxProfile.DataContext = App.CurUser;
+            MainPageFrame.Navigate(new CreatingPerAcc());
+        }
+
+        public MeterInstallerPage(bool a)
+        {
+            InitializeComponent();
+            (App.Current.MainWindow as MainMenuWindow).DataContext = this;
+            CBoxProfile.DataContext = App.CurUser;
+            MainPageFrame.Navigate(new ProfilePage());
         }
 
         private void CBoxProfile_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -25,7 +33,7 @@ namespace Novaelectrosbit.Pages
                 MainPageFrame.Navigate(new ProfilePage());
             }
             else if (CBoxProfile.SelectedIndex == 2)
-                (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new AuthorizationPage());
+                (App.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new AuthorizationPage());
         }
     }
 }

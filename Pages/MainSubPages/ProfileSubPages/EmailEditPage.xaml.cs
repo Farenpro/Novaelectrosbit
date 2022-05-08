@@ -12,18 +12,16 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
     public partial class EmailEditPage : Page
     {
         public EditInfoWindow window;
+
         public EmailEditPage()
         {
             InitializeComponent();
-            window = Application.Current.Windows.OfType<EditInfoWindow>().SingleOrDefault();
+            window = App.Current.Windows.OfType<EditInfoWindow>().SingleOrDefault();
             window.DataContext = this;
             DataContext = App.CurUser;
         }
 
-        private void TBkCancel_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            window.Close();
-        }
+        private void TBkCancel_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e) { window.Close(); }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
@@ -37,7 +35,7 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
                         App.Database.SaveChanges();
                         window.Close();
                         App.Messages.ShowInfo(Properties.Resources.EmailCongrats);
-                        (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage(0));
+                        App.LoadProfilePage(App.CurUser.RoleID);
                     }
                     else
                         App.Messages.ShowError(Properties.Resources.EmailError);

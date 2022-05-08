@@ -30,42 +30,24 @@ namespace Novaelectrosbit.Pages
         {
             InitializeComponent();
             CBoxGender.ItemsSource = App.Database.Genders.ToList();
-            RegistrationWindow window = Application.Current.Windows.OfType<RegistrationWindow>().SingleOrDefault();
+            RegistrationWindow window = App.Current.Windows.OfType<RegistrationWindow>().SingleOrDefault();
             window.DataContext = this;
             DataContext = this;
             DPBirthdate.DisplayDateStart = DateTime.Now.AddYears(-100);
             DPBirthdate.DisplayDateEnd = DateTime.Now.AddYears(-18);
         }
 
-        private void TBDisplay_Checked(object sender, RoutedEventArgs e)
-        {
-            SubFunctions.TBShowHide(PBoxPasswordVisible, PBoxPassword, true);
-        }
+        private void TBDisplay_Checked(object sender, RoutedEventArgs e) { SubFunctions.TBShowHide(PBoxPasswordVisible, PBoxPassword, true); }
 
-        private void TBDisplay_Unchecked(object sender, RoutedEventArgs e)
-        {
-            SubFunctions.TBShowHide(PBoxPasswordVisible, PBoxPassword, false);
-        }
+        private void TBDisplay_Unchecked(object sender, RoutedEventArgs e) { SubFunctions.TBShowHide(PBoxPasswordVisible, PBoxPassword, false); }
 
-        private void TBDisplay2_Checked(object sender, RoutedEventArgs e)
-        {
-            SubFunctions.TBShowHide(PBoxPasswordAgainVisible, PBoxPasswordAgain, true);
-        }
+        private void TBDisplay2_Checked(object sender, RoutedEventArgs e) { SubFunctions.TBShowHide(PBoxPasswordAgainVisible, PBoxPasswordAgain, true); }
 
-        private void TBDisplay2_Unchecked(object sender, RoutedEventArgs e)
-        {
-            SubFunctions.TBShowHide(PBoxPasswordAgainVisible, PBoxPasswordAgain, false);
-        }
+        private void TBDisplay2_Unchecked(object sender, RoutedEventArgs e) { SubFunctions.TBShowHide(PBoxPasswordAgainVisible, PBoxPasswordAgain, false); }
 
-        private void BtnCBoxClear_Click(object sender, RoutedEventArgs e)
-        {
-            CBoxGender.SelectedIndex = -1;
-        }
+        private void BtnCBoxClear_Click(object sender, RoutedEventArgs e) { CBoxGender.SelectedIndex = -1; }
 
-        private void BtnDPClear_Click(object sender, RoutedEventArgs e)
-        {
-            DPBirthdate.SelectedDate = null;
-        }
+        private void BtnDPClear_Click(object sender, RoutedEventArgs e) { DPBirthdate.SelectedDate = null; }
 
         private void BtnContinue_Click(object sender, RoutedEventArgs e)
         {
@@ -146,7 +128,7 @@ namespace Novaelectrosbit.Pages
             App.Database.Users.Add(user);
             App.Database.SaveChanges();
             App.Messages.ShowInfo(Properties.Resources.RegistrationCongrats);
-            RegistrationWindow window = Application.Current.Windows.OfType<RegistrationWindow>().SingleOrDefault();
+            RegistrationWindow window = App.Current.Windows.OfType<RegistrationWindow>().SingleOrDefault();
             window.Close();
         }
     }

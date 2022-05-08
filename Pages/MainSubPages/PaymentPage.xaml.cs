@@ -29,10 +29,7 @@ namespace Novaelectrosbit.Pages.MainSubPages
                 TBoxPaySumm.Text = "1000";
         }
 
-        private void BtnMainPageBack_Click(object sender, RoutedEventArgs e)
-        {
-            App.CurUserDefaultPage();
-        }
+        private void BtnMainPageBack_Click(object sender, RoutedEventArgs e) { App.LoadCurPayPage(App.CurPay); }
 
         private void TBoxPaySumm_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
@@ -42,15 +39,9 @@ namespace Novaelectrosbit.Pages.MainSubPages
                 e.Handled = true;
         }
 
-        private void CBoxAgree_Checked(object sender, RoutedEventArgs e)
-        {
-            BtnPay.IsEnabled = true;
-        }
+        private void CBoxAgree_Checked(object sender, RoutedEventArgs e) { BtnPay.IsEnabled = true; }
 
-        private void CBoxAgree_Unchecked(object sender, RoutedEventArgs e)
-        {
-            BtnPay.IsEnabled = false;
-        }
+        private void CBoxAgree_Unchecked(object sender, RoutedEventArgs e) { BtnPay.IsEnabled = false; }
 
         private void BtnPay_Click(object sender, RoutedEventArgs e)
         {

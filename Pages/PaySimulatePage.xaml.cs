@@ -38,7 +38,7 @@ namespace Novaelectrosbit.Pages
             InitializeComponent();
             SummPay = summpay;
             Email = email;
-            window = Application.Current.Windows.OfType<PayWindow>().SingleOrDefault();
+            window = App.Current.Windows.OfType<PayWindow>().SingleOrDefault();
             window.DataContext = this;
             DataContext = this;
             LRequistes.DataContext = App.CurPay;
@@ -81,7 +81,7 @@ namespace Novaelectrosbit.Pages
 
         private void BtnPrint_Click(object sender, RoutedEventArgs e)
         {
-            string path = System.IO.Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Resources");
+            string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Resources");
             path = $"{path}\\ЧекШаблон.docx";
             Word.Application app = new Word.Application();
             Word.Document document = app.Documents.Add(path);

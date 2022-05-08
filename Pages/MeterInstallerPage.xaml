@@ -3,9 +3,10 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:res="clr-namespace:Novaelectrosbit.Properties"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      Title="{x:Static res:Resources.MeterInstaller}" Height="800" Width="800" MinHeight="800" MinWidth="800" FontFamily="{StaticResource FontMain}">
+      Title="{x:Static res:Resources.MeterInstaller}" Height="990" Width="800" MinHeight="990" MinWidth="800" FontFamily="{StaticResource FontMain}">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -26,6 +27,6 @@
                 <ComboBoxItem Content="{x:Static res:Resources.Exit}"/>
             </ComboBox>
         </Grid>
-        <Frame x:Name="MainPageFrame" Grid.Row="1" Grid.Column="1" NavigationUIVisibility="Hidden" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Frame x:Name="MainPageFrame" Grid.Row="2" NavigationUIVisibility="Hidden" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
 </Page>

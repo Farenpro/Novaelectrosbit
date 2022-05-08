@@ -18,8 +18,13 @@ namespace Novaelectrosbit.Pages.MainSubPages
             InitializeComponent();
             App.CurPay = p;
             DataContext = p;
-            if (DateTime.Now.Day > 26 || App.CurPay.Requisite.Counter.MeterReadings.Select(p=>p.IndicationsDate).Last().Month == DateTime.Now.Month)
+            if (DateTime.Now.Day > 26)
                 BtnTransferMR.IsEnabled = false;
+            if (App.CurPay.Requisite.Counter.MeterReadings.Count() > 0)
+            {
+                if (App.CurPay.Requisite.Counter.MeterReadings.Select(p => p.IndicationsDate).Last().Month == DateTime.Now.Month)
+                    BtnTransferMR.IsEnabled = false;
+            }
         }
 
         private void BtnBalanceRefresh_Click(object sender, RoutedEventArgs e)
@@ -41,14 +46,8 @@ namespace Novaelectrosbit.Pages.MainSubPages
             }
         }
 
-        private void BtnPay_Click(object sender, RoutedEventArgs e)
-        {
-            (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage(2));
-        }
+        private void BtnPay_Click(object sender, RoutedEventArgs e) { (App.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage(2)); }
 
-        private void BtnTransferMR_Click(object sender, RoutedEventArgs e)
-        {
-            (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage(3));
-        }
+        private void BtnTransferMR_Click(object sender, RoutedEventArgs e) { (App.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage(3)); }
     }
 }

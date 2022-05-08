@@ -31,6 +31,7 @@ namespace Novaelectrosbit.Models
         public virtual DbSet<Gender> Genders { get; set; }
         public virtual DbSet<InstallPlace> InstallPlaces { get; set; }
         public virtual DbSet<Locality> Localities { get; set; }
+        public virtual DbSet<LocalityType> LocalityTypes { get; set; }
         public virtual DbSet<MeterReading> MeterReadings { get; set; }
         public virtual DbSet<NetworkOrganisation> NetworkOrganisations { get; set; }
         public virtual DbSet<Payer> Payers { get; set; }

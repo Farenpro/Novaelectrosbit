@@ -16,19 +16,14 @@ namespace Novaelectrosbit.Pages.MainSubPages.PerAccSubPages.TabPages
     {
         RequisitesPayment payment;
         public DateTime SelectedDate { get; set; }
-        public PerAccHistoryPage()
-        {
-            InitializeComponent();
-        }
 
-        private void TCSubPages_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            LoadDG();
-        }
+        public PerAccHistoryPage() { InitializeComponent(); }
+
+        private void TCSubPages_SelectionChanged(object sender, SelectionChangedEventArgs e) { LoadDG(); }
 
         private void LoadDG()
         {
-            if (this.IsInitialized)
+            if (IsInitialized)
             {
                 LNoData.Visibility = Visibility.Collapsed;
                 switch (TCSubPages.SelectedIndex)
@@ -80,7 +75,7 @@ namespace Novaelectrosbit.Pages.MainSubPages.PerAccSubPages.TabPages
 
         private void BtnPrintReceipt_Click(object sender, RoutedEventArgs e)
         {
-            string path = System.IO.Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Resources");
+            string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Resources");
             path = $"{path}\\НЭСШаблон.docx";
             Word.Application app = new Word.Application();
             Word.Document document = app.Documents.Add(path);

@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>ДОБАВИТЬ</value>
+  </data>
+  <data name="AddCongrats" xml:space="preserve">
+    <value>Успешно добавлено!</value>
+  </data>
   <data name="AddPerAcc" xml:space="preserve">
     <value>+ Добавить лицевой счет</value>
   </data>
@@ -140,6 +146,9 @@
   </data>
   <data name="BirthdateToolTip" xml:space="preserve">
     <value>Вам должно быть не менее 18 лет</value>
+  </data>
+  <data name="BrandExists" xml:space="preserve">
+    <value>Такая марка уже существует</value>
   </data>
   <data name="BuildType" xml:space="preserve">
     <value>Тип дома:</value>
@@ -177,6 +186,15 @@
   <data name="CounterBrand" xml:space="preserve">
     <value>Марка счетчика</value>
   </data>
+  <data name="CounterBrandCreate" xml:space="preserve">
+    <value>Добавить марку счетчика</value>
+  </data>
+  <data name="CounterCreate" xml:space="preserve">
+    <value>Добавить счетчик</value>
+  </data>
+  <data name="CounterExists" xml:space="preserve">
+    <value>Счетчик с таким номером уже существует</value>
+  </data>
   <data name="CounterInstallPlace" xml:space="preserve">
     <value>Место установки счетчика:</value>
   </data>
@@ -200,6 +218,9 @@
   </data>
   <data name="CurPassword" xml:space="preserve">
     <value>Текущий пароль *</value>
+  </data>
+  <data name="CurPasswordError" xml:space="preserve">
+    <value>Неверный текущий пароль</value>
   </data>
   <data name="DateTime" xml:space="preserve">
     <value>Дата/время:</value>
@@ -252,8 +273,17 @@
   <data name="FIOError" xml:space="preserve">
     <value>ФИО должно начинаться с заглавной буквы и содержать не менее 2х символов</value>
   </data>
+  <data name="FirstnameOwner" xml:space="preserve">
+    <value>Имя:</value>
+  </data>
+  <data name="Flat" xml:space="preserve">
+    <value>Квартира</value>
+  </data>
   <data name="Gender" xml:space="preserve">
     <value>Пол</value>
+  </data>
+  <data name="GeneralArea" xml:space="preserve">
+    <value>Общая площадь</value>
   </data>
   <data name="GeneralInfo" xml:space="preserve">
     <value>Общая информация</value>
@@ -269,6 +299,9 @@
   </data>
   <data name="History" xml:space="preserve">
     <value>История</value>
+  </data>
+  <data name="House" xml:space="preserve">
+    <value>Дом</value>
   </data>
   <data name="IconInfoToolTip" xml:space="preserve">
     <value>Пароль должен содержать не менее 8 знаков, включая цифры, и большие, и маленькие буквы латинского алфавита</value>
@@ -300,6 +333,21 @@
   <data name="LCCProfile" xml:space="preserve">
     <value>&lt; Профиль пользователя личного кабинета</value>
   </data>
+  <data name="LivingArea" xml:space="preserve">
+    <value>Жилая площадь</value>
+  </data>
+  <data name="Locality" xml:space="preserve">
+    <value>Населенный пункт</value>
+  </data>
+  <data name="LocalityAdd" xml:space="preserve">
+    <value>Добавить населенный пункт</value>
+  </data>
+  <data name="LocalityExists" xml:space="preserve">
+    <value>Такой населенный пункт уже существует</value>
+  </data>
+  <data name="LocalityType" xml:space="preserve">
+    <value>Тип населенного пункта</value>
+  </data>
   <data name="LogOrPassError" xml:space="preserve">
     <value>Неверно введен логин или пароль. Проверьте правильность ввода и повторите попытку.</value>
   </data>
@@ -308,6 +356,9 @@
   </data>
   <data name="MeterInstaller" xml:space="preserve">
     <value>Установщик счетчиков</value>
+  </data>
+  <data name="MiddlenameOwner" xml:space="preserve">
+    <value>Отчество:</value>
   </data>
   <data name="Month" xml:space="preserve">
     <value>Месяц</value>
@@ -326,6 +377,9 @@
   </data>
   <data name="MRSuccess" xml:space="preserve">
     <value>Показания успешно добавлены</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Название</value>
   </data>
   <data name="NameASKUESystem" xml:space="preserve">
     <value>Наименование системы АСКУЭ:</value>
@@ -348,6 +402,9 @@
   <data name="NoPerAccs" xml:space="preserve">
     <value>У вас не подключены лицевые
 счета</value>
+  </data>
+  <data name="NumError" xml:space="preserve">
+    <value>Число должно быть больше 0</value>
   </data>
   <data name="OOONES" xml:space="preserve">
     <value>ООО "НЭС"</value>
@@ -427,11 +484,20 @@
   <data name="PerAccAlreadyConnected" xml:space="preserve">
     <value>Данный лицевой счет уже подключен!</value>
   </data>
+  <data name="PerAccCreate" xml:space="preserve">
+    <value>Создать лицевой счет</value>
+  </data>
+  <data name="PerAccCreateCaps" xml:space="preserve">
+    <value>СОЗДАТЬ ЛИЦЕВОЙ СЧЕТ</value>
+  </data>
   <data name="PerAccNotFound" xml:space="preserve">
     <value>Лицевой счет не найден</value>
   </data>
   <data name="PerAccNumber" xml:space="preserve">
     <value>Номер лицевого счета *</value>
+  </data>
+  <data name="PerAccNumber2" xml:space="preserve">
+    <value>Номер лицевого счета:</value>
   </data>
   <data name="PerAccRelationStatus" xml:space="preserve">
     <value>Статус отношения к ЛС</value>
@@ -448,6 +514,9 @@
   </data>
   <data name="PersonalInfoEdit" xml:space="preserve">
     <value>Редактирование личных данных</value>
+  </data>
+  <data name="Prefix" xml:space="preserve">
+    <value>Префикс</value>
   </data>
   <data name="Price" xml:space="preserve">
     <value>Стоимость:</value>
@@ -467,6 +536,12 @@
   <data name="RecSumm" xml:space="preserve">
     <value>+1000 руб</value>
   </data>
+  <data name="RegAddressCreate" xml:space="preserve">
+    <value>Добавить адрес регистрации</value>
+  </data>
+  <data name="RegAddressExists" xml:space="preserve">
+    <value>Данный адрес уже зарегистрирован</value>
+  </data>
   <data name="Registration" xml:space="preserve">
     <value>Регистрация</value>
   </data>
@@ -485,6 +560,12 @@
   <data name="RequiredFillIn" xml:space="preserve">
     <value>Обязательно для заполнения</value>
   </data>
+  <data name="RequisiteCongrats" xml:space="preserve">
+    <value>Лицевой счет успешно создан!</value>
+  </data>
+  <data name="RequisiteExists" xml:space="preserve">
+    <value>Лицевой счет с таким номером уже существует</value>
+  </data>
   <data name="RetryPassS" xml:space="preserve">
     <value>Повторите пароль *</value>
   </data>
@@ -500,6 +581,12 @@
   <data name="SavePassword" xml:space="preserve">
     <value>СОХРАНИТЬ ПАРОЛЬ</value>
   </data>
+  <data name="SelectCounter" xml:space="preserve">
+    <value>Выберите счетчик</value>
+  </data>
+  <data name="SelectTariff" xml:space="preserve">
+    <value>Выберите тариф</value>
+  </data>
   <data name="Seller" xml:space="preserve">
     <value>Продавец:</value>
   </data>
@@ -509,14 +596,35 @@
   <data name="StartWork" xml:space="preserve">
     <value>Начните работу с сервисом добавлением лицевого счета</value>
   </data>
+  <data name="Street" xml:space="preserve">
+    <value>Улица</value>
+  </data>
+  <data name="StreetAdd" xml:space="preserve">
+    <value>Добавить улицу</value>
+  </data>
+  <data name="StreetExists" xml:space="preserve">
+    <value>Такая улица уже существует</value>
+  </data>
   <data name="Summ" xml:space="preserve">
     <value>Сумма:</value>
   </data>
   <data name="SummError" xml:space="preserve">
     <value>Проверьте правильность введенной суммы. Она не может быть меньше 1, не должна начинаться с 0, превышать 9'999'999 млн. руб., а также не может содержать 3 цифры после запятой</value>
   </data>
+  <data name="SurnameOwner" xml:space="preserve">
+    <value>Фамилия:</value>
+  </data>
   <data name="Tariff" xml:space="preserve">
     <value>Тариф</value>
+  </data>
+  <data name="TariffCreate" xml:space="preserve">
+    <value>Добавить тариф</value>
+  </data>
+  <data name="TariffExists" xml:space="preserve">
+    <value>Такой тариф уже существует</value>
+  </data>
+  <data name="TariffName" xml:space="preserve">
+    <value>Название тарифа</value>
   </data>
   <data name="TariffType" xml:space="preserve">
     <value>Тип тарифа:</value>

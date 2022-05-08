@@ -1,6 +1,5 @@
 ﻿using Novaelectrosbit.Pages.MainSubPages;
 using Novaelectrosbit.Windows;
-using System.Windows;
 using System.Windows.Controls;
 
 namespace Novaelectrosbit.Pages
@@ -13,7 +12,7 @@ namespace Novaelectrosbit.Pages
         public AdminPage()
         {
             InitializeComponent();
-            (Application.Current.MainWindow as MainMenuWindow).DataContext = this;
+            (App.Current.MainWindow as MainMenuWindow).DataContext = this;
             CBoxProfile.DataContext = App.CurUser;
         }
 
@@ -25,7 +24,7 @@ namespace Novaelectrosbit.Pages
                 MainPageFrame.Navigate(new ProfilePage());
             }
             else if (CBoxProfile.SelectedIndex == 2)
-                (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new AuthorizationPage());
+                (App.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new AuthorizationPage());
         }
     }
 }

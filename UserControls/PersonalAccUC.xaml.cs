@@ -12,12 +12,15 @@ namespace Novaelectrosbit.UserControls
     public partial class PersonalAccUC : UserControl
     {
         public Payer ThisPayer { get; set; }
+
         public PersonalAccUC(Payer payer)
         {
             InitializeComponent();
             ThisPayer = payer;
             DataContext = payer;
         }
+
+        private void GridPerAcc_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) { App.LoadCurPayPage(ThisPayer); }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
@@ -28,11 +31,6 @@ namespace Novaelectrosbit.UserControls
                 App.Database.SaveChanges();
                 App.CurUserDefaultPage();
             }
-        }
-
-        private void GridPerAcc_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            App.CurUserDefaultPage();
         }
     }
 }

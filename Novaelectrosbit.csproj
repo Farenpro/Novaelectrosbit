@@ -161,6 +161,10 @@
     <Compile Include="Models\Locality.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\LocalityPartial.cs" />
+    <Compile Include="Models\LocalityType.cs">
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\MeterReading.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
@@ -178,12 +182,14 @@
     <Compile Include="Models\Prefix.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PrefixPartial.cs" />
     <Compile Include="Models\PrefixType.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\RegistrationAddress.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\RegistrationAddressPartial.cs" />
     <Compile Include="Models\Requisite.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
@@ -220,6 +226,9 @@
     <Compile Include="Pages\MainSubPages\AddPerAccPage.xaml.cs">
       <DependentUpon>AddPerAccPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\MainSubPages\CreatingPerAcc.xaml.cs">
+      <DependentUpon>CreatingPerAcc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MainSubPages\MeterReadingPage.xaml.cs">
       <DependentUpon>MeterReadingPage.xaml</DependentUpon>
     </Compile>
@@ -231,6 +240,24 @@
     </Compile>
     <Compile Include="Pages\MeterInstallerPage.xaml.cs">
       <DependentUpon>MeterInstallerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MRPages\AddCounterPage.xaml.cs">
+      <DependentUpon>AddCounterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MRPages\AddRegAddressPage.xaml.cs">
+      <DependentUpon>AddRegAddressPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MRPages\AddTariffPage.xaml.cs">
+      <DependentUpon>AddTariffPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MRPages\CounterSubPages\AddBrandPage.xaml.cs">
+      <DependentUpon>AddBrandPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MRPages\RegAddressSubPages\LocalityAddPage.xaml.cs">
+      <DependentUpon>LocalityAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MRPages\RegAddressSubPages\StreetAddPage.xaml.cs">
+      <DependentUpon>StreetAddPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PaySimulatePage.xaml.cs">
       <DependentUpon>PaySimulatePage.xaml</DependentUpon>
@@ -335,6 +362,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\MainSubPages\CreatingPerAcc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\MainSubPages\MeterReadingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -348,6 +379,30 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MeterInstallerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MRPages\AddCounterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MRPages\AddRegAddressPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MRPages\AddTariffPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MRPages\CounterSubPages\AddBrandPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MRPages\RegAddressSubPages\LocalityAddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MRPages\RegAddressSubPages\StreetAddPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -463,16 +518,6 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Models\BaseModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BaseModel.edmx</DependentUpon>
-      <LastGenOutput>BaseModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\BaseModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BaseModel.edmx</DependentUpon>
-      <LastGenOutput>BaseModel.cs</LastGenOutput>
-    </Content>
     <Resource Include="Resources\PayLoading.gif" />
     <Resource Include="Resources\PayComplete.gif" />
     <Resource Include="Resources\BankLogos\MIRCheckLOGO.png" />
@@ -485,6 +530,18 @@
     <Resource Include="Resources\BankLogos\MIRLOGO.png" />
     <Resource Include="Resources\BankLogos\GPBLOGO.png" />
     <Resource Include="Resources\NovaelectrosbitShortLOGOBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\BaseModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BaseModel.edmx</DependentUpon>
+      <LastGenOutput>BaseModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\BaseModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BaseModel.edmx</DependentUpon>
+      <LastGenOutput>BaseModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets')" />

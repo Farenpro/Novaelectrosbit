@@ -55,6 +55,15 @@
       <EntityTypeMapping TypeName="NovaelectrosbitModel.Locality">
         <MappingFragment StoreEntitySet="Locality">
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LocalityTypeID" ColumnName="LocalityTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LocalityTypes">
+      <EntityTypeMapping TypeName="NovaelectrosbitModel.LocalityType">
+        <MappingFragment StoreEntitySet="LocalityType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>

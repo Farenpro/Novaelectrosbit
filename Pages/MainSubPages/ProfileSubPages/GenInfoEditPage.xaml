@@ -27,20 +27,17 @@
         </Grid.ColumnDefinitions>
         <Label Content="{x:Static res:Resources.PersonalInfoEdit}" Style="{StaticResource LHead}"/>
         <Label Grid.Row="1" Content="{x:Static res:Resources.UserSurname}" Style="{StaticResource LDescription}"/>
-        <TextBox x:Name="TBoxSurname" Grid.Row="2" Margin="10,0" HorizontalAlignment="Left" MinWidth="300" Text="{Binding Surname, UpdateSourceTrigger=PropertyChanged, Mode=OneTime}"
+        <TextBox x:Name="TBoxSurname" Grid.Row="2" Margin="10,0" HorizontalAlignment="Left" MinWidth="300" MaxLength="50" Text="{Binding Surname, UpdateSourceTrigger=PropertyChanged, Mode=OneTime}"
                  BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
         <Label Grid.Row="3" Content="{x:Static res:Resources.UserFirstnameS}" Style="{StaticResource LDescription}"/>
-        <TextBox x:Name="TBoxName" Grid.Row="4" Margin="10,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, Mode=OneTime}"
+        <TextBox x:Name="TBoxName" Grid.Row="4" Margin="10,0" HorizontalAlignment="Left" MinWidth="300" MaxLength="30" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, Mode=OneTime}"
                  BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
         <Label Grid.Row="5" Margin="5,20,0,0" Content="{x:Static res:Resources.UserMiddlename}" Style="{StaticResource LDescription}"/>
-        <TextBox x:Name="TBoxMiddlename" Grid.Row="6" Margin="10,0" HorizontalAlignment="Left" MinWidth="300" Text="{Binding Middlename, UpdateSourceTrigger=PropertyChanged, Mode=OneTime}"
+        <TextBox x:Name="TBoxMiddlename" Grid.Row="6" Margin="10,0" HorizontalAlignment="Left" MinWidth="300" MaxLength="60" Text="{Binding Middlename, UpdateSourceTrigger=PropertyChanged, Mode=OneTime}"
                  BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
         <Label Grid.Row="7" Content="{x:Static res:Resources.Gender}" Style="{StaticResource LDescription}"/>
-        <ComboBox x:Name="CBoxGender" Grid.Row="9" Margin="10,0" HorizontalAlignment="Left" MinWidth="300" SelectedIndex="{Binding IntGenderID, UpdateSourceTrigger=PropertyChanged, Mode=OneTime}"
-                 BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedComboBox}">
-            <ComboBoxItem Content="{x:Static res:Resources.Male}"/>
-            <ComboBoxItem Content="{x:Static res:Resources.Female}"/>
-        </ComboBox>
+        <ComboBox x:Name="CBoxGender" Grid.Row="9" Margin="10,0" HorizontalAlignment="Left" MinWidth="300" SelectedIndex="{Binding IntGenderID, UpdateSourceTrigger=PropertyChanged, Mode=OneTime}" DisplayMemberPath="Name"
+                 BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
         <Button x:Name="BtnCBoxClear" Grid.Row="9" Grid.Column="3" Content="{materialDesign:PackIcon Kind=Eraser}" Click="BtnCBoxClear_Click" Style="{StaticResource BtnClear}"/>
         <Label Grid.Row="10" Margin="10,0" Content="{x:Static res:Resources.Birthdate}" Style="{StaticResource LDescription}"/>
         <DatePicker x:Name="DPBirthdate" Grid.Row="11" Margin="10,0" HorizontalAlignment="Left" MinWidth="300" SelectedDate="{Binding Birthdate, UpdateSourceTrigger=PropertyChanged, Mode=OneTime}" ToolTip="{x:Static res:Resources.BirthdateToolTip}" FirstDayOfWeek="Monday" Focusable="False"

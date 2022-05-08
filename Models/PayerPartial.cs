@@ -14,9 +14,9 @@ namespace Novaelectrosbit.Models
             get
             {
                 if (Requisite.RegistrationAddress.Flat.HasValue)
-                    return $"{Requisite.RegistrationAddress.Locality.Name}, {Requisite.RegistrationAddress.Prefix.PrefixType.Name} {Requisite.RegistrationAddress.Prefix.Name}, {Requisite.RegistrationAddress.House}, {Requisite.RegistrationAddress.Flat}";
+                    return $"{Requisite.RegistrationAddress.Locality.LocalityStr}, {Requisite.RegistrationAddress.Prefix.PrefixStr}, {Requisite.RegistrationAddress.House}, {Requisite.RegistrationAddress.Flat}";
                 else
-                    return $"{Requisite.RegistrationAddress.Locality.Name}, {Requisite.RegistrationAddress.Prefix.PrefixType.Name} {Requisite.RegistrationAddress.Prefix.Name}, {Requisite.RegistrationAddress.House}";
+                    return $"{Requisite.RegistrationAddress.Locality.LocalityStr}, {Requisite.RegistrationAddress.Prefix.PrefixStr}, {Requisite.RegistrationAddress.House}";
             }
         }
 
@@ -25,9 +25,9 @@ namespace Novaelectrosbit.Models
             get
             {
                 if (Requisite.RegistrationAddress.Flat.HasValue)
-                    return $"{Requisite.RegistrationAddress.Prefix.PrefixType.Name} {Requisite.RegistrationAddress.Prefix.Name}, {Requisite.RegistrationAddress.House}, {Requisite.RegistrationAddress.Flat}";
+                    return $"{Requisite.RegistrationAddress.Prefix.PrefixStr}, {Requisite.RegistrationAddress.House}, {Requisite.RegistrationAddress.Flat}";
                 else
-                    return $"{Requisite.RegistrationAddress.Prefix.PrefixType.Name} {Requisite.RegistrationAddress.Prefix.Name}, {Requisite.RegistrationAddress.House}";
+                    return $"{Requisite.RegistrationAddress.Prefix.PrefixStr}, {Requisite.RegistrationAddress.House}";
             }
         }
 

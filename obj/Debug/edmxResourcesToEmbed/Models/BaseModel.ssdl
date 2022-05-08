@@ -50,6 +50,14 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="LocalityTypeID" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LocalityType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="MeterReading">
@@ -131,7 +139,7 @@
     </Key>
     <Property Name="ID" Type="int" Nullable="false" />
     <Property Name="PersonalAccount" Type="nvarchar" MaxLength="30" Nullable="false" />
-    <Property Name="PaymentTypeID" Type="int" />
+    <Property Name="PaymentTypeID" Type="int" Nullable="false" />
     <Property Name="PayDate" Type="datetime2" Precision="7" Nullable="false" />
     <Property Name="PayAmount" Type="float" Nullable="false" />
     <Property Name="BalanceAfterPay" Type="float" Nullable="false" />
@@ -267,6 +275,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Locality_LocalityType">
+    <End Role="LocalityType" Type="Self.LocalityType" Multiplicity="0..1" />
+    <End Role="Locality" Type="Self.Locality" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LocalityType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Locality">
+        <PropertyRef Name="LocalityTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_MeterReading_Counter">
     <End Role="Counter" Type="Self.Counter" Multiplicity="1" />
     <End Role="MeterReading" Type="Self.MeterReading" Multiplicity="*" />
@@ -376,7 +396,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_RequisitesPayments_PaymentType">
-    <End Role="PaymentType" Type="Self.PaymentType" Multiplicity="0..1" />
+    <End Role="PaymentType" Type="Self.PaymentType" Multiplicity="1" />
     <End Role="RequisitesPayments" Type="Self.RequisitesPayments" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PaymentType">
@@ -418,6 +438,7 @@
     <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="InstallPlace" EntityType="Self.InstallPlace" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Locality" EntityType="Self.Locality" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LocalityType" EntityType="Self.LocalityType" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MeterReading" EntityType="Self.MeterReading" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NetworkOrganisation" EntityType="Self.NetworkOrganisation" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Payers" EntityType="Self.Payers" Schema="dbo" store:Type="Tables" />
@@ -459,6 +480,10 @@
     <AssociationSet Name="FK_Counter_ResponsiblePerson" Association="Self.FK_Counter_ResponsiblePerson">
       <End Role="ResponsiblePerson" EntitySet="ResponsiblePerson" />
       <End Role="Counter" EntitySet="Counter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Locality_LocalityType" Association="Self.FK_Locality_LocalityType">
+      <End Role="LocalityType" EntitySet="LocalityType" />
+      <End Role="Locality" EntitySet="Locality" />
     </AssociationSet>
     <AssociationSet Name="FK_MeterReading_Counter" Association="Self.FK_MeterReading_Counter">
       <End Role="Counter" EntitySet="Counter" />

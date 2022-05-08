@@ -12,7 +12,11 @@
                 <Setter Property="FontSize" Value="14"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
             </Style>
-            <Style x:Key="PBoxDisabled" TargetType="PasswordBox">
+            <Style TargetType="TextBox">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+            <Style TargetType="PasswordBox" x:Key="PBoxDisabled">
                 <Setter Property="BorderThickness" Value="0"/>
                 <Setter Property="Background" Value="Transparent"/>
                 <Style.Triggers>
@@ -21,31 +25,46 @@
                     </Trigger>
                 </Style.Triggers>
             </Style>
-            <Style x:Key="LHead" TargetType="Label">
+            <Style TargetType="Label" x:Key="LHead">
                 <Setter Property="HorizontalAlignment" Value="Left"/>
                 <Setter Property="Margin" Value="5"/>
                 <Setter Property="FontSize" Value="18"/>
             </Style>
-            <Style x:Key="LDescription" TargetType="Label">
+            <Style TargetType="Label" x:Key="LDescription">
                 <Setter Property="HorizontalAlignment" Value="Left"/>
                 <Setter Property="Foreground" Value="{StaticResource MaterialDesignShadowBrush}"/>
                 <Setter Property="Margin" Value="5,0"/>
                 <Setter Property="VerticalAlignment" Value="Bottom"/>
             </Style>
-            <Style x:Key="LHelpBtn" TargetType="Label">
+            <Style TargetType="Label" x:Key="LHelpBtn">
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="HorizontalAlignment" Value="Left"/>
                 <Setter Property="Margin" Value="5"/>
                 <Setter Property="Cursor" Value="Hand"/>
+            </Style> 
+            <Style TargetType="Label" x:Key="LWhiteText">
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="5,0,0,0"/>
+            </Style>
+            <Style TargetType="Label" x:Key="LLGrayText">
+                <Setter Property="Foreground" Value="LightGray"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="5,0,0,0"/>
+            </Style>
+            <Style TargetType="Label" x:Key="LPayInfo">
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="Margin" Value="10,2,0,0"/>
+                <Setter Property="FontSize" Value="8"/>
+            </Style>
+            <Style TargetType="Label" x:Key="LPayInfo2">
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="FontSize" Value="8"/>
             </Style>
             <Style x:Key="TBkHelpBtn" TargetType="TextBlock">
                 <Setter Property="TextDecorations" Value="Underline"/>
                 <Setter Property="Foreground" Value="{DynamicResource SecondaryHueMidBrush}"/>
                 <Setter Property="Cursor" Value="Hand"/>
-            </Style>
-            <Style TargetType="TextBox">
-                <Setter Property="FontSize" Value="18"/>
-                <Setter Property="Margin" Value="5"/>
             </Style>
             <Style TargetType="materialDesign:PackIcon" x:Key="IconInfo">
                 <Setter Property="Kind" Value="QuestionMarkCircle"/>
@@ -62,16 +81,6 @@
                 <Setter Property="Cursor" Value="Hand"/>
                 <Setter Property="ToolTip" Value="Очистить поле"/>
             </Style>
-            <Style TargetType="Label" x:Key="LWhiteText">
-                <Setter Property="Foreground" Value="White"/>
-                <Setter Property="VerticalAlignment" Value="Center"/>
-                <Setter Property="Margin" Value="5,0,0,0"/>
-            </Style>
-            <Style TargetType="Label" x:Key="LLGrayText">
-                <Setter Property="Foreground" Value="LightGray"/>
-                <Setter Property="VerticalAlignment" Value="Center"/>
-                <Setter Property="Margin" Value="5,0,0,0"/>
-            </Style>
             <Style TargetType="Grid" x:Key="Definition1">
                 <Setter Property="Background" Value="LightGray"/>
                 <Setter Property="Grid.ColumnSpan" Value="3"/>
@@ -84,23 +93,14 @@
             <Style TargetType="Grid" x:Key="GridRightInfo">
                 <Setter Property="Margin" Value="0,0,20,0"/>
             </Style>
-            <Style TargetType="Label" x:Key="LPayInfo">
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="Margin" Value="10,2,0,0"/>
-                <Setter Property="FontSize" Value="8"/>
-            </Style>
-            <Style TargetType="Label" x:Key="LPayInfo2">
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="FontSize" Value="8"/>
-            </Style>
-            <Style TargetType="Image" x:Key="ImgPayLogo">
-                <Setter Property="Width" Value="30"/>
-                <Setter Property="Margin" Value="15"/>
-            </Style>
             <Style TargetType="StackPanel" x:Key="SPBtnsPay">
                 <Setter Property="Margin" Value="0,20,0,0"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
                 <Setter Property="Orientation" Value="Horizontal"/>
+            </Style>
+            <Style TargetType="Image" x:Key="ImgPayLogo">
+                <Setter Property="Width" Value="30"/>
+                <Setter Property="Margin" Value="15"/>
             </Style>
             <Style TargetType="Image" x:Key="ImgPayLogo2">
                 <Setter Property="Width" Value="60"/>

@@ -9,5 +9,6 @@
         public string PersonTypeName { get { return ResponsiblePerson.Name; } }
         public string NetOrgName { get { return NetworkOrganisation.Name; } }
         public string BuildName { get { return BuildType.Name; } }
+        public string NumAndDate { get { return $"{Number} | {InstallDateStr}"; } }
     }
 }

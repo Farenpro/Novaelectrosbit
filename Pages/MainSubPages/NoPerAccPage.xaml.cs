@@ -15,9 +15,6 @@ namespace Novaelectrosbit.Pages.MainSubPages
             DataContext = App.CurUser;
         }
 
-        private void BtnAddPerAcc_Click(object sender, RoutedEventArgs e)
-        {
-            (Application.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage(1));
-        }
+        private void BtnAddPerAcc_Click(object sender, RoutedEventArgs e) { (App.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage(1)); }
     }
 }

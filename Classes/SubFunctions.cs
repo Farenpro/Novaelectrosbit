@@ -1,4 +1,5 @@
-﻿using QRCoder;
+﻿using Novaelectrosbit.Windows;
+using QRCoder;
 using System;
 using System.Net;
 using System.Net.Mail;
@@ -66,6 +67,11 @@ namespace Novaelectrosbit.Classes
                 tbox.Visibility = Visibility.Collapsed;
                 pbox.Visibility = Visibility.Visible;
             }
+        }
+        public static void ShowEditWindow(byte type)
+        {
+            EditInfoWindow editInfoWindow = new EditInfoWindow(type);
+            editInfoWindow.ShowDialog();
         }
     }
 }

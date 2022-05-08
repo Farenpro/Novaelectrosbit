@@ -61,6 +61,24 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ДОБАВИТЬ.
+        /// </summary>
+        public static string Add {
+            get {
+                return ResourceManager.GetString("Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успешно добавлено!.
+        /// </summary>
+        public static string AddCongrats {
+            get {
+                return ResourceManager.GetString("AddCongrats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to + Добавить лицевой счет.
         /// </summary>
         public static string AddPerAcc {
@@ -129,6 +147,15 @@ namespace Novaelectrosbit.Properties {
         public static string BirthdateToolTip {
             get {
                 return ResourceManager.GetString("BirthdateToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Такая марка уже существует.
+        /// </summary>
+        public static string BrandExists {
+            get {
+                return ResourceManager.GetString("BrandExists", resourceCulture);
             }
         }
         
@@ -241,6 +268,33 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Добавить марку счетчика.
+        /// </summary>
+        public static string CounterBrandCreate {
+            get {
+                return ResourceManager.GetString("CounterBrandCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Добавить счетчик.
+        /// </summary>
+        public static string CounterCreate {
+            get {
+                return ResourceManager.GetString("CounterCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Счетчик с таким номером уже существует.
+        /// </summary>
+        public static string CounterExists {
+            get {
+                return ResourceManager.GetString("CounterExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Место установки счетчика:.
         /// </summary>
         public static string CounterInstallPlace {
@@ -309,6 +363,15 @@ namespace Novaelectrosbit.Properties {
         public static string CurPassword {
             get {
                 return ResourceManager.GetString("CurPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Неверный текущий пароль.
+        /// </summary>
+        public static string CurPasswordError {
+            get {
+                return ResourceManager.GetString("CurPasswordError", resourceCulture);
             }
         }
         
@@ -466,11 +529,38 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Имя:.
+        /// </summary>
+        public static string FirstnameOwner {
+            get {
+                return ResourceManager.GetString("FirstnameOwner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Квартира.
+        /// </summary>
+        public static string Flat {
+            get {
+                return ResourceManager.GetString("Flat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Пол.
         /// </summary>
         public static string Gender {
             get {
                 return ResourceManager.GetString("Gender", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Общая площадь.
+        /// </summary>
+        public static string GeneralArea {
+            get {
+                return ResourceManager.GetString("GeneralArea", resourceCulture);
             }
         }
         
@@ -516,6 +606,15 @@ namespace Novaelectrosbit.Properties {
         public static string History {
             get {
                 return ResourceManager.GetString("History", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дом.
+        /// </summary>
+        public static string House {
+            get {
+                return ResourceManager.GetString("House", resourceCulture);
             }
         }
         
@@ -610,6 +709,51 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Жилая площадь.
+        /// </summary>
+        public static string LivingArea {
+            get {
+                return ResourceManager.GetString("LivingArea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Населенный пункт.
+        /// </summary>
+        public static string Locality {
+            get {
+                return ResourceManager.GetString("Locality", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Добавить населенный пункт.
+        /// </summary>
+        public static string LocalityAdd {
+            get {
+                return ResourceManager.GetString("LocalityAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Такой населенный пункт уже существует.
+        /// </summary>
+        public static string LocalityExists {
+            get {
+                return ResourceManager.GetString("LocalityExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Тип населенного пункта.
+        /// </summary>
+        public static string LocalityType {
+            get {
+                return ResourceManager.GetString("LocalityType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Неверно введен логин или пароль. Проверьте правильность ввода и повторите попытку..
         /// </summary>
         public static string LogOrPassError {
@@ -633,6 +777,15 @@ namespace Novaelectrosbit.Properties {
         public static string MeterInstaller {
             get {
                 return ResourceManager.GetString("MeterInstaller", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Отчество:.
+        /// </summary>
+        public static string MiddlenameOwner {
+            get {
+                return ResourceManager.GetString("MiddlenameOwner", resourceCulture);
             }
         }
         
@@ -687,6 +840,15 @@ namespace Novaelectrosbit.Properties {
         public static string MRSuccess {
             get {
                 return ResourceManager.GetString("MRSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Название.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
             }
         }
         
@@ -751,6 +913,15 @@ namespace Novaelectrosbit.Properties {
         public static string NoPerAccs {
             get {
                 return ResourceManager.GetString("NoPerAccs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Число должно быть больше 0.
+        /// </summary>
+        public static string NumError {
+            get {
+                return ResourceManager.GetString("NumError", resourceCulture);
             }
         }
         
@@ -977,6 +1148,24 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Создать лицевой счет.
+        /// </summary>
+        public static string PerAccCreate {
+            get {
+                return ResourceManager.GetString("PerAccCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to СОЗДАТЬ ЛИЦЕВОЙ СЧЕТ.
+        /// </summary>
+        public static string PerAccCreateCaps {
+            get {
+                return ResourceManager.GetString("PerAccCreateCaps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Лицевой счет не найден.
         /// </summary>
         public static string PerAccNotFound {
@@ -991,6 +1180,15 @@ namespace Novaelectrosbit.Properties {
         public static string PerAccNumber {
             get {
                 return ResourceManager.GetString("PerAccNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Номер лицевого счета:.
+        /// </summary>
+        public static string PerAccNumber2 {
+            get {
+                return ResourceManager.GetString("PerAccNumber2", resourceCulture);
             }
         }
         
@@ -1037,6 +1235,15 @@ namespace Novaelectrosbit.Properties {
         public static string PersonalInfoEdit {
             get {
                 return ResourceManager.GetString("PersonalInfoEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Префикс.
+        /// </summary>
+        public static string Prefix {
+            get {
+                return ResourceManager.GetString("Prefix", resourceCulture);
             }
         }
         
@@ -1095,6 +1302,24 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Добавить адрес регистрации.
+        /// </summary>
+        public static string RegAddressCreate {
+            get {
+                return ResourceManager.GetString("RegAddressCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Данный адрес уже зарегистрирован.
+        /// </summary>
+        public static string RegAddressExists {
+            get {
+                return ResourceManager.GetString("RegAddressExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Регистрация.
         /// </summary>
         public static string Registration {
@@ -1149,6 +1374,24 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Лицевой счет успешно создан!.
+        /// </summary>
+        public static string RequisiteCongrats {
+            get {
+                return ResourceManager.GetString("RequisiteCongrats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Лицевой счет с таким номером уже существует.
+        /// </summary>
+        public static string RequisiteExists {
+            get {
+                return ResourceManager.GetString("RequisiteExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Повторите пароль *.
         /// </summary>
         public static string RetryPassS {
@@ -1194,6 +1437,24 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Выберите счетчик.
+        /// </summary>
+        public static string SelectCounter {
+            get {
+                return ResourceManager.GetString("SelectCounter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выберите тариф.
+        /// </summary>
+        public static string SelectTariff {
+            get {
+                return ResourceManager.GetString("SelectTariff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Продавец:.
         /// </summary>
         public static string Seller {
@@ -1221,6 +1482,33 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Улица.
+        /// </summary>
+        public static string Street {
+            get {
+                return ResourceManager.GetString("Street", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Добавить улицу.
+        /// </summary>
+        public static string StreetAdd {
+            get {
+                return ResourceManager.GetString("StreetAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Такая улица уже существует.
+        /// </summary>
+        public static string StreetExists {
+            get {
+                return ResourceManager.GetString("StreetExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Сумма:.
         /// </summary>
         public static string Summ {
@@ -1239,11 +1527,47 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Фамилия:.
+        /// </summary>
+        public static string SurnameOwner {
+            get {
+                return ResourceManager.GetString("SurnameOwner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Тариф.
         /// </summary>
         public static string Tariff {
             get {
                 return ResourceManager.GetString("Tariff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Добавить тариф.
+        /// </summary>
+        public static string TariffCreate {
+            get {
+                return ResourceManager.GetString("TariffCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Такой тариф уже существует.
+        /// </summary>
+        public static string TariffExists {
+            get {
+                return ResourceManager.GetString("TariffExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Название тарифа.
+        /// </summary>
+        public static string TariffName {
+            get {
+                return ResourceManager.GetString("TariffName", resourceCulture);
             }
         }
         
