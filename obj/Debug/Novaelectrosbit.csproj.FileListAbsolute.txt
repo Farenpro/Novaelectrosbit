@@ -282,3 +282,7 @@ D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MRPages\RegAd
 D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MRPages\RegAddressSubPages\StreetAddPage.baml
 D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MRPages\CounterSubPages\AddBrandPage.g.cs
 D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MRPages\CounterSubPages\AddBrandPage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\IssueInvoicePage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\MainSubPages\IssueInvoicePage.baml
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\ADMPages\IssueManuallyPage.g.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\Pages\ADMPages\IssueManuallyPage.baml

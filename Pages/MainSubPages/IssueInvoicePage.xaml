@@ -1,0 +1,54 @@
+﻿<Page x:Class="Novaelectrosbit.Pages.MainSubPages.IssueInvoicePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+      xmlns:res="clr-namespace:Novaelectrosbit.Properties"
+      xmlns:s="clr-namespace:System;assembly=mscorlib"
+      MinWidth="750" MinHeight="750"
+      FontFamily="{StaticResource FontMain}">
+    <Grid Margin="0,0,7,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="{x:Static res:Resources.IssueInvoice}" Margin="5,0" Style="{StaticResource LHead}"/>
+        <Button x:Name="BtnAutoIssue" Grid.Row="1" Margin="5" Content="{x:Static res:Resources.AutoIssue}" Foreground="White" Click="BtnAutoIssue_Click"/>
+        <DataGrid x:Name="DGRequisites" Grid.Row="2" Margin="5" Background="White" Foreground="Orange" BorderBrush="Black" AutoGenerateColumns="False" CanUserAddRows="False" SelectionUnit="FullRow"
+                  CanUserDeleteRows="False" IsReadOnly="True" SelectedValuePath="PersonalAccount">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="auto" Header="ЛC" Binding="{Binding PersonalAccount}"/>
+                <DataGridTextColumn Width="auto" Header="ФИО" Binding="{Binding FIOOwner}"/>
+                <DataGridTextColumn Width="auto" Header="Тек. показ." Binding="{Binding NowMR}"/>
+                <DataGridTextColumn Width="auto" Header="Дата тек. показ." Binding="{Binding NowMRDate}"/>
+                <DataGridTextColumn Width="auto" Header="Пред. показ." Binding="{Binding LastMR}"/>
+                <DataGridTextColumn Width="auto" Header="Дата пред. показ." Binding="{Binding LastMRDate}"/>
+                <DataGridTextColumn Width="auto" Header="Оплата текущий месяц" Binding="{Binding FinalStr}"/>
+                <DataGridTemplateColumn Width="*" Header="Выставить счет вручную">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="BtnIssueInvoiceManually" Margin="5" IsEnabled="{Binding Issue}" VerticalAlignment="Top" Content="{x:Static res:Resources.ManuallyIssue}" Click="BtnIssueInvoiceManually_Click" Foreground="{DynamicResource SecondaryHueMidBrush}" BorderBrush="Black" BorderThickness="1" 
+                                    materialDesign:ShadowAssist.ShadowDepth="Depth0">
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Foreground" Value="Black"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="BorderBrush" Value="Orange"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+        </DataGrid>
+    </Grid>
+</Page>

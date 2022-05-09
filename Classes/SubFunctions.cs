@@ -1,4 +1,5 @@
-﻿using Novaelectrosbit.Windows;
+﻿using Novaelectrosbit.Models;
+using Novaelectrosbit.Windows;
 using QRCoder;
 using System;
 using System.Net;
@@ -71,6 +72,12 @@ namespace Novaelectrosbit.Classes
         public static void ShowEditWindow(byte type)
         {
             EditInfoWindow editInfoWindow = new EditInfoWindow(type);
+            editInfoWindow.ShowDialog();
+        }
+
+        public static void ShowEditWindow(Requisite requisite)
+        {
+            EditInfoWindow editInfoWindow = new EditInfoWindow(requisite);
             editInfoWindow.ShowDialog();
         }
     }

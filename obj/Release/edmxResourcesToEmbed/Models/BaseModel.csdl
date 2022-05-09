@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NovaelectrosbitModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BuildType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Counters" Relationship="Self.FK_Counter_BuildType" FromRole="BuildType" ToRole="Counter" />
+  </EntityType>
+  <EntityType Name="Counter">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InstallDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CounterValue" Type="Double" Nullable="false" />
+    <Property Name="CounterBrandID" Type="Int32" Nullable="false" />
+    <Property Name="SettingIndications" Type="Int32" Nullable="false" />
+    <Property Name="TransformCoefficient" Type="Double" Nullable="false" />
+    <Property Name="MPIEndDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="InstallPlaceID" Type="Int32" Nullable="false" />
+    <Property Name="ExplResponsiblePersonID" Type="Int32" Nullable="false" />
+    <Property Name="NetworkOrganisationID" Type="Int32" Nullable="false" />
+    <Property Name="BuildTypeID" Type="Int32" Nullable="false" />
+    <Property Name="ASKUESystemName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BuildType" Relationship="Self.FK_Counter_BuildType" FromRole="Counter" ToRole="BuildType" />
+    <NavigationProperty Name="CounterBrand" Relationship="Self.FK_Counter_CounterBrand" FromRole="Counter" ToRole="CounterBrand" />
+    <NavigationProperty Name="InstallPlace" Relationship="Self.FK_Counter_InstallPlace" FromRole="Counter" ToRole="InstallPlace" />
+    <NavigationProperty Name="NetworkOrganisation" Relationship="Self.FK_Counter_NetworkOrganisation" FromRole="Counter" ToRole="NetworkOrganisation" />
+    <NavigationProperty Name="ResponsiblePerson" Relationship="Self.FK_Counter_ResponsiblePerson" FromRole="Counter" ToRole="ResponsiblePerson" />
+    <NavigationProperty Name="MeterReadings" Relationship="Self.FK_MeterReading_Counter" FromRole="Counter" ToRole="MeterReading" />
+    <NavigationProperty Name="Requisites" Relationship="Self.FK_Requisites_Counter" FromRole="Counter" ToRole="Requisites" />
+  </EntityType>
+  <EntityType Name="CounterBrand">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Counters" Relationship="Self.FK_Counter_CounterBrand" FromRole="CounterBrand" ToRole="Counter" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_User_Gender" FromRole="Gender" ToRole="User" />
+  </EntityType>
+  <EntityType Name="InstallPlace">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Counters" Relationship="Self.FK_Counter_InstallPlace" FromRole="InstallPlace" ToRole="Counter" />
+  </EntityType>
+  <EntityType Name="Locality">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="LocalityTypeID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="LocalityType" Relationship="Self.FK_Locality_LocalityType" FromRole="Locality" ToRole="LocalityType" />
+    <NavigationProperty Name="RegistrationAddresses" Relationship="Self.FK_RegistrationAddress_Locality" FromRole="Locality" ToRole="RegistrationAddress" />
+  </EntityType>
+  <EntityType Name="LocalityType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Localities" Relationship="Self.FK_Locality_LocalityType" FromRole="LocalityType" ToRole="Locality" />
+  </EntityType>
+  <EntityType Name="MeterReading">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="CounterNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IndicationsDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Indications" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Counter" Relationship="Self.FK_MeterReading_Counter" FromRole="MeterReading" ToRole="Counter" />
+  </EntityType>
+  <EntityType Name="NetworkOrganisation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Counters" Relationship="Self.FK_Counter_NetworkOrganisation" FromRole="NetworkOrganisation" ToRole="Counter" />
+  </EntityType>
+  <EntityType Name="Payer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="ResponsiblePersonID" Type="Int32" Nullable="false" />
+    <Property Name="RequisitesPersonalAccount" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Requisite" Relationship="Self.FK_Payers_Requisites" FromRole="Payers" ToRole="Requisites" />
+    <NavigationProperty Name="ResponsiblePerson" Relationship="Self.FK_Payers_ResponsiblePerson" FromRole="Payers" ToRole="ResponsiblePerson" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Payers_User" FromRole="Payers" ToRole="User" />
+  </EntityType>
+  <EntityType Name="PaymentType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="RequisitesPayments" Relationship="Self.FK_RequisitesPayments_PaymentType" FromRole="PaymentType" ToRole="RequisitesPayments" />
+  </EntityType>
+  <EntityType Name="Prefix">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="PrefixTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="PrefixType" Relationship="Self.FK_Prefix_PrefixType" FromRole="Prefix" ToRole="PrefixType" />
+    <NavigationProperty Name="RegistrationAddresses" Relationship="Self.FK_RegistrationAddress_Prefix" FromRole="Prefix" ToRole="RegistrationAddress" />
+  </EntityType>
+  <EntityType Name="PrefixType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Prefixes" Relationship="Self.FK_Prefix_PrefixType" FromRole="PrefixType" ToRole="Prefix" />
+  </EntityType>
+  <EntityType Name="RegistrationAddress">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="LocalityID" Type="Int32" Nullable="false" />
+    <Property Name="PrefixID" Type="Int32" Nullable="false" />
+    <Property Name="House" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Flat" Type="Int32" />
+    <NavigationProperty Name="Locality" Relationship="Self.FK_RegistrationAddress_Locality" FromRole="RegistrationAddress" ToRole="Locality" />
+    <NavigationProperty Name="Prefix" Relationship="Self.FK_RegistrationAddress_Prefix" FromRole="RegistrationAddress" ToRole="Prefix" />
+    <NavigationProperty Name="Requisites" Relationship="Self.FK_Consumer_RegistrationAddress" FromRole="RegistrationAddress" ToRole="Requisites" />
+  </EntityType>
+  <EntityType Name="Requisite">
+    <Key>
+      <PropertyRef Name="PersonalAccount" />
+    </Key>
+    <Property Name="PersonalAccount" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OwnerSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OwnerFirstname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OwnerMiddlename" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RegistrationAddressID" Type="Int32" Nullable="false" />
+    <Property Name="TotalArea" Type="Double" Nullable="false" />
+    <Property Name="LivingArea" Type="Double" Nullable="false" />
+    <Property Name="NumOfResidents" Type="Int32" Nullable="false" />
+    <Property Name="NumOfRooms" Type="Int32" Nullable="false" />
+    <Property Name="TariffID" Type="Int32" Nullable="false" />
+    <Property Name="CounterNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Counter" Relationship="Self.FK_Requisites_Counter" FromRole="Requisites" ToRole="Counter" />
+    <NavigationProperty Name="Payers" Relationship="Self.FK_Payers_Requisites" FromRole="Requisites" ToRole="Payers" />
+    <NavigationProperty Name="RegistrationAddress" Relationship="Self.FK_Consumer_RegistrationAddress" FromRole="Requisites" ToRole="RegistrationAddress" />
+    <NavigationProperty Name="RequisitesPayments" Relationship="Self.FK_ConsumerPayments_ConsumerPayments" FromRole="Requisites" ToRole="RequisitesPayments" />
+    <NavigationProperty Name="Tariff" Relationship="Self.FK_Requisites_Tariff" FromRole="Requisites" ToRole="Tariff" />
+  </EntityType>
+  <EntityType Name="RequisitesPayment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="PersonalAccount" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PaymentTypeID" Type="Int32" Nullable="false" />
+    <Property Name="PayDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="PayAmount" Type="Double" Nullable="false" />
+    <Property Name="BalanceAfterPay" Type="Double" Nullable="false" />
+    <NavigationProperty Name="PaymentType" Relationship="Self.FK_RequisitesPayments_PaymentType" FromRole="RequisitesPayments" ToRole="PaymentType" />
+    <NavigationProperty Name="Requisite" Relationship="Self.FK_ConsumerPayments_ConsumerPayments" FromRole="RequisitesPayments" ToRole="Requisites" />
+  </EntityType>
+  <EntityType Name="ResponsiblePerson">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Counters" Relationship="Self.FK_Counter_ResponsiblePerson" FromRole="ResponsiblePerson" ToRole="Counter" />
+    <NavigationProperty Name="Payers" Relationship="Self.FK_Payers_ResponsiblePerson" FromRole="ResponsiblePerson" ToRole="Payers" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_User_Role" FromRole="Role" ToRole="User" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tariff">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Requisites" Relationship="Self.FK_Requisites_Tariff" FromRole="Tariff" ToRole="Requisites" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Middlename" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="Birthdate" Type="DateTime" Precision="0" />
+    <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="GenderID" Type="Int32" />
+    <NavigationProperty Name="Gender" Relationship="Self.FK_User_Gender" FromRole="User" ToRole="Gender" />
+    <NavigationProperty Name="Payers" Relationship="Self.FK_Payers_User" FromRole="User" ToRole="Payers" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_User_Role" FromRole="User" ToRole="Role" />
+  </EntityType>
+  <Association Name="FK_Counter_BuildType">
+    <End Role="BuildType" Type="Self.BuildType" Multiplicity="1" />
+    <End Role="Counter" Type="Self.Counter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BuildType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Counter">
+        <PropertyRef Name="BuildTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Counter_CounterBrand">
+    <End Role="CounterBrand" Type="Self.CounterBrand" Multiplicity="1" />
+    <End Role="Counter" Type="Self.Counter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CounterBrand">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Counter">
+        <PropertyRef Name="CounterBrandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Counter_InstallPlace">
+    <End Role="InstallPlace" Type="Self.InstallPlace" Multiplicity="1" />
+    <End Role="Counter" Type="Self.Counter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstallPlace">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Counter">
+        <PropertyRef Name="InstallPlaceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Counter_NetworkOrganisation">
+    <End Role="NetworkOrganisation" Type="Self.NetworkOrganisation" Multiplicity="1" />
+    <End Role="Counter" Type="Self.Counter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NetworkOrganisation">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Counter">
+        <PropertyRef Name="NetworkOrganisationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Counter_ResponsiblePerson">
+    <End Role="ResponsiblePerson" Type="Self.ResponsiblePerson" Multiplicity="1" />
+    <End Role="Counter" Type="Self.Counter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResponsiblePerson">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Counter">
+        <PropertyRef Name="ExplResponsiblePersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MeterReading_Counter">
+    <End Role="Counter" Type="Self.Counter" Multiplicity="1" />
+    <End Role="MeterReading" Type="Self.MeterReading" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Counter">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="MeterReading">
+        <PropertyRef Name="CounterNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Requisites_Counter">
+    <End Role="Counter" Type="Self.Counter" Multiplicity="1" />
+    <End Role="Requisites" Type="Self.Requisite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Counter">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="Requisites">
+        <PropertyRef Name="CounterNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Gender">
+    <End Role="Gender" Type="Self.Gender" Multiplicity="0..1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="GenderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Locality_LocalityType">
+    <End Role="LocalityType" Type="Self.LocalityType" Multiplicity="0..1" />
+    <End Role="Locality" Type="Self.Locality" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LocalityType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Locality">
+        <PropertyRef Name="LocalityTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistrationAddress_Locality">
+    <End Role="Locality" Type="Self.Locality" Multiplicity="1" />
+    <End Role="RegistrationAddress" Type="Self.RegistrationAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locality">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RegistrationAddress">
+        <PropertyRef Name="LocalityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payers_Requisites">
+    <End Role="Requisites" Type="Self.Requisite" Multiplicity="1" />
+    <End Role="Payers" Type="Self.Payer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Requisites">
+        <PropertyRef Name="PersonalAccount" />
+      </Principal>
+      <Dependent Role="Payers">
+        <PropertyRef Name="RequisitesPersonalAccount" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payers_ResponsiblePerson">
+    <End Role="ResponsiblePerson" Type="Self.ResponsiblePerson" Multiplicity="1" />
+    <End Role="Payers" Type="Self.Payer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResponsiblePerson">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Payers">
+        <PropertyRef Name="ResponsiblePersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payers_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Payers" Type="Self.Payer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Payers">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequisitesPayments_PaymentType">
+    <End Role="PaymentType" Type="Self.PaymentType" Multiplicity="1" />
+    <End Role="RequisitesPayments" Type="Self.RequisitesPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RequisitesPayments">
+        <PropertyRef Name="PaymentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prefix_PrefixType">
+    <End Role="PrefixType" Type="Self.PrefixType" Multiplicity="1" />
+    <End Role="Prefix" Type="Self.Prefix" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PrefixType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Prefix">
+        <PropertyRef Name="PrefixTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistrationAddress_Prefix">
+    <End Role="Prefix" Type="Self.Prefix" Multiplicity="1" />
+    <End Role="RegistrationAddress" Type="Self.RegistrationAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Prefix">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RegistrationAddress">
+        <PropertyRef Name="PrefixID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Consumer_RegistrationAddress">
+    <End Role="RegistrationAddress" Type="Self.RegistrationAddress" Multiplicity="1" />
+    <End Role="Requisites" Type="Self.Requisite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistrationAddress">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Requisites">
+        <PropertyRef Name="RegistrationAddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConsumerPayments_ConsumerPayments">
+    <End Role="Requisites" Type="Self.Requisite" Multiplicity="1" />
+    <End Role="RequisitesPayments" Type="Self.RequisitesPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Requisites">
+        <PropertyRef Name="PersonalAccount" />
+      </Principal>
+      <Dependent Role="RequisitesPayments">
+        <PropertyRef Name="PersonalAccount" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Requisites_Tariff">
+    <End Role="Tariff" Type="Self.Tariff" Multiplicity="1" />
+    <End Role="Requisites" Type="Self.Requisite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tariff">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Requisites">
+        <PropertyRef Name="TariffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NovaelectrosbitEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BuildTypes" EntityType="Self.BuildType" />
+    <EntitySet Name="Counters" EntityType="Self.Counter" />
+    <EntitySet Name="CounterBrands" EntityType="Self.CounterBrand" />
+    <EntitySet Name="Genders" EntityType="Self.Gender" />
+    <EntitySet Name="InstallPlaces" EntityType="Self.InstallPlace" />
+    <EntitySet Name="Localities" EntityType="Self.Locality" />
+    <EntitySet Name="LocalityTypes" EntityType="Self.LocalityType" />
+    <EntitySet Name="MeterReadings" EntityType="Self.MeterReading" />
+    <EntitySet Name="NetworkOrganisations" EntityType="Self.NetworkOrganisation" />
+    <EntitySet Name="Payers" EntityType="Self.Payer" />
+    <EntitySet Name="PaymentTypes" EntityType="Self.PaymentType" />
+    <EntitySet Name="Prefixes" EntityType="Self.Prefix" />
+    <EntitySet Name="PrefixTypes" EntityType="Self.PrefixType" />
+    <EntitySet Name="RegistrationAddresses" EntityType="Self.RegistrationAddress" />
+    <EntitySet Name="Requisites" EntityType="Self.Requisite" />
+    <EntitySet Name="RequisitesPayments" EntityType="Self.RequisitesPayment" />
+    <EntitySet Name="ResponsiblePersons" EntityType="Self.ResponsiblePerson" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Tariffs" EntityType="Self.Tariff" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_Counter_BuildType" Association="Self.FK_Counter_BuildType">
+      <End Role="BuildType" EntitySet="BuildTypes" />
+      <End Role="Counter" EntitySet="Counters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Counter_CounterBrand" Association="Self.FK_Counter_CounterBrand">
+      <End Role="CounterBrand" EntitySet="CounterBrands" />
+      <End Role="Counter" EntitySet="Counters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Counter_InstallPlace" Association="Self.FK_Counter_InstallPlace">
+      <End Role="InstallPlace" EntitySet="InstallPlaces" />
+      <End Role="Counter" EntitySet="Counters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Counter_NetworkOrganisation" Association="Self.FK_Counter_NetworkOrganisation">
+      <End Role="NetworkOrganisation" EntitySet="NetworkOrganisations" />
+      <End Role="Counter" EntitySet="Counters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Counter_ResponsiblePerson" Association="Self.FK_Counter_ResponsiblePerson">
+      <End Role="ResponsiblePerson" EntitySet="ResponsiblePersons" />
+      <End Role="Counter" EntitySet="Counters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MeterReading_Counter" Association="Self.FK_MeterReading_Counter">
+      <End Role="Counter" EntitySet="Counters" />
+      <End Role="MeterReading" EntitySet="MeterReadings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Requisites_Counter" Association="Self.FK_Requisites_Counter">
+      <End Role="Counter" EntitySet="Counters" />
+      <End Role="Requisites" EntitySet="Requisites" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Gender" Association="Self.FK_User_Gender">
+      <End Role="Gender" EntitySet="Genders" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Locality_LocalityType" Association="Self.FK_Locality_LocalityType">
+      <End Role="LocalityType" EntitySet="LocalityTypes" />
+      <End Role="Locality" EntitySet="Localities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistrationAddress_Locality" Association="Self.FK_RegistrationAddress_Locality">
+      <End Role="Locality" EntitySet="Localities" />
+      <End Role="RegistrationAddress" EntitySet="RegistrationAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payers_Requisites" Association="Self.FK_Payers_Requisites">
+      <End Role="Requisites" EntitySet="Requisites" />
+      <End Role="Payers" EntitySet="Payers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payers_ResponsiblePerson" Association="Self.FK_Payers_ResponsiblePerson">
+      <End Role="ResponsiblePerson" EntitySet="ResponsiblePersons" />
+      <End Role="Payers" EntitySet="Payers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payers_User" Association="Self.FK_Payers_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Payers" EntitySet="Payers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequisitesPayments_PaymentType" Association="Self.FK_RequisitesPayments_PaymentType">
+      <End Role="PaymentType" EntitySet="PaymentTypes" />
+      <End Role="RequisitesPayments" EntitySet="RequisitesPayments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prefix_PrefixType" Association="Self.FK_Prefix_PrefixType">
+      <End Role="PrefixType" EntitySet="PrefixTypes" />
+      <End Role="Prefix" EntitySet="Prefixes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistrationAddress_Prefix" Association="Self.FK_RegistrationAddress_Prefix">
+      <End Role="Prefix" EntitySet="Prefixes" />
+      <End Role="RegistrationAddress" EntitySet="RegistrationAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Consumer_RegistrationAddress" Association="Self.FK_Consumer_RegistrationAddress">
+      <End Role="RegistrationAddress" EntitySet="RegistrationAddresses" />
+      <End Role="Requisites" EntitySet="Requisites" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConsumerPayments_ConsumerPayments" Association="Self.FK_ConsumerPayments_ConsumerPayments">
+      <End Role="Requisites" EntitySet="Requisites" />
+      <End Role="RequisitesPayments" EntitySet="RequisitesPayments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Requisites_Tariff" Association="Self.FK_Requisites_Tariff">
+      <End Role="Tariff" EntitySet="Tariffs" />
+      <End Role="Requisites" EntitySet="Requisites" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Role" Association="Self.FK_User_Role">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

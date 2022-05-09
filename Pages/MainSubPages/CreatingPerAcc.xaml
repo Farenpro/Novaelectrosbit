@@ -14,10 +14,9 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Label Grid.Row="1" Content="{x:Static res:Resources.PerAccCreate}" Margin="5,0" Style="{StaticResource LHead}"/>
-        <Grid x:Name="GridRequisites" Grid.Row="2" Style="{StaticResource GridRightInfo}">
+        <Label Content="{x:Static res:Resources.PerAccCreate}" Margin="5,0" Style="{StaticResource LHead}"/>
+        <Grid x:Name="GridRequisites" Grid.Row="1" Style="{StaticResource GridRightInfo}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
@@ -83,7 +82,7 @@
             <TextBox x:Name="TBoxCountOfRooms" Grid.Row="17" Grid.Column="1" Margin="15,5,15,15" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" 
                  Text="{Binding CountOfRooms, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
         </Grid>
-        <Grid x:Name="GridCounter" Grid.Row="3" Style="{StaticResource GridRightInfo}">
+        <Grid x:Name="GridCounter" Grid.Row="2" Style="{StaticResource GridRightInfo}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
@@ -100,7 +99,7 @@
             <Button x:Name="BtnCounterAdd" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Content="{materialDesign:PackIcon Kind=PencilAdd}" Click="BtnCounterAdd_Click" ToolTip="{x:Static res:Resources.CounterCreate}" Foreground="White"
                     Background="#076194" BorderThickness="0" BorderBrush="#076194" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{DynamicResource MaterialDesignFloatingActionMiniButton}" />
         </Grid>
-        <Grid x:Name="GridTariff" Grid.Row="4" Style="{StaticResource GridRightInfo}">
+        <Grid x:Name="GridTariff" Grid.Row="3" Style="{StaticResource GridRightInfo}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
@@ -117,6 +116,6 @@
             <Button x:Name="BtnTariffAdd" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Content="{materialDesign:PackIcon Kind=PencilAdd}" Click="BtnTariffAdd_Click" ToolTip="{x:Static res:Resources.TariffCreate}" Foreground="White"
                     Background="#076194" BorderThickness="0" BorderBrush="#076194" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{DynamicResource MaterialDesignFloatingActionMiniButton}" />
         </Grid>
-        <Button x:Name="BtnCreate" Grid.Row="5" Grid.ColumnSpan="3" Margin="20" VerticalAlignment="Center" Content="{x:Static res:Resources.PerAccCreateCaps}" Click="BtnCreate_Click" Foreground="White" Style="{StaticResource MaterialDesignFlatMidBgButton}"/>
+        <Button x:Name="BtnCreate" Grid.Row="4" Grid.ColumnSpan="3" Margin="20" VerticalAlignment="Center" Content="{x:Static res:Resources.PerAccCreateCaps}" Click="BtnCreate_Click" Foreground="White" Style="{StaticResource MaterialDesignFlatMidBgButton}"/>
     </Grid>
 </Page>

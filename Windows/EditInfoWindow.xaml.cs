@@ -1,4 +1,6 @@
-﻿using Novaelectrosbit.Pages.MainSubPages.ProfileSubPages;
+﻿using Novaelectrosbit.Models;
+using Novaelectrosbit.Pages.ADMPages;
+using Novaelectrosbit.Pages.MainSubPages.ProfileSubPages;
 using Novaelectrosbit.Pages.MRPages;
 using Novaelectrosbit.Pages.MRPages.CounterSubPages;
 using Novaelectrosbit.Pages.MRPages.RegAddressSubPages;
@@ -47,6 +49,11 @@ namespace Novaelectrosbit.Windows
                     MainFrame.Navigate(new AddBrandPage());
                     break;
             }
+        }
+        public EditInfoWindow(Requisite requisite)
+        {
+            InitializeComponent();
+            MainFrame.Navigate(new IssueManuallyPage(requisite));
         }
     }
 }

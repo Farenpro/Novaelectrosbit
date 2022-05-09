@@ -217,6 +217,9 @@
     <Compile Include="Pages\AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ADMPages\IssueManuallyPage.xaml.cs">
+      <DependentUpon>IssueManuallyPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AuthorizationPage.xaml.cs">
       <DependentUpon>AuthorizationPage.xaml</DependentUpon>
     </Compile>
@@ -228,6 +231,9 @@
     </Compile>
     <Compile Include="Pages\MainSubPages\CreatingPerAcc.xaml.cs">
       <DependentUpon>CreatingPerAcc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MainSubPages\IssueInvoicePage.xaml.cs">
+      <DependentUpon>IssueInvoicePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MainSubPages\MeterReadingPage.xaml.cs">
       <DependentUpon>MeterReadingPage.xaml</DependentUpon>
@@ -350,6 +356,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ADMPages\IssueManuallyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AuthorizationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -363,6 +373,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MainSubPages\CreatingPerAcc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MainSubPages\IssueInvoicePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

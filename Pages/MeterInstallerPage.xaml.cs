@@ -12,17 +12,21 @@ namespace Novaelectrosbit.Pages
         public MeterInstallerPage()
         {
             InitializeComponent();
-            (App.Current.MainWindow as MainMenuWindow).DataContext = this;
-            CBoxProfile.DataContext = App.CurUser;
+            Binding();
             MainPageFrame.Navigate(new CreatingPerAcc());
         }
 
         public MeterInstallerPage(bool a)
         {
             InitializeComponent();
+            Binding();
+            MainPageFrame.Navigate(new ProfilePage());
+        }
+
+        private void Binding()
+        {
             (App.Current.MainWindow as MainMenuWindow).DataContext = this;
             CBoxProfile.DataContext = App.CurUser;
-            MainPageFrame.Navigate(new ProfilePage());
         }
 
         private void CBoxProfile_SelectionChanged(object sender, SelectionChangedEventArgs e)

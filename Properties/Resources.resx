@@ -138,6 +138,9 @@
   <data name="AuthCode" xml:space="preserve">
     <value>Авторизованный код:</value>
   </data>
+  <data name="AutoIssue" xml:space="preserve">
+    <value>Выставить счета автоматически</value>
+  </data>
   <data name="BankInfo" xml:space="preserve">
     <value>Банк ГБП (АО). Генеральная лицензия Банка России №354</value>
   </data>
@@ -318,6 +321,30 @@
   <data name="InstallDate" xml:space="preserve">
     <value>Дата установки</value>
   </data>
+  <data name="IssueAlready" xml:space="preserve">
+    <value>Счет уже был выставлен</value>
+  </data>
+  <data name="IssueCongrats" xml:space="preserve">
+    <value>Счет успешно выставлен</value>
+  </data>
+  <data name="IssueInvoice" xml:space="preserve">
+    <value>Выставление счетов</value>
+  </data>
+  <data name="IssueRecSumm" xml:space="preserve">
+    <value>Рекомендуемая к выставлению сумма:</value>
+  </data>
+  <data name="IssuesAlready" xml:space="preserve">
+    <value>Все счета уже были выставлены</value>
+  </data>
+  <data name="IssueSuccess" xml:space="preserve">
+    <value>Счет(а) успешно выставлен(ы)</value>
+  </data>
+  <data name="IssueSumm" xml:space="preserve">
+    <value>Выставить счет на сумму:</value>
+  </data>
+  <data name="IssueWarning" xml:space="preserve">
+    <value>Еще рано выставлять счета, вы хотите продолжить?</value>
+  </data>
   <data name="Last3Months" xml:space="preserve">
     <value>За последние 3 месяца</value>
   </data>
@@ -353,6 +380,9 @@
   </data>
   <data name="Male" xml:space="preserve">
     <value>Мужской</value>
+  </data>
+  <data name="ManuallyIssue" xml:space="preserve">
+    <value>Выставить счет вручную</value>
   </data>
   <data name="MeterInstaller" xml:space="preserve">
     <value>Установщик счетчиков</value>

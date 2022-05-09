@@ -14,9 +14,35 @@ namespace Novaelectrosbit.Models
         public string PayDateStr3 { get { return PayDate.ToString("MMMM yyyy"); } }
         public string FinalStr { get { return Math.Abs(Final).ToString(); } }
         public string PriceTariff { get { return $"{Convert.ToDouble(Requisite.Tariff.Price) * Convert.ToDouble(ExpPeriodNow)}"; } }
-        public double LastPay { get { return App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).LastOrDefault().PayAmount; } }
-        public string LastPayDate { get { return App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).LastOrDefault().PayDate.ToString("dd.MM.yyyy"); } }
-        public double LastBalance { get { return App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).LastOrDefault().BalanceAfterPay; } }
+        public double LastPay
+        {
+            get
+            {
+                if (App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).Count() > 0)
+                    return App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).LastOrDefault().PayAmount;
+                else
+                    return 0;
+            }
+        }
+        public string LastPayDate
+        {
+            get
+            {
+                if (App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).Count() > 0)
+                    return App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).LastOrDefault().PayDate.ToString("dd.MM.yyyy");
+                else return "";
+            }
+        }
+        public double LastBalance
+        {
+            get
+            {
+                if (App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).Count() > 0)
+                    return App.CurPay.Requisite.RequisitesPayments.Where(p => p.PayDate < PayDate).LastOrDefault().BalanceAfterPay;
+                else
+                    return 0;
+            }
+        }
 
         public Brush BalanceBrush
         {
@@ -82,7 +108,7 @@ namespace Novaelectrosbit.Models
             get
             {
                 if (Requisite.Counter.MeterReadings.Count() > 0)
-                    return Requisite.Counter.MeterReadings.Where(p => p.IndicationsDate <= PayDate).FirstOrDefault().IndicationsDate.ToString("dd.MM.yyyy");
+                    return Requisite.Counter.MeterReadings.Where(p => p.IndicationsDate <= PayDate).LastOrDefault().IndicationsDate.ToString("dd.MM.yyyy");
                 else
                     return "-";
             }
@@ -92,7 +118,7 @@ namespace Novaelectrosbit.Models
             get
             {
                 if (Requisite.Counter.MeterReadings.Count() > 0)
-                    return Requisite.Counter.MeterReadings.Where(p => p.IndicationsDate <= PayDate).FirstOrDefault().Indications.ToString();
+                    return Requisite.Counter.MeterReadings.Where(p => p.IndicationsDate <= PayDate).LastOrDefault().Indications.ToString();
                 else
                     return "-";
             }
@@ -129,7 +155,12 @@ namespace Novaelectrosbit.Models
                 if (LastMR != "-" && NowMR != "-")
                     return $"{Convert.ToInt32(NowMR) - Convert.ToInt32(LastMR)}";
                 else if (LastMR != "-" || NowMR != "-")
-                    return "0";
+                {
+                    if (LastMR == "-")
+                        return NowMR;
+                    else
+                        return (Convert.ToInt32(LastMR) / 3).ToString();
+                }
                 else
                     return "?";
             }

@@ -12,6 +12,19 @@ namespace Novaelectrosbit.Pages
         public AdminPage()
         {
             InitializeComponent();
+            Binding();
+            MainPageFrame.Navigate(new IssueInvoicePage());
+        }
+
+        public AdminPage(bool a)
+        {
+            InitializeComponent();
+            Binding();
+            MainPageFrame.Navigate(new ProfilePage());
+        }
+
+        private void Binding()
+        {
             (App.Current.MainWindow as MainMenuWindow).DataContext = this;
             CBoxProfile.DataContext = App.CurUser;
         }

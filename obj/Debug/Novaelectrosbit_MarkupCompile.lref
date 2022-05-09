@@ -5,6 +5,7 @@ FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\AuthorizationPage.xaml
 FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainPage.xaml;;
 FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\AddPerAccPage.xaml;;
 FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\CreatingPerAcc.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\IssueInvoicePage.xaml;;
 FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\MeterReadingPage.xaml;;
 FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\NoPerAccPage.xaml;;
 FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\PaymentPage.xaml;;
@@ -26,4 +27,5 @@ FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\ProfileSu
 FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\ProfileSubPages\TelephoneEditPage.xaml;;
 FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\RegistrationPage.xaml;;
 FD:\MyWorks\Айрат работа\Novaelectrosbit\UserControls\PersonalAccUC.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\ADMPages\IssueManuallyPage.xaml;;
 

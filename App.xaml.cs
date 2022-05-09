@@ -44,6 +44,7 @@ namespace Novaelectrosbit
                     (App.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MeterInstallerPage(true));
                     break;
                 case 3:
+                    (App.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new AdminPage(true));
                     break;
             }
         }

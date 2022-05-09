@@ -124,6 +124,15 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Выставить счета автоматически.
+        /// </summary>
+        public static string AutoIssue {
+            get {
+                return ResourceManager.GetString("AutoIssue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Банк ГБП (АО). Генеральная лицензия Банка России №354.
         /// </summary>
         public static string BankInfo {
@@ -664,6 +673,78 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Счет уже был выставлен.
+        /// </summary>
+        public static string IssueAlready {
+            get {
+                return ResourceManager.GetString("IssueAlready", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Счет успешно выставлен.
+        /// </summary>
+        public static string IssueCongrats {
+            get {
+                return ResourceManager.GetString("IssueCongrats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выставление счетов.
+        /// </summary>
+        public static string IssueInvoice {
+            get {
+                return ResourceManager.GetString("IssueInvoice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Рекомендуемая к выставлению сумма:.
+        /// </summary>
+        public static string IssueRecSumm {
+            get {
+                return ResourceManager.GetString("IssueRecSumm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Все счета уже были выставлены.
+        /// </summary>
+        public static string IssuesAlready {
+            get {
+                return ResourceManager.GetString("IssuesAlready", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Счет(а) успешно выставлен(ы).
+        /// </summary>
+        public static string IssueSuccess {
+            get {
+                return ResourceManager.GetString("IssueSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выставить счет на сумму:.
+        /// </summary>
+        public static string IssueSumm {
+            get {
+                return ResourceManager.GetString("IssueSumm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Еще рано выставлять счета, вы хотите продолжить?.
+        /// </summary>
+        public static string IssueWarning {
+            get {
+                return ResourceManager.GetString("IssueWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to За последние 3 месяца.
         /// </summary>
         public static string Last3Months {
@@ -768,6 +849,15 @@ namespace Novaelectrosbit.Properties {
         public static string Male {
             get {
                 return ResourceManager.GetString("Male", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выставить счет вручную.
+        /// </summary>
+        public static string ManuallyIssue {
+            get {
+                return ResourceManager.GetString("ManuallyIssue", resourceCulture);
             }
         }
         
