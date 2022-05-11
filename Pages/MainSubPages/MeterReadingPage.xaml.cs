@@ -22,10 +22,11 @@ namespace Novaelectrosbit.Pages.MainSubPages
         private void BtnTransferMR_Click(object sender, RoutedEventArgs e)
         {
             int lastMR = 0, ID = 1;
-            if (App.CurPay.Requisite.Counter.MeterReadings.Count > 0)
+            if (App.Database.MeterReadings.Count() > 0)
             {
-                lastMR = App.CurPay.Requisite.Counter.MeterReadings.Select(p => p.Indications).LastOrDefault();
-                ID = App.CurPay.Requisite.Counter.MeterReadings.Select(p => p.ID).Max() + 1;
+                ID = App.Database.MeterReadings.Select(p => p.ID).Max() + 1;
+                if (App.CurPay.Requisite.Counter.MeterReadings.Count > 0)
+                    lastMR = App.CurPay.Requisite.Counter.MeterReadings.Select(p => p.Indications).LastOrDefault();
             }
             if (TBoxMR.Text != "" && int.TryParse(TBoxMR.Text, out int MR))
             {
