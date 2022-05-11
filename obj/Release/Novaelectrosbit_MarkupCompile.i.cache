@@ -1,0 +1,20 @@
+﻿Novaelectrosbit
+
+
+winexe
+C#
+.cs
+D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Release\
+Novaelectrosbit
+none
+false
+TRACE
+D:\MyWorks\Айрат работа\Novaelectrosbit\App.xaml
+32989867070
+21219829441
+731715015104
+331203758100
+Pages\AdminPage.xaml;Pages\ADMPages\IssueManuallyPage.xaml;Pages\AuthorizationPage.xaml;Pages\MainPage.xaml;Pages\MainSubPages\AddPerAccPage.xaml;Pages\MainSubPages\CreatingPerAcc.xaml;Pages\MainSubPages\IssueInvoicePage.xaml;Pages\MainSubPages\MeterReadingPage.xaml;Pages\MainSubPages\NoPerAccPage.xaml;Pages\MainSubPages\PaymentPage.xaml;Pages\MeterInstallerPage.xaml;Pages\MRPages\AddCounterPage.xaml;Pages\MRPages\AddRegAddressPage.xaml;Pages\MRPages\AddTariffPage.xaml;Pages\MRPages\CounterSubPages\AddBrandPage.xaml;Pages\MRPages\RegAddressSubPages\LocalityAddPage.xaml;Pages\MRPages\RegAddressSubPages\StreetAddPage.xaml;Pages\PaySimulatePage.xaml;Pages\MainSubPages\PerAccPage.xaml;Pages\MainSubPages\PerAccSubPages\TabPages\PerAccHistoryPage.xaml;Pages\MainSubPages\PerAccSubPages\TabPages\PerAccRequisitesPage.xaml;Pages\MainSubPages\ProfilePage.xaml;Pages\MainSubPages\ProfileSubPages\EmailEditPage.xaml;Pages\MainSubPages\ProfileSubPages\GenInfoEditPage.xaml;Pages\MainSubPages\ProfileSubPages\PasswordEditPage.xaml;Pages\MainSubPages\ProfileSubPages\TelephoneEditPage.xaml;Pages\RegistrationPage.xaml;UserControls\PersonalAccUC.xaml;Windows\EditInfoWindow.xaml;Windows\MainMenuWindow.xaml;Windows\PayWindow.xaml;Windows\RegistrationWindow.xaml;
+
+True
+

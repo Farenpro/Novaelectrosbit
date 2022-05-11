@@ -11,7 +11,7 @@ namespace Novaelectrosbit.Classes
         public static string PasswordPatternUpLetters = @"[A-Z]";
         public static string PasswordPatternLowLetters = @"[a-z]";
         public static string PasswordPatternNumbers = @"[0-9]";
-        public static string NamePattern = @"^[A-ZА-ЯЁ]+[A-Za-z0-9]{1,}";
+        public static string NamePattern = @"^[A-ZА-ЯЁ]{1,}[A-Za-zа-яёА-ЯЁ0-9]{1,}";
         public static string NumPattern = @"^[1-9]{1}[0-9]{0,6}(\,[0-9]{1,2})?$";
         public static string NumSymbPattern = @"^[-,0-9]+$";
 

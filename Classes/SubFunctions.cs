@@ -35,6 +35,7 @@ namespace Novaelectrosbit.Classes
             QRCode qr = new QRCode(qrData);
             System.Drawing.Bitmap qrImage = qr.GetGraphic(1);
             qrImage.Save("qrtemp.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            qrImage.Dispose();
         }
         public static void ImgGifInit(Image gifplayer, string path)
         {
