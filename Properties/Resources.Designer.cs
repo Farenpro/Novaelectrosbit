@@ -385,6 +385,15 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Соединение с БД не установлено. Проверьте наличие БД в MSSQL, а также строку подключения.
+        /// </summary>
+        public static string DatabaseError {
+            get {
+                return ResourceManager.GetString("DatabaseError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Дата/время:.
         /// </summary>
         public static string DateTime {
@@ -453,6 +462,15 @@ namespace Novaelectrosbit.Properties {
         public static string EmailError {
             get {
                 return ResourceManager.GetString("EmailError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Чек операции не отправлен на электронную почту. Проверьте соединение с интернетом.
+        /// </summary>
+        public static string EmailNotSent {
+            get {
+                return ResourceManager.GetString("EmailNotSent", resourceCulture);
             }
         }
         

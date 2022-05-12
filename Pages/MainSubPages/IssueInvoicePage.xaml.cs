@@ -55,7 +55,7 @@ namespace Novaelectrosbit.Pages.MainSubPages
                                     BalanceAfterPay = requisite.LastBalance + requisite.Final
                                 };
                                 App.Database.RequisitesPayments.Add(requisitesPayment);
-                                App.Database.SaveChanges();
+                                App.DBRefresh();
                                 id = App.Database.RequisitesPayments.Select(p => p.ID).Max() + 1;
                             }
                         }

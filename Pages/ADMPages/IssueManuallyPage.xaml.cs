@@ -47,7 +47,7 @@ namespace Novaelectrosbit.Pages.ADMPages
                         BalanceAfterPay = Requisite.LastBalance - Summ
                     };
                     App.Database.RequisitesPayments.Add(requisitesPayment);
-                    App.Database.SaveChanges();
+                    App.DBRefresh();
                     App.Messages.ShowInfo(Properties.Resources.IssueCongrats);
                     window.Close();
                 }

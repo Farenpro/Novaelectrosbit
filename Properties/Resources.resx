@@ -225,6 +225,9 @@
   <data name="CurPasswordError" xml:space="preserve">
     <value>Неверный текущий пароль</value>
   </data>
+  <data name="DatabaseError" xml:space="preserve">
+    <value>Соединение с БД не установлено. Проверьте наличие БД в MSSQL, а также строку подключения</value>
+  </data>
   <data name="DateTime" xml:space="preserve">
     <value>Дата/время:</value>
   </data>
@@ -248,6 +251,9 @@
   </data>
   <data name="EmailError" xml:space="preserve">
     <value>Некорректный E-mail</value>
+  </data>
+  <data name="EmailNotSent" xml:space="preserve">
+    <value>Чек операции не отправлен на электронную почту. Проверьте соединение с интернетом</value>
   </data>
   <data name="EmailS" xml:space="preserve">
     <value>Email *</value>

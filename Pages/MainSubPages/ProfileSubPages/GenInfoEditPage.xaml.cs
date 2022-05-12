@@ -70,7 +70,7 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
                 else
                     App.CurUser.GenderID = CBoxGender.SelectedIndex + 1;
                 App.CurUser.Birthdate = DPBirthdate.SelectedDate;
-                App.Database.SaveChanges();
+                App.DBRefresh();
                 window.Close();
                 App.Messages.ShowInfo(Properties.Resources.GenInfoCongrats);
                 App.LoadProfilePage(App.CurUser.RoleID);

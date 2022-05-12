@@ -81,7 +81,7 @@ namespace Novaelectrosbit.Pages.MRPages
                             ASKUESystemName = ASKUESName
                         };
                         App.Database.Counters.Add(Counter);
-                        App.Database.SaveChanges();
+                        App.DBRefresh();
                         App.Messages.ShowInfo(Properties.Resources.AddCongrats);
                         window.Close();
                     }

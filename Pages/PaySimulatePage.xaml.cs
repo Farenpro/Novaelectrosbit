@@ -179,7 +179,7 @@ namespace Novaelectrosbit.Pages
                 BalanceAfterPay = balance + SummPay
             };
             App.Database.RequisitesPayments.Add(requisitesPayment);
-            App.Database.SaveChanges();
+            App.DBRefresh();
             SubFunctions.GenerateQR($"Name=Кассовый чек. Приход,\n" +
                 $"Time={DateTimeNow}\n" +
                 $"FN={FN}\n" +

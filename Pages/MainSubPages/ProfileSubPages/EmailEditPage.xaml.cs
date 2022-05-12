@@ -32,7 +32,7 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
                     if (Checking.EmailCheck(TBoxEmail.Text))
                     {
                         App.CurUser.Email = TBoxEmail.Text;
-                        App.Database.SaveChanges();
+                        App.DBRefresh();
                         window.Close();
                         App.Messages.ShowInfo(Properties.Resources.EmailCongrats);
                         App.LoadProfilePage(App.CurUser.RoleID);

@@ -40,7 +40,7 @@ namespace Novaelectrosbit.Pages.MainSubPages
                         Indications = MR
                     };
                     App.Database.MeterReadings.Add(meterReading);
-                    App.Database.SaveChanges();
+                    App.DBRefresh();
                     App.Messages.ShowInfo(Properties.Resources.MRSuccess);
                     BtnMainPageBack_Click(null, null);
                 }

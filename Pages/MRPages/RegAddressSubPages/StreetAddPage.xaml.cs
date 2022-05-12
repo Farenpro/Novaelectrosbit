@@ -43,7 +43,7 @@ namespace Novaelectrosbit.Pages.MRPages.RegAddressSubPages
                         Name = Street
                     };
                     App.Database.Prefixes.Add(prefix);
-                    App.Database.SaveChanges();
+                    App.DBRefresh();
                     App.Messages.ShowInfo(Properties.Resources.AddCongrats);
                     window.Close();
                 }

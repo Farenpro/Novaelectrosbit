@@ -38,7 +38,7 @@ namespace Novaelectrosbit.Pages.MainSubPages
                             RequisitesPersonalAccount = TBoxPerAccNumber.Value.ToString()
                         };
                         App.Database.Payers.Add(payer);
-                        App.Database.SaveChanges();
+                        App.DBRefresh();
                         App.CurUserDefaultPage();
                     }
                     else

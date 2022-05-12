@@ -50,7 +50,7 @@ namespace Novaelectrosbit.Pages.MRPages.CounterSubPages
                         Name = BrandName
                     };
                     App.Database.CounterBrands.Add(brandName);
-                    App.Database.SaveChanges();
+                    App.DBRefresh();
                     App.Messages.ShowInfo(Properties.Resources.AddCongrats);
                     window.Close();
                 }

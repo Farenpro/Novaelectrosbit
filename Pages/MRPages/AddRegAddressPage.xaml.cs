@@ -74,7 +74,7 @@ namespace Novaelectrosbit.Pages.MRPages
                         Flat = Flat
                     };
                     App.Database.RegistrationAddresses.Add(registrationAddress);
-                    App.Database.SaveChanges();
+                    App.DBRefresh();
                     App.Messages.ShowInfo(Properties.Resources.AddCongrats);
                     window.Close();
                 }

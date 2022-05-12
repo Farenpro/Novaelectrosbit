@@ -51,7 +51,7 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
                                 App.CurUser.Password = PBoxNewPassword.Password;
                             else
                                 App.CurUser.Password = PBoxNewPasswordVisible.Text;
-                            App.Database.SaveChanges();
+                            App.DBRefresh();
                             App.Messages.ShowInfo(Properties.Resources.PasswordCongrats);
                             window.Close();
                             App.LoadProfilePage(App.CurUser.RoleID);

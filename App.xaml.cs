@@ -3,6 +3,7 @@ using Novaelectrosbit.Models;
 using Novaelectrosbit.Pages;
 using Novaelectrosbit.Windows;
 using System.Windows;
+using res = Novaelectrosbit.Properties;
 
 namespace Novaelectrosbit
 {
@@ -15,6 +16,20 @@ namespace Novaelectrosbit
         public static NovaelectrosbitEntities Database { get; set; } = new NovaelectrosbitEntities();
         public static User CurUser { get; set; } = new User();
         public static Payer CurPay { get; set; } = new Payer();
+
+        public App()
+        {
+            try
+            {
+                Database.Database.Connection.Open();
+                Database.Database.Connection.Close();
+            }
+            catch
+            {
+                App.Messages.ShowError(res.Resources.DatabaseError);
+                App.Current.Shutdown();
+            }
+        }
 
         public static void LoadCurPayPage(Payer p) { (Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new MainPage(p)); }
 
@@ -33,8 +48,8 @@ namespace Novaelectrosbit
                     break;
             }
         }
-        public static void LoadProfilePage(int id) 
-        { 
+        public static void LoadProfilePage(int id)
+        {
             switch (id)
             {
                 case 1:
@@ -47,6 +62,11 @@ namespace Novaelectrosbit
                     (App.Current.MainWindow as MainMenuWindow).MainFrame.Navigate(new AdminPage(true));
                     break;
             }
+        }
+        public static void DBRefresh()
+        {
+            App.Database.SaveChanges();
+            App.Database = new NovaelectrosbitEntities();
         }
     }
 }

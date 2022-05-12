@@ -43,7 +43,7 @@ namespace Novaelectrosbit.Pages.MRPages.RegAddressSubPages
                         Name = Locality
                     };
                     App.Database.Localities.Add(locality);
-                    App.Database.SaveChanges();
+                    App.DBRefresh();
                     App.Messages.ShowInfo(Properties.Resources.AddCongrats);
                     window.Close();
                 }

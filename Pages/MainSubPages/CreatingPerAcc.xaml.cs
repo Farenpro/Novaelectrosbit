@@ -79,7 +79,7 @@ namespace Novaelectrosbit.Pages.MainSubPages
                             CounterNumber = Counter.Number
                         };
                         App.Database.Requisites.Add(requisite);
-                        App.Database.SaveChanges();
+                        App.DBRefresh();
                         App.Messages.ShowInfo(Properties.Resources.RequisiteCongrats);
                         App.CurUserDefaultPage();
                     }

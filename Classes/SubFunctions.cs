@@ -26,7 +26,8 @@ namespace Novaelectrosbit.Classes
             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
             smtp.Credentials = new NetworkCredential("novaelectrosbit@gmail.com", "Novaelectrosbit2244");
             smtp.EnableSsl = true;
-            smtp.Send(m);
+            try { smtp.Send(m); }
+            catch { App.Messages.ShowError(Properties.Resources.EmailNotSent); }
         }
         public static void GenerateQR(string data)
         {

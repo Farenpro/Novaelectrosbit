@@ -30,7 +30,7 @@ namespace Novaelectrosbit.Pages.MainSubPages.ProfileSubPages
                 if (Checking.UserExistCheck("", TBoxTelephone.Value.ToString()))
                 {
                     App.CurUser.Telephone = TBoxTelephone.Value.ToString().Insert(0, "8");
-                    App.Database.SaveChanges();
+                    App.DBRefresh();
                     window.Close();
                     App.Messages.ShowInfo(Properties.Resources.TelephoneCongrats);
                     App.LoadProfilePage(App.CurUser.RoleID);

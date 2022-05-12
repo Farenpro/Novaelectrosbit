@@ -28,7 +28,7 @@ namespace Novaelectrosbit.UserControls
             {
                 Payer p = App.Database.Payers.Where(p => p.UserID == App.CurUser.ID && p.RequisitesPersonalAccount == TBkPerAcc.Text).SingleOrDefault();
                 App.Database.Payers.Remove(p);
-                App.Database.SaveChanges();
+                App.DBRefresh();
                 App.CurUserDefaultPage();
             }
         }

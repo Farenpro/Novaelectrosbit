@@ -46,7 +46,7 @@ namespace Novaelectrosbit.Pages.MRPages
                         Price = Price
                     };
                     App.Database.Tariffs.Add(tariff);
-                    App.Database.SaveChanges();
+                    App.DBRefresh();
                     App.Messages.ShowInfo(Properties.Resources.AddCongrats);
                     window.Close();
                 }

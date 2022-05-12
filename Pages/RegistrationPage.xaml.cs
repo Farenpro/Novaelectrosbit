@@ -51,7 +51,7 @@ namespace Novaelectrosbit.Pages
 
         private void BtnContinue_Click(object sender, RoutedEventArgs e)
         {
-            if (Telephone == null || Email == "" || Firstname == null || (PBoxPassword.Password == "" && PBoxPasswordVisible.Text == "") || (PBoxPasswordAgain.Password == "" &&
+            if (Telephone == null || Email == "" || Firstname == null && Firstname != "" || (PBoxPassword.Password == "" && PBoxPasswordVisible.Text == "") || (PBoxPasswordAgain.Password == "" &&
                 PBoxPasswordAgainVisible.Text == ""))
                 App.Messages.ShowError(Properties.Resources.NeedToFillRequired);
             else
@@ -86,7 +86,7 @@ namespace Novaelectrosbit.Pages
                 App.Messages.ShowError(Properties.Resources.FIOError);
                 return;
             }
-            if (Surname != null)
+            if (Surname != null && Surname!= "")
             {
                 if (!Checking.FIOCheck(Surname))
                 {
@@ -94,7 +94,7 @@ namespace Novaelectrosbit.Pages
                     return;
                 }
             }
-            if (Middlename != null)
+            if (Middlename != null && Middlename != "")
             {
                 if (!Checking.FIOCheck(Middlename))
                 {
@@ -126,7 +126,7 @@ namespace Novaelectrosbit.Pages
                 GenderID = Gender + 1
             };
             App.Database.Users.Add(user);
-            App.Database.SaveChanges();
+            App.DBRefresh();
             App.Messages.ShowInfo(Properties.Resources.RegistrationCongrats);
             RegistrationWindow window = App.Current.Windows.OfType<RegistrationWindow>().SingleOrDefault();
             window.Close();
