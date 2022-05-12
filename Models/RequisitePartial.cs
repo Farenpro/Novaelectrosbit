@@ -136,7 +136,7 @@ namespace Novaelectrosbit.Models
                     if (LastMR == "-")
                         return NowMR;
                     else
-                        return (Convert.ToInt32(LastMR) / 3).ToString();
+                        return (Counter.MeterReadings.Select(p => p.Indications).Average() / 3).ToString();
                 }
                 else
                     return "?";
@@ -165,16 +165,14 @@ namespace Novaelectrosbit.Models
         {
             get
             {
-                if (ExpType == "П")
-                    return Expenditure;
-                else if (ExpType == "С")
-                    return $"{Counter.MeterReadings.Average(p => Convert.ToDouble(Expenditure))}";
-                else if (ExpType == "С,П")
-                    return $"{Counter.MeterReadings.Average(p => Convert.ToDouble(Expenditure) + Convert.ToInt32(NowMR))}";
-                else if (NumOfResidents != 0)
+                if (ExpType == "С,П")
+                    return $"{Convert.ToDouble(Expenditure) + Convert.ToInt32(NowMR)}";
+                else if (ExpType == "Н" && NumOfResidents != 0)
                     return $"{NumOfResidents * 120 * Tariff.Price}";
-                else
+                else if (ExpType == "Н")
                     return $"{1 * 120 * Tariff.Price}";
+                else
+                    return Expenditure;
             }
         }
     }
