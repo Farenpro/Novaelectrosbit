@@ -5,7 +5,7 @@
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       xmlns:res="clr-namespace:Novaelectrosbit.Properties"
       xmlns:s="clr-namespace:System;assembly=mscorlib"
-      MinWidth="800" MinHeight="930"
+      MinWidth="1030" MinHeight="710"
       FontFamily="{StaticResource FontMain}">
     <Grid Margin="0,0,9,0">
         <Grid.RowDefinitions>
@@ -21,6 +21,8 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
@@ -33,54 +35,42 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="1.5"/>
                 <RowDefinition Height="auto"/>
-                <RowDefinition Height="1.5"/>
                 <RowDefinition Height="auto"/>
-                <RowDefinition Height="1.5"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="1.5"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="1.5"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="1.5"/>
             </Grid.RowDefinitions>
             <Label Margin="5,0" Content="{x:Static res:Resources.GeneralInfo}" FontSize="17" Style="{StaticResource LHead}"/>
             <Label Grid.Row="1" VerticalAlignment="Center" Content="{x:Static res:Resources.PerAccNumber2}" Style="{StaticResource LDescription}"/>
             <xctk:MaskedTextBox x:Name="TBoxPerAccNumber" Grid.Row="1" Grid.Column="1"  Margin="15,5,15,15" MinWidth="305" Value="{Binding PerAccNum, UpdateSourceTrigger=PropertyChanged}" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" Mask="00000-000-00" BeepOnError="True" ValueDataType="{x:Type s:String}" 
                               BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
-            <Grid Grid.Row="2" Grid.ColumnSpan="3" Style="{StaticResource Definition2}"/>
-            <Label Grid.Row="3" VerticalAlignment="Center" Content="{x:Static res:Resources.SurnameOwner}" Style="{StaticResource LDescription}"/>
-            <TextBox x:Name="TBoxSurname" Grid.Row="3" Grid.Column="1" Margin="15,5,15,15" HorizontalAlignment="Left" VerticalAlignment="Center" MaxLength="50" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" 
-                 Text="{Binding SurnameOwner, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
-            <Grid Grid.Row="4" Grid.ColumnSpan="3" Style="{StaticResource Definition2}"/>
-            <Label Grid.Row="5" VerticalAlignment="Center" Content="{x:Static res:Resources.FirstnameOwner}" Style="{StaticResource LDescription}"/>
-            <TextBox x:Name="TBoxFirstname" Grid.Row="5" Grid.Column="1" Margin="15,5,15,15" HorizontalAlignment="Left" VerticalAlignment="Center" MaxLength="30" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" 
-                 Text="{Binding FirstnameOwner, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
-            <Grid Grid.Row="6" Style="{StaticResource Definition1}"/>
-            <Label Grid.Row="7" VerticalAlignment="Center" Content="{x:Static res:Resources.MiddlenameOwner}" Style="{StaticResource LDescription}"/>
-            <TextBox x:Name="TBoxMiddlename" Grid.Row="7" Grid.Column="1" Margin="15,5,15,15" HorizontalAlignment="Left" VerticalAlignment="Center" MaxLength="60" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" 
-                 Text="{Binding MiddlenameOwner, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
-            <Grid Grid.Row="8" Style="{StaticResource Definition1}"/>
-            <Label Grid.Row="9" VerticalAlignment="Center" Content="{x:Static res:Resources.RegistrationAddress}" Style="{StaticResource LDescription}"/>
-            <ComboBox x:Name="CBoxRegAddress" Grid.Row="9" Grid.Column="1" Margin="15,5,15,15" HorizontalAlignment="Left" MinWidth="300" SelectedItem="{Binding RegistationAddress, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" IsEditable="True" IsTextSearchEnabled="True" DisplayMemberPath="RegAddressStr"
+            <Grid Grid.Row="2" Style="{StaticResource Definition3}"/>
+             <Label Grid.Row="3" VerticalAlignment="Center" Content="{x:Static res:Resources.RegistrationAddress}" Style="{StaticResource LDescription}"/>
+            <ComboBox x:Name="CBoxRegAddress" Grid.Row="3" Grid.Column="1" Margin="15,5,15,15" HorizontalAlignment="Left" MinWidth="300" SelectedItem="{Binding RegistationAddress, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" IsEditable="True" IsTextSearchEnabled="True" DisplayMemberPath="RegAddressStr"
                  BorderBrush="Black" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" Foreground="{DynamicResource PrimaryHueMidBrush}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
-            <Button x:Name="BtnRegAddressAdd" Grid.Row="9" Grid.Column="2" HorizontalAlignment="Left" Margin="0,0,0,10" Content="{materialDesign:PackIcon Kind=PencilAdd}" Click="BtnRegAddressAdd_Click" ToolTip="{x:Static res:Resources.RegAddressCreate}" Foreground="White" 
+            <Button x:Name="BtnRegAddressAdd" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" Margin="0,0,0,10" Content="{materialDesign:PackIcon Kind=PencilAdd}" Click="BtnRegAddressAdd_Click" ToolTip="{x:Static res:Resources.RegAddressCreate}" Foreground="White" 
                     Background="#076194" BorderThickness="0" BorderBrush="#076194" materialDesign:ShadowAssist.ShadowDepth="Depth0" Style="{DynamicResource MaterialDesignFloatingActionMiniButton}"/>
-            <Grid Grid.Row="10" Style="{StaticResource Definition1}"/>
-            <Label Grid.Row="11" VerticalAlignment="Center" Content="{x:Static res:Resources.GeneralArea}" Style="{StaticResource LDescription}"/>
-            <TextBox x:Name="TBoxGeneralArea" Grid.Row="11" Grid.Column="1" Margin="15,5,15,15" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" 
-                 Text="{Binding GeneralArea, UpdateSourceTrigger=LostFocus}" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
-            <Grid Grid.Row="12" Style="{StaticResource Definition1}"/>
-            <Label Grid.Row="13" VerticalAlignment="Center" Content="{x:Static res:Resources.LivingArea}" Style="{StaticResource LDescription}"/>
-            <TextBox x:Name="TBoxLivingArea" Grid.Row="13" Grid.Column="1" Margin="15,5,15,15" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" 
-                 Text="{Binding LivingArea, UpdateSourceTrigger=LostFocus}" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
-            <Grid Grid.Row="14" Style="{StaticResource Definition1}"/>
-            <Label Grid.Row="15" VerticalAlignment="Center" Content="{x:Static res:Resources.CountOfLiving}" Style="{StaticResource LDescription}"/>
-            <TextBox x:Name="TBoxCountOfLiving" Grid.Row="15" Grid.Column="1" Margin="15,5,15,15" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" 
+            <Grid Grid.Row="4" Style="{StaticResource Definition3}"/>
+            <Label Grid.Row="5" VerticalAlignment="Center" Content="{x:Static res:Resources.CountOfLiving}" Style="{StaticResource LDescription}"/>
+            <TextBox x:Name="TBoxCountOfLiving" Grid.Row="5" Grid.Column="1" Margin="15,5,15,15" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" 
                  Text="{Binding CountOfLiving, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
-            <Grid Grid.Row="16" Style="{StaticResource Definition1}"/>
-            <Label Grid.Row="17" VerticalAlignment="Center" Content="{x:Static res:Resources.CountOfRooms}" Style="{StaticResource LDescription}"/>
-            <TextBox x:Name="TBoxCountOfRooms" Grid.Row="17" Grid.Column="1" Margin="15,5,15,15" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" 
-                 Text="{Binding CountOfRooms, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <Grid Grid.Row="6" Style="{StaticResource Definition3}"/>
+            <Label Grid.Row="7" VerticalAlignment="Center" Content="{x:Static res:Resources.CountOfRooms}" Style="{StaticResource LDescription}"/>
+            <TextBox x:Name="TBoxCountOfRooms" Grid.Row="7" Grid.Column="1" Margin="15,5,15,15" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" 
+                 Text="{Binding CountOfRooms, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>  
+            <Grid Grid.Row="8" Style="{StaticResource Definition3}"/>
+            <Label Grid.Row="9" VerticalAlignment="Center" Content="{x:Static res:Resources.LivingArea}" Style="{StaticResource LDescription}"/>
+            <TextBox x:Name="TBoxLivingArea" Grid.Row="9" Grid.Column="1" Margin="15,5,15,15" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" 
+                 Text="{Binding LivingArea, UpdateSourceTrigger=LostFocus}" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <Label Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Right" Content="{x:Static res:Resources.SurnameOwner}" Style="{StaticResource LDescription}"/>
+            <TextBox x:Name="TBoxSurname" Grid.Row="1" Grid.Column="4" Margin="15,5,15,15" HorizontalAlignment="Left" VerticalAlignment="Center" MaxLength="50" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" 
+                 Text="{Binding SurnameOwner, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <Label Grid.Row="3" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Right" Content="{x:Static res:Resources.FirstnameOwner}" Style="{StaticResource LDescription}"/>
+            <TextBox x:Name="TBoxFirstname" Grid.Row="3" Grid.Column="4" Margin="15,5,15,15" HorizontalAlignment="Left" VerticalAlignment="Center" MaxLength="30" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" 
+                 Text="{Binding FirstnameOwner, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <Label Grid.Row="5" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Right" Content="{x:Static res:Resources.MiddlenameOwner}" Style="{StaticResource LDescription}"/>
+            <TextBox x:Name="TBoxMiddlename" Grid.Row="5" Grid.Column="4" Margin="15,5,15,15" HorizontalAlignment="Left" VerticalAlignment="Center" MaxLength="60" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" 
+                 Text="{Binding MiddlenameOwner, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+            <Label Grid.Row="7" Grid.Column="3" VerticalAlignment="Center" Content="{x:Static res:Resources.GeneralArea}" Style="{StaticResource LDescription}"/>
+            <TextBox x:Name="TBoxGeneralArea" Grid.Row="7" Grid.Column="4" Margin="15,5,15,15" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" 
+                 Text="{Binding GeneralArea, UpdateSourceTrigger=LostFocus}" BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
         </Grid>
         <Grid x:Name="GridCounter" Grid.Row="2" Style="{StaticResource GridRightInfo}">
             <Grid.ColumnDefinitions>

@@ -90,6 +90,11 @@
                 <Setter Property="Grid.ColumnSpan" Value="2"/>
                 <Setter Property="Margin" Value="5,0,0,0"/>
             </Style>
+            <Style TargetType="Grid" x:Key="Definition3">
+                <Setter Property="Background" Value="LightGray"/>
+                <Setter Property="Grid.ColumnSpan" Value="5"/>
+                <Setter Property="Margin" Value="5,0,0,0"/>
+            </Style>
             <Style TargetType="Grid" x:Key="GridRightInfo">
                 <Setter Property="Margin" Value="0,0,20,0"/>
             </Style>

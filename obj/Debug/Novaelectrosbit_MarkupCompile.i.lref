@@ -1,5 +1,31 @@
-﻿
+﻿D:\MyWorks\Айрат работа\Novaelectrosbit\obj\Debug\GeneratedInternalTypeHelper.g.i.cs
 
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\AdminPage.xaml;;
 FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\ADMPages\IssueManuallyPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\AuthorizationPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\AddPerAccPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\CreatingPerAcc.xaml;;
 FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\IssueInvoicePage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\MeterReadingPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\NoPerAccPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\PaymentPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MeterInstallerPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MRPages\AddCounterPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MRPages\AddRegAddressPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MRPages\AddTariffPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MRPages\CounterSubPages\AddBrandPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MRPages\RegAddressSubPages\LocalityAddPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MRPages\RegAddressSubPages\StreetAddPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\PaySimulatePage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\PerAccPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\PerAccSubPages\TabPages\PerAccHistoryPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\PerAccSubPages\TabPages\PerAccRequisitesPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\ProfilePage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\ProfileSubPages\EmailEditPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\ProfileSubPages\GenInfoEditPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\ProfileSubPages\PasswordEditPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\MainSubPages\ProfileSubPages\TelephoneEditPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\Pages\RegistrationPage.xaml;;
+FD:\MyWorks\Айрат работа\Novaelectrosbit\UserControls\PersonalAccUC.xaml;;
 
