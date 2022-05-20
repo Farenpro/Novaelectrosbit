@@ -1,4 +1,4 @@
-﻿using Novaelectrosbit.Models;
+﻿ using Novaelectrosbit.Models;
 using Novaelectrosbit.Windows;
 using QRCoder;
 using System;
@@ -15,7 +15,8 @@ namespace Novaelectrosbit.Classes
     {
         public static void SendEmail(string mailname, string sentemail, string themename, string mail, bool attachqr)
         {
-            MailAddress from = new MailAddress("novaelectrosbit@gmail.com", mailname);
+            const string email = "novaelectrosbit@mail.ru", password = "qEi2C0NvpXY1jhKYb5wx";
+            MailAddress from = new MailAddress(email, mailname);
             MailAddress to = new MailAddress(sentemail);
             MailMessage m = new MailMessage(from, to);
             m.Subject = themename;
@@ -23,8 +24,8 @@ namespace Novaelectrosbit.Classes
             m.IsBodyHtml = true;
             if (attachqr)
                 m.Attachments.Add(new Attachment($"{AppDomain.CurrentDomain.BaseDirectory}\\qrtemp.jpeg"));
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-            smtp.Credentials = new NetworkCredential("novaelectrosbit@gmail.com", "Novaelectrosbit2244");
+            SmtpClient smtp = new SmtpClient("smtp.mail.ru");
+            smtp.Credentials = new NetworkCredential(email, password);
             smtp.EnableSsl = true;
             try { smtp.Send(m); }
             catch { App.Messages.ShowError(Properties.Resources.EmailNotSent); }
