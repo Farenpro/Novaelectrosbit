@@ -26,22 +26,33 @@ namespace Novaelectrosbit.Pages.MainSubPages
             {
                 ID = App.Database.MeterReadings.Select(p => p.ID).Max() + 1;
                 if (App.CurPay.Requisite.Counter.MeterReadings.Count > 0)
-                    lastMR = App.CurPay.Requisite.Counter.MeterReadings.Select(p => p.Indications).LastOrDefault();
+                    lastMR = App.CurPay.Requisite.Counter.MeterReadings.Where(p => (p.IndicationsDate.Month!=DateTime.Now.Month && p.IndicationsDate.Year == DateTime.Now.Year) || p.IndicationsDate.Year != DateTime.Now.Year).Select(p => p.Indications).LastOrDefault();
             }
             if (TBoxMR.Text != "" && int.TryParse(TBoxMR.Text, out int MR))
             {
-                if (MR > lastMR)
+                if (MR >= lastMR)
                 {
-                    MeterReading meterReading = new MeterReading()
+                    if (App.CurPay.Requisite.Counter.MeterReadings.Select(p => p.IndicationsDate).Last().Month == DateTime.Now.Month)
                     {
-                        ID = ID,
-                        CounterNumber = App.CurPay.CounterNum,
-                        IndicationsDate = DateTime.Now,
-                        Indications = MR
-                    };
-                    App.Database.MeterReadings.Add(meterReading);
-                    App.DBRefresh();
-                    App.Messages.ShowInfo(Properties.Resources.MRSuccess);
+                        MeterReading meterReading = App.CurPay.Requisite.Counter.MeterReadings.Last();
+                        meterReading.IndicationsDate = DateTime.Now;
+                        meterReading.Indications = MR;
+                        App.DBRefresh();
+                        App.Messages.ShowInfo(Properties.Resources.MRSuccess);
+                    }
+                    else
+                    {
+                        MeterReading meterReading = new MeterReading()
+                        {
+                            ID = ID,
+                            CounterNumber = App.CurPay.CounterNum,
+                            IndicationsDate = DateTime.Now,
+                            Indications = MR
+                        };
+                        App.Database.MeterReadings.Add(meterReading);
+                        App.DBRefresh();
+                        App.Messages.ShowInfo(Properties.Resources.MRSuccess);
+                    }
                     BtnMainPageBack_Click(null, null);
                 }
                 else

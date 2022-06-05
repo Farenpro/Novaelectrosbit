@@ -357,6 +357,9 @@
   <data name="Last6Months" xml:space="preserve">
     <value>За последние 6 месяцев</value>
   </data>
+  <data name="LastMR" xml:space="preserve">
+    <value>Предыдущие показания:</value>
+  </data>
   <data name="LastYear" xml:space="preserve">
     <value>За год</value>
   </data>
@@ -403,7 +406,7 @@
     <value>Дата окончания МПИ:</value>
   </data>
   <data name="MRError" xml:space="preserve">
-    <value>Нынешние показания не могут быть меньше, чем предыдущие</value>
+    <value>Показания данного месяца не могут быть меньше, чем в предыдущий раз</value>
   </data>
   <data name="MRNow" xml:space="preserve">
     <value>Текущие показания, кВт*ч *</value>
@@ -571,6 +574,9 @@
   </data>
   <data name="RecSumm" xml:space="preserve">
     <value>+1000 руб</value>
+  </data>
+  <data name="RecToPaySumm" xml:space="preserve">
+    <value>Рекомендуемая к оплате сумма:</value>
   </data>
   <data name="RegAddressCreate" xml:space="preserve">
     <value>Добавить адрес регистрации</value>

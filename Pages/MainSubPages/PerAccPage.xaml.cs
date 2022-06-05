@@ -20,11 +20,6 @@ namespace Novaelectrosbit.Pages.MainSubPages
             DataContext = p;
             if (DateTime.Now.Day > 26)
                 BtnTransferMR.IsEnabled = false;
-            if (App.CurPay.Requisite.Counter.MeterReadings.Count() > 0)
-            {
-                if (App.CurPay.Requisite.Counter.MeterReadings.Select(p => p.IndicationsDate).Last().Month == DateTime.Now.Month)
-                    BtnTransferMR.IsEnabled = false;
-            }
         }
 
         private void BtnBalanceRefresh_Click(object sender, RoutedEventArgs e)

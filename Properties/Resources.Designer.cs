@@ -781,6 +781,15 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Предыдущие показания:.
+        /// </summary>
+        public static string LastMR {
+            get {
+                return ResourceManager.GetString("LastMR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to За год.
         /// </summary>
         public static string LastYear {
@@ -916,7 +925,7 @@ namespace Novaelectrosbit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Нынешние показания не могут быть меньше, чем предыдущие.
+        ///   Looks up a localized string similar to Показания данного месяца не могут быть меньше, чем в предыдущий раз.
         /// </summary>
         public static string MRError {
             get {
@@ -1406,6 +1415,15 @@ namespace Novaelectrosbit.Properties {
         public static string RecSumm {
             get {
                 return ResourceManager.GetString("RecSumm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Рекомендуемая к оплате сумма:.
+        /// </summary>
+        public static string RecToPaySumm {
+            get {
+                return ResourceManager.GetString("RecToPaySumm", resourceCulture);
             }
         }
         

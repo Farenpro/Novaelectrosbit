@@ -49,6 +49,12 @@
                 <Label Margin="0,10,0,0" Content="{x:Static res:Resources.PayQuestion}" FontSize="9"/>
                 <TextBlock x:Name="AddRecSumm" Text="{x:Static res:Resources.RecSumm}" HorizontalAlignment="Center" MouseLeftButtonDown="AddRecSumm_MouseLeftButtonDown" Style="{StaticResource TBkHelpBtn}"/>
             </StackPanel>
+            <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Vertical">
+                <Label Grid.Row="3" Grid.Column="1" Content="{x:Static res:Resources.LastMR}" Style="{StaticResource LDescription}" HorizontalAlignment="Center"/>
+                <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding LastMRAndDate}" Style="{StaticResource MaterialDesignCaptionTextBlock}" HorizontalAlignment="Center"/>
+                <Label Grid.Row="5" Grid.Column="1" Content="{x:Static res:Resources.RecToPaySumm}" Style="{StaticResource LDescription}" HorizontalAlignment="Center"/>
+                <TextBlock Grid.Row="6" Grid.Column="1" Text="{Binding Final}" Style="{StaticResource MaterialDesignCaptionTextBlock}" HorizontalAlignment="Center"/>
+            </StackPanel>
             <Label Grid.Row="3" Margin="5,20,0,0" Content="{x:Static res:Resources.FinalSumm}" Style="{StaticResource LDescription}"/>
             <TextBox x:Name="TBoxPaySumm" Grid.Row="4" Margin="5,0" HorizontalAlignment="Left" MinWidth="300" materialDesign:HintAssist.HelperText="{x:Static res:Resources.RequiredFillIn}" PreviewTextInput="TBoxPaySumm_PreviewTextInput" 
                  BorderBrush="Black" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>

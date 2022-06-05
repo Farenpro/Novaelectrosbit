@@ -111,5 +111,28 @@ namespace Novaelectrosbit.Models
                     return "-";
             }
         }
+
+        public string LastMRAndDate
+        {
+            get
+            {
+                if (LastMRDate != null && LastMR != null)
+                    return $"Дата: {LastMRDate} | Показания: {LastMR}";
+                else
+                    return "Предыдущие показания не найдены";
+            }
+        }
+        public string Final
+        {
+            get 
+            {
+                if (Requisite.FinalStr != null && BalanceAfterPay >= 0)
+                    return Requisite.FinalStr;
+                else if (Requisite.FinalStr != null && BalanceAfterPay < 0)
+                    return $"{Math.Round(Math.Abs(Requisite.Final),2) + Math.Abs(BalanceAfterPay)}\nс учетом задолженности";
+                else
+                    return "Рекомендуемая сумма не найдена";
+            }
+        }
     }
 }

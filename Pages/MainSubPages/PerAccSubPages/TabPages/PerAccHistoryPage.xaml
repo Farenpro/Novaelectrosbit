@@ -31,7 +31,7 @@
         </ComboBox>
         <Grid Grid.Row="4" Background="LightGray"/>
         <Label x:Name="LNoData" Grid.Row="5" Content="{x:Static res:Resources.NoData}" Visibility="Collapsed" Style="{StaticResource LDescription}"/>
-        <DataGrid x:Name="DGMR" Grid.Row="5" Margin="5" Background="White" Foreground="Orange" HeadersVisibility="None" AutoGenerateColumns="False" CanUserAddRows="False" SelectionUnit="Cell"
+        <DataGrid x:Name="DGMR" Grid.Row="5" Margin="5" Background="White" Foreground="Orange" HeadersVisibility="None" AutoGenerateColumns="False" CanUserAddRows="False" SelectionUnit="Cell" SelectionMode="Single"
                   CanUserDeleteRows="False" IsReadOnly="True" Visibility="Collapsed">
             <DataGrid.Columns>
                 <DataGridTemplateColumn>
