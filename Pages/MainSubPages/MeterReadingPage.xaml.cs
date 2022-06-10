@@ -32,13 +32,29 @@ namespace Novaelectrosbit.Pages.MainSubPages
             {
                 if (MR >= lastMR)
                 {
-                    if (App.CurPay.Requisite.Counter.MeterReadings.Select(p => p.IndicationsDate).Last().Month == DateTime.Now.Month)
+                    if (App.CurPay.Requisite.Counter.MeterReadings.Count >= 1)
                     {
-                        MeterReading meterReading = App.CurPay.Requisite.Counter.MeterReadings.Last();
-                        meterReading.IndicationsDate = DateTime.Now;
-                        meterReading.Indications = MR;
-                        App.DBRefresh();
-                        App.Messages.ShowInfo(Properties.Resources.MRSuccess);
+                        if (App.CurPay.Requisite.Counter.MeterReadings.Select(p => p.IndicationsDate).Last().Month == DateTime.Now.Month)
+                        {
+                            MeterReading meterReading = App.CurPay.Requisite.Counter.MeterReadings.Last();
+                            meterReading.IndicationsDate = DateTime.Now;
+                            meterReading.Indications = MR;
+                            App.DBRefresh();
+                            App.Messages.ShowInfo(Properties.Resources.MRSuccess);
+                        }
+                        else
+                        {
+                            MeterReading meterReading = new MeterReading()
+                            {
+                                ID = ID,
+                                CounterNumber = App.CurPay.CounterNum,
+                                IndicationsDate = DateTime.Now,
+                                Indications = MR
+                            };
+                            App.Database.MeterReadings.Add(meterReading);
+                            App.DBRefresh();
+                            App.Messages.ShowInfo(Properties.Resources.MRSuccess);
+                        }
                     }
                     else
                     {
